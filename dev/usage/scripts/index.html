@@ -1,0 +1,1480 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../dependency/">
+      
+      
+        <link rel="next" href="../hooks/">
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
+    
+    
+      
+        <title>PDM Scripts - PDM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9c788c91.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/umami.js"></script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pdm-scripts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<span class="twemoji" style="vertical-align: middle;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408z"/></svg> 
+</span>
+<a class="pdm-expansions" style="display: none;">Python Dependency Manager</a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PDM" class="md-header__button md-logo" aria-label="PDM" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PDM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PDM Scripts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pdm-project/pdm" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link md-tabs__link--active">
+        Usage
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../pyproject/pep621/" class="md-tabs__link">
+        Writing pyproject.toml
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../plugin/write/" class="md-tabs__link">
+        Plugins
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dev/contributing/" class="md-tabs__link">
+        Development
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://github.com/sponsors/pdm-project" class="md-tabs__link">
+      Sponsor
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PDM" class="md-nav__button md-logo" aria-label="PDM" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    PDM
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pdm-project/pdm" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" tabindex="0" aria-expanded="true">
+          Usage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Usage" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Usage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/" class="md-nav__link">
+        Manage Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../venv/" class="md-nav__link">
+        Working with virtualenv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pep582/" class="md-nav__link">
+        Working with PEP 582
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency/" class="md-nav__link">
+        Manage Dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PDM Scripts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        PDM Scripts
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arbitrary-scripts" class="md-nav__link">
+    Arbitrary Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-scripts" class="md-nav__link">
+    User Scripts
+  </a>
+  
+    <nav class="md-nav" aria-label="User Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmd" class="md-nav__link">
+    cmd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell" class="md-nav__link">
+    shell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call" class="md-nav__link">
+    call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composite" class="md-nav__link">
+    composite
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-options" class="md-nav__link">
+    Script Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Script Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#env" class="md-nav__link">
+    env
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#env_file" class="md-nav__link">
+    env_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#site_packages" class="md-nav__link">
+    site_packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-options" class="md-nav__link">
+    Shared Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-placeholder" class="md-nav__link">
+    Arguments placeholder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-the-list-of-scripts" class="md-nav__link">
+    Show the List of Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-post-scripts" class="md-nav__link">
+    Pre &amp; Post Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hook-scripts" class="md-nav__link">
+    Hook Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skipping-scripts" class="md-nav__link">
+    Skipping scripts
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hooks/" class="md-nav__link">
+        Lifecycle and hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        Advanced Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_reference/" class="md-nav__link">
+        CLI Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configurations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Writing pyproject.toml
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Writing pyproject.toml" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Writing pyproject.toml
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pyproject/pep621/" class="md-nav__link">
+        PEP 621 Metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pyproject/tool-pdm/" class="md-nav__link">
+        PDM Tool Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pyproject/build/" class="md-nav__link">
+        Build Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          Plugins
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Plugins" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Plugins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugin/write/" class="md-nav__link">
+        Write a plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugin/reference/" class="md-nav__link">
+        API Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugin/fixtures/" class="md-nav__link">
+        Pytest fixtures
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Development" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/benchmark/" class="md-nav__link">
+        Benchmark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/sponsors/pdm-project" class="md-nav__link">
+        Sponsor
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arbitrary-scripts" class="md-nav__link">
+    Arbitrary Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-scripts" class="md-nav__link">
+    User Scripts
+  </a>
+  
+    <nav class="md-nav" aria-label="User Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmd" class="md-nav__link">
+    cmd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell" class="md-nav__link">
+    shell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call" class="md-nav__link">
+    call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composite" class="md-nav__link">
+    composite
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-options" class="md-nav__link">
+    Script Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Script Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#env" class="md-nav__link">
+    env
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#env_file" class="md-nav__link">
+    env_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#site_packages" class="md-nav__link">
+    site_packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-options" class="md-nav__link">
+    Shared Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arguments-placeholder" class="md-nav__link">
+    Arguments placeholder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-the-list-of-scripts" class="md-nav__link">
+    Show the List of Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-post-scripts" class="md-nav__link">
+    Pre &amp; Post Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hook-scripts" class="md-nav__link">
+    Hook Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skipping-scripts" class="md-nav__link">
+    Skipping scripts
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="pdm-scripts">PDM Scripts<a class="headerlink" href="#pdm-scripts" title="Permanent link">#</a></h1>
+<p>Like <code>npm run</code>, with PDM, you can run arbitrary scripts or commands with local packages loaded.</p>
+<h2 id="arbitrary-scripts">Arbitrary Scripts<a class="headerlink" href="#arbitrary-scripts" title="Permanent link">#</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>run<span class="w"> </span>flask<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">54321</span>
+</code></pre></div></td></tr></table></div>
+<p>It will run <code>flask run -p 54321</code> in the environment that is aware of packages in <code>__pypackages__/</code> folder.</p>
+<h2 id="user-scripts">User Scripts<a class="headerlink" href="#user-scripts" title="Permanent link">#</a></h2>
+<p>PDM also supports custom script shortcuts in the optional <code>[tool.pdm.scripts]</code> section of <code>pyproject.toml</code>.</p>
+<p>You can then run <code>pdm run &lt;script_name&gt;</code> to invoke the script in the context of your PDM project. For example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flask run -p 54321&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>And then in your terminal:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>start
+Flask<span class="w"> </span>server<span class="w"> </span>started<span class="w"> </span>at<span class="w"> </span>http://127.0.0.1:54321
+</code></pre></div></td></tr></table></div>
+<p>Any following arguments will be appended to the command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>start<span class="w"> </span>-h<span class="w"> </span><span class="m">0</span>.0.0.0
+Flask<span class="w"> </span>server<span class="w"> </span>started<span class="w"> </span>at<span class="w"> </span>http://0.0.0.0:54321
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Yarn-like script shortcuts</p>
+<p>There is a builtin shortcut making all scripts available as root commands
+as long as the script does not conflict with any builtin or plugin-contributed command.
+Said otherwise, if you have a <code>start</code> script, you can run both <code>pdm run start</code> and <code>pdm start</code>.
+But if you have an <code>install</code> script, only <code>pdm run install</code> will run it,
+<code>pdm install</code> will still run the builtin <code>install</code> command.</p>
+</div>
+<p>PDM supports 4 types of scripts:</p>
+<h3 id="cmd"><code>cmd</code><a class="headerlink" href="#cmd" title="Permanent link">#</a></h3>
+<p>Plain text scripts are regarded as normal command, or you can explicitly specify it:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flask run -p 54321&quot;</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>In some cases, such as when wanting to add comments between parameters, it might be more convenient
+to specify the command as an array instead of a string:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s">&quot;flask&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;run&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1"># Important comment here about always using port 54321</span>
+<span class="w">    </span><span class="s">&quot;-p&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;54321&quot;</span>
+<span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="shell"><code>shell</code><a class="headerlink" href="#shell" title="Permanent link">#</a></h3>
+<p>Shell scripts can be used to run more shell-specific tasks, such as pipeline and output redirecting.
+This is basically run via <code>subprocess.Popen()</code> with <code>shell=True</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">filter_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">shell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cat error.log|grep CRITICAL &gt; critical.log&quot;</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="call"><code>call</code><a class="headerlink" href="#call" title="Permanent link">#</a></h3>
+<p>The script can be also defined as calling a python function in the form <code>&lt;module_name&gt;:&lt;func_name&gt;</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">foobar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;foo_package.bar_module:main&quot;</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>The function can be supplied with literal arguments:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">foobar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;foo_package.bar_module:main(&#39;dev&#39;)&quot;</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="composite"><code>composite</code><a class="headerlink" href="#composite" title="Permanent link">#</a></h3>
+<p>This script kind execute other defined scripts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">lint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flake8&quot;</span>
+<span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pytest&quot;</span>
+<span class="n">all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;lint&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+<p>Running <code>pdm run all</code> will run <code>lint</code> first and then <code>test</code> if <code>lint</code> succeeded.</p>
+<p>You can also provide arguments to the called scripts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">lint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flake8&quot;</span>
+<span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pytest&quot;</span>
+<span class="n">all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;lint mypackage/&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;test -v tests/&quot;</span><span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Argument passed on the command line are given to each called task.</p>
+</div>
+<h2 id="script-options">Script Options<a class="headerlink" href="#script-options" title="Permanent link">#</a></h2>
+<h3 id="env"><code>env</code><a class="headerlink" href="#env" title="Permanent link">#</a></h3>
+<p>All environment variables set in the current shell can be seen by <code>pdm run</code> and will be expanded when executed.
+Besides, you can also define some fixed environment variables in your <code>pyproject.toml</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">start</span><span class="p">.</span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flask run -p 54321&quot;</span>
+<span class="n">start</span><span class="p">.</span><span class="n">env</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">FOO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FLASK_ENV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;development&quot;</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Note how we use <a href="https://github.com/toml-lang/toml">TOML's syntax</a> to define a composite dictionary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Environment variables specified on a composite task level will override those defined by called tasks.</p>
+</div>
+<h3 id="env_file"><code>env_file</code><a class="headerlink" href="#env_file" title="Permanent link">#</a></h3>
+<p>You can also store all environment variables in a dotenv file and let PDM read it:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">start</span><span class="p">.</span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flask run -p 54321&quot;</span>
+<span class="n">start</span><span class="p">.</span><span class="n">env_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.env&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>The variables within the dotenv file will <em>not</em> override any existing environment variables.
+If you want the dotenv file to override existing environment variables use the following:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">start</span><span class="p">.</span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flask run -p 54321&quot;</span>
+<span class="n">start</span><span class="p">.</span><span class="n">env_file</span><span class="p">.</span><span class="n">override</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.env&quot;</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A dotenv file specified on a composite task level will override those defined by called tasks.</p>
+</div>
+<h3 id="site_packages"><code>site_packages</code><a class="headerlink" href="#site_packages" title="Permanent link">#</a></h3>
+<p>To make sure the running environment is properly isolated from the outer Python interpreter,
+site-packages from the selected interpreter WON'T be loaded into <code>sys.path</code>, unless any of the following conditions holds:</p>
+<ol>
+<li>The executable is from <code>PATH</code> but not inside the <code>__pypackages__</code> folder.</li>
+<li><code>-s/--site-packages</code> flag is following <code>pdm run</code>.</li>
+<li><code>site_packages = true</code> is in either the script table or the global setting key <code>_</code>.</li>
+</ol>
+<p>Note that site-packages will always be loaded if running with PEP 582 enabled(without the <code>pdm run</code> prefix).</p>
+<h3 id="shared-options">Shared Options<a class="headerlink" href="#shared-options" title="Permanent link">#</a></h3>
+<p>If you want the options to be shared by all tasks run by <code>pdm run</code>,
+you can write them under a special key <code>_</code> in <code>[tool.pdm.scripts]</code> table:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">_</span><span class="p">.</span><span class="n">env_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.env&quot;</span>
+<span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flask run -p 54321&quot;</span>
+<span class="n">migrate_db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;flask db upgrade&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>Besides, inside the tasks, <code>PDM_PROJECT_ROOT</code> environment variable will be set to the project root.</p>
+<h3 id="arguments-placeholder">Arguments placeholder<a class="headerlink" href="#arguments-placeholder" title="Permanent link">#</a></h3>
+<p>By default, all user provided extra arguments are simply appended to the command (or to all the commands for <code>composite</code> tasks).</p>
+<p>If you want more control over the user provided extra arguments, you can use the <code>{args}</code> placeholder.
+It is available for all script types and will be interpolated properly for each:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;echo &#39;--before {args} --after&#39;&quot;</span>
+<span class="n">shell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">shell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;echo &#39;--before {args} --after&#39;&quot;</span><span class="p">}</span>
+<span class="n">composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;cmd --something&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;shell {args}&quot;</span><span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+<p>will produce the following interpolations (those are not real scripts, just here to illustrate the interpolation):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>cmd<span class="w"> </span>--user<span class="w"> </span>--provided
+--before<span class="w"> </span>--user<span class="w"> </span>--provided<span class="w"> </span>--after
+$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>cmd
+--before<span class="w"> </span>--after
+$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>shell<span class="w"> </span>--user<span class="w"> </span>--provided
+--before<span class="w"> </span>--user<span class="w"> </span>--provided<span class="w"> </span>--after
+$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>shell
+--before<span class="w"> </span>--after
+$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>composite<span class="w"> </span>--user<span class="w"> </span>--provided
+cmd<span class="w"> </span>--something
+shell<span class="w"> </span>--before<span class="w"> </span>--user<span class="w"> </span>--provided<span class="w"> </span>--after
+$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>composite
+cmd<span class="w"> </span>--something
+shell<span class="w"> </span>--before<span class="w"> </span>--after
+</code></pre></div></td></tr></table></div>
+<p>You may optionally provide default values that will be used if no user arguments are provided:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;echo &#39;--before {args:--default --value} --after&#39;&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>will produce the following:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--user<span class="w"> </span>--provided
+--before<span class="w"> </span>--user<span class="w"> </span>--provided<span class="w"> </span>--after
+$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span><span class="nb">test</span>
+--before<span class="w"> </span>--default<span class="w"> </span>--value<span class="w"> </span>--after
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As soon a placeholder is detected, arguments are not appended anymore.
+This is important for <code>composite</code> scripts because if a placeholder
+is detected on one of the subtasks, none for the subtasks will have
+the arguments appended, you need to explicitly pass the placeholder
+to every nested command requiring it.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>call</code> scripts don't support the <code>{args}</code> placeholder as they have
+access to <code>sys.argv</code> directly to handle such complexe cases and more.</p>
+</div>
+<h2 id="show-the-list-of-scripts">Show the List of Scripts<a class="headerlink" href="#show-the-list-of-scripts" title="Permanent link">#</a></h2>
+<p>Use <code>pdm run --list/-l</code> to show the list of available script shortcuts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>--list
+╭─────────────┬───────┬───────────────────────────╮
+│<span class="w"> </span>Name<span class="w">        </span>│<span class="w"> </span>Type<span class="w">  </span>│<span class="w"> </span>Description<span class="w">               </span>│
+├─────────────┼───────┼───────────────────────────┤
+│<span class="w"> </span>test_cmd<span class="w">    </span>│<span class="w"> </span>cmd<span class="w">   </span>│<span class="w"> </span>flask<span class="w"> </span>db<span class="w"> </span>upgrade<span class="w">          </span>│
+│<span class="w"> </span>test_script<span class="w"> </span>│<span class="w"> </span>call<span class="w">  </span>│<span class="w"> </span>call<span class="w"> </span>a<span class="w"> </span>python<span class="w"> </span><span class="k">function</span><span class="w">    </span>│
+│<span class="w"> </span>test_shell<span class="w">  </span>│<span class="w"> </span>shell<span class="w"> </span>│<span class="w"> </span>shell<span class="w"> </span><span class="nb">command</span><span class="w">             </span>│
+╰─────────────┴───────┴───────────────────────────╯
+</code></pre></div></td></tr></table></div>
+<p>You can add an <code>help</code> option with the description of the script, and it will be displayed in the <code>Description</code> column in the above output.</p>
+<h2 id="pre-post-scripts">Pre &amp; Post Scripts<a class="headerlink" href="#pre-post-scripts" title="Permanent link">#</a></h2>
+<p>Like <code>npm</code>, PDM also supports tasks composition by pre and post scripts, pre script will be run before the given task and post script will be run after.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.scripts]</span>
+<span class="n">pre_compress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{{ Run BEFORE the `compress` script }}&quot;</span>
+<span class="n">compress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tar czvf compressed.tar.gz data/&quot;</span>
+<span class="n">post_compress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{{ Run AFTER the `compress` script }}&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>In this example, <code>pdm run compress</code> will run all these 3 scripts sequentially.</p>
+<div class="admonition note">
+<p class="admonition-title">The pipeline fails fast</p>
+<p>In a pipeline of pre - self - post scripts, a failure will cancel the subsequent execution.</p>
+</div>
+<h2 id="hook-scripts">Hook Scripts<a class="headerlink" href="#hook-scripts" title="Permanent link">#</a></h2>
+<p>Under certain situations PDM will look for some special hook scripts for execution:</p>
+<ul>
+<li><code>post_init</code>: Run after <code>pdm init</code></li>
+<li><code>pre_install</code>: Run before installing packages</li>
+<li><code>post_install</code>: Run after packages are installed</li>
+<li><code>pre_lock</code>: Run before dependency resolution</li>
+<li><code>post_lock</code>: Run after dependency resolution</li>
+<li><code>pre_build</code>: Run before building distributions</li>
+<li><code>post_build</code>: Run after distributions are built</li>
+<li><code>pre_publish</code>: Run before publishinbg distributions</li>
+<li><code>post_publish</code>: Run after distributions are published</li>
+<li><code>pre_script</code>: Run before any script</li>
+<li><code>post_script</code>: Run after any script</li>
+<li><code>pre_run</code>: Run once before run script invocation</li>
+<li><code>post_script</code>: Run once after run script invocation</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pre &amp; post scripts can't receive any arguments.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Avoid name conflicts</p>
+<p>If there exists an <code>install</code> scripts under <code>[tool.pdm.scripts]</code> table, <code>pre_install</code>
+scripts can be triggered by both <code>pdm install</code> and <code>pdm run install</code>. So it is
+recommended to not use the preserved names.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Composite tasks can also have pre and post scripts.
+Called tasks will run their own pre and post scripts.</p>
+</div>
+<h2 id="skipping-scripts">Skipping scripts<a class="headerlink" href="#skipping-scripts" title="Permanent link">#</a></h2>
+<p>Because, sometimes it is desirable to run a script but without its hooks or pre and post scripts,
+there is a <code>--skip=:all</code> which will disable all hooks, pre and post.
+There is also <code>--skip=:pre</code> and <code>--skip=:post</code> allowing to respectively
+skip all <code>pre_*</code> hooks and all <code>post_*</code> hooks.</p>
+<p>It is also possible to need a pre script but not the post one,
+or to need all tasks from a composite tasks except one.
+For those use cases, there is a finer grained <code>--skip</code> parameter
+accepting a list of tasks or hooks name to exclude.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>run<span class="w"> </span>--skip<span class="w"> </span>pre_task1,task2<span class="w"> </span>my-composite
+</code></pre></div></td></tr></table></div>
+<p>This command will run the <code>my-composite</code> task and skip the <code>pre_task1</code> hook as well as the <code>task2</code> and its hooks.</p>
+<p>You can also provide you skip list in <code>PDM_SKIP_HOOKS</code> environment variable
+but it will be overridden as soon as the <code>--skip</code> parameter is provided.</p>
+<p>There is more details on hooks and pre/post scripts behavior on <a href="../hooks/">the dedicated hooks page</a>.</p>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 <a href="https://frostming.com">Frost Ming</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/pdm-project/pdm" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/pdm_project" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/Phn8smztpv" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      
+        <script src="../../assets/extra.js"></script>
+      
+    
+  </body>
+</html>
