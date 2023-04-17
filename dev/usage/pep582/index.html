@@ -12,7 +12,7 @@
         <link rel="prev" href="../venv/">
       
       
-        <link rel="next" href="../dependency/">
+        <link rel="next" href="../../reference/pep621/">
       
       <link rel="icon" href="../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
@@ -243,8 +243,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../pyproject/pep621/" class="md-tabs__link">
-        Writing pyproject.toml
+      <a href="../../reference/pep621/" class="md-tabs__link">
+        Reference
       </a>
     </li>
   
@@ -259,23 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../plugin/write/" class="md-tabs__link">
-        Plugins
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../dev/contributing/" class="md-tabs__link">
+      <a href="../../dev/write/" class="md-tabs__link">
         Development
       </a>
     </li>
@@ -381,7 +365,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Home
+        Introduction
       </a>
     </li>
   
@@ -395,7 +379,91 @@
   
     <li class="md-nav__item">
       <a href="../project/" class="md-nav__link">
-        Manage Project
+        New Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency/" class="md-nav__link">
+        Manage Dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish/" class="md-nav__link">
+        Build and Publish
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        Configure the Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scripts/" class="md-nav__link">
+        PDM Scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hooks/" class="md-nav__link">
+        Lifecycle and Hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        Advanced Usage
       </a>
     </li>
   
@@ -409,7 +477,7 @@
   
     <li class="md-nav__item">
       <a href="../venv/" class="md-nav__link">
-        Working with virtualenv
+        Working with Virtual Environments
       </a>
     </li>
   
@@ -492,9 +560,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#seek-for-other-ides-or-editors" class="md-nav__link">
-    Seek for other IDEs or editors
+  <a href="#emacs" class="md-nav__link">
+    Emacs
   </a>
+  
+    <nav class="md-nav" aria-label="Emacs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-pyprojecttoml-and-pyright" class="md-nav__link">
+    Using pyproject.toml and pyright
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eglot-pyright" class="md-nav__link">
+    eglot + pyright
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-mode-lsp-python-ms" class="md-nav__link">
+    LSP-Mode + lsp-python-ms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -507,90 +602,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dependency/" class="md-nav__link">
-        Manage Dependencies
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../scripts/" class="md-nav__link">
-        PDM Scripts
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hooks/" class="md-nav__link">
-        Lifecycle and hooks
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../advanced/" class="md-nav__link">
-        Advanced Usage
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cli_reference/" class="md-nav__link">
-        CLI Reference
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
-        Configurations
-      </a>
     </li>
   
 
@@ -620,14 +631,14 @@
       
       
         <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
-          Writing pyproject.toml
+          Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Writing pyproject.toml" data-md-level="1">
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Writing pyproject.toml
+          Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -637,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyproject/pep621/" class="md-nav__link">
+      <a href="../../reference/pep621/" class="md-nav__link">
         PEP 621 Metadata
       </a>
     </li>
@@ -651,8 +662,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyproject/tool-pdm/" class="md-nav__link">
-        PDM Tool Settings
+      <a href="../../reference/configuration/" class="md-nav__link">
+        Configurations
       </a>
     </li>
   
@@ -665,8 +676,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyproject/build/" class="md-nav__link">
+      <a href="../../reference/build/" class="md-nav__link">
         Build Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/" class="md-nav__link">
+        CLI Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/api/" class="md-nav__link">
+        API Reference
       </a>
     </li>
   
@@ -697,14 +736,14 @@
       
       
         <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
-          Plugins
+          Development
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Plugins" data-md-level="1">
+      <nav class="md-nav" aria-label="Development" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Plugins
+          Development
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -714,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/write/" class="md-nav__link">
+      <a href="../../dev/write/" class="md-nav__link">
         Write a plugin
       </a>
     </li>
@@ -728,62 +767,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/reference/" class="md-nav__link">
-        API Reference
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../plugin/fixtures/" class="md-nav__link">
+      <a href="../../dev/fixtures/" class="md-nav__link">
         Pytest fixtures
       </a>
     </li>
   
 
             
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
-          Development
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Development" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Development
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -911,9 +901,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#seek-for-other-ides-or-editors" class="md-nav__link">
-    Seek for other IDEs or editors
+  <a href="#emacs" class="md-nav__link">
+    Emacs
   </a>
+  
+    <nav class="md-nav" aria-label="Emacs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-pyprojecttoml-and-pyright" class="md-nav__link">
+    Using pyproject.toml and pyright
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eglot-pyright" class="md-nav__link">
+    eglot + pyright
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-mode-lsp-python-ms" class="md-nav__link">
+    LSP-Mode + lsp-python-ms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -973,12 +990,6 @@ for the nearest <code>__pypackage__</code> folder and append it to the <code>sys
 </details>
 <h2 id="configure-ide-to-support-pep-582">Configure IDE to support PEP 582<a class="headerlink" href="#configure-ide-to-support-pep-582" title="Permanent link">#</a></h2>
 <p>Now there are no built-in support or plugins for PEP 582 in most IDEs, you have to configure your tools manually.</p>
-<p>PDM will write and store project-wide configurations in <code>.pdm.toml</code> and you are recommended to add following lines
-in the <code>.gitignore</code>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>.pdm.toml
-__pypackages__/
-</code></pre></div></td></tr></table></div>
 <h3 id="pycharm">PyCharm<a class="headerlink" href="#pycharm" title="Permanent link">#</a></h3>
 <p>Mark <code>__pypackages__/&lt;major.minor&gt;/lib</code> as <a href="https://www.jetbrains.com/help/pycharm/configuring-project-structure.html#mark-dir-project-view">Sources Root</a>.
 Then, select as <a href="https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html#interpreter">Python interpreter</a> a Python installation with the same <code>&lt;major.minor&gt;</code> version.</p>
@@ -1086,7 +1097,107 @@ project's <code>pyproject.toml</code>.</p>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pyright]</span>
 <span class="n">extraPaths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;__pypackages__/&lt;major.minor&gt;/lib/&quot;</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="seek-for-other-ides-or-editors"><a href="../advanced/#integrate-with-other-ide-or-editors">Seek for other IDEs or editors</a><a class="headerlink" href="#seek-for-other-ides-or-editors" title="Permanent link">#</a></h3>
+<h3 id="emacs">Emacs<a class="headerlink" href="#emacs" title="Permanent link">#</a></h3>
+<p>You have a few options, but basically you'll want to tell an LSP client to add <code>__pypackages__</code> to the paths it looks at. Here are a few options that are available:</p>
+<h4 id="using-pyprojecttoml-and-pyright">Using <code>pyproject.toml</code> and pyright<a class="headerlink" href="#using-pyprojecttoml-and-pyright" title="Permanent link">#</a></h4>
+<p>Add this to your project's <code>pyproject.toml</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pyright]</span>
+<span class="n">extraPaths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;__pypackages__/&lt;major.minor&gt;/lib/&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="eglot-pyright">eglot + pyright<a class="headerlink" href="#eglot-pyright" title="Permanent link">#</a></h4>
+<p>Using <a href="https://github.com/microsoft/pyright">pyright</a> and <a href="https://github.com/joaotavora/eglot">eglot</a> (included in Emacs 29), add the following to your config:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">get-pdm-packages-path</span><span class="w"> </span><span class="p">()</span>
+<span class="w">  </span><span class="s">&quot;For the current PDM project, find the path to the packages.&quot;</span>
+<span class="w">  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nv">packages-path</span><span class="w"> </span><span class="p">(</span><span class="nv">string-trim</span><span class="w"> </span><span class="p">(</span><span class="nv">shell-command-to-string</span><span class="w"> </span><span class="s">&quot;pdm info --packages&quot;</span><span class="p">))))</span>
+<span class="w">    </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="nv">packages-path</span><span class="w"> </span><span class="s">&quot;/lib&quot;</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">my/eglot-workspace-config</span><span class="w"> </span><span class="p">(</span><span class="nv">server</span><span class="p">)</span>
+<span class="w">  </span><span class="s">&quot;For the current PDM project, dynamically generate a python lsp config.&quot;</span>
+<span class="w">  </span><span class="o">`</span><span class="p">(</span><span class="nb">:python\.analysis</span><span class="w"> </span><span class="p">(</span><span class="nb">:extraPaths</span><span class="w"> </span><span class="o">,</span><span class="p">(</span><span class="nf">vector</span><span class="w"> </span><span class="p">(</span><span class="nv">get-pdm-packages-path</span><span class="p">)))))</span>
+
+<span class="p">(</span><span class="k">setq-default</span><span class="w"> </span><span class="nv">eglot-workspace-configuration</span><span class="w"> </span><span class="nf">#&#39;</span><span class="nv">my/eglot-workspace-config</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>You'll want pyright installed either globally, or in your project (probably as a dev dependency). You can add this with, for example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>add<span class="w"> </span>--dev<span class="w"> </span>--group<span class="w"> </span>devel<span class="w"> </span>pyright
+</code></pre></div></td></tr></table></div>
+<h4 id="lsp-mode-lsp-python-ms">LSP-Mode + lsp-python-ms<a class="headerlink" href="#lsp-mode-lsp-python-ms" title="Permanent link">#</a></h4>
+<p>Below is a sample code snippet showing how to make PDM work with <a href="https://github.com/emacs-lsp/lsp-python-ms">lsp-python-ms</a> in Emacs. Contributed by <a href="https://github.com/pdm-project/pdm/discussions/372#discussion-3303501">@linw1995</a>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="c1">;; TODO: Cache result</span>
+<span class="w">  </span><span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">linw1995/pdm-get-python-executable</span><span class="w"> </span><span class="p">(</span><span class="kp">&amp;optional</span><span class="w"> </span><span class="nv">dir</span><span class="p">)</span>
+<span class="w">    </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nv">pdm-get-python-cmd</span><span class="w"> </span><span class="s">&quot;pdm info --python&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="p">(</span><span class="nv">string-trim</span>
+<span class="w">       </span><span class="p">(</span><span class="nv">shell-command-to-string</span>
+<span class="w">        </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="nv">dir</span>
+<span class="w">            </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="s">&quot;cd &quot;</span>
+<span class="w">                    </span><span class="nv">dir</span>
+<span class="w">                    </span><span class="s">&quot; &amp;&amp; &quot;</span>
+<span class="w">                    </span><span class="nv">pdm-get-python-cmd</span><span class="p">)</span>
+<span class="w">          </span><span class="nv">pdm-get-python-cmd</span><span class="p">)))))</span>
+
+<span class="w">  </span><span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">linw1995/pdm-get-packages-path</span><span class="w"> </span><span class="p">(</span><span class="kp">&amp;optional</span><span class="w"> </span><span class="nv">dir</span><span class="p">)</span>
+<span class="w">    </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nv">pdm-get-packages-cmd</span><span class="w"> </span><span class="s">&quot;pdm info --packages&quot;</span><span class="p">))</span>
+<span class="w">      </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="p">(</span><span class="nv">string-trim</span>
+<span class="w">               </span><span class="p">(</span><span class="nv">shell-command-to-string</span>
+<span class="w">                </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="nv">dir</span>
+<span class="w">                    </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="s">&quot;cd &quot;</span>
+<span class="w">                            </span><span class="nv">dir</span>
+<span class="w">                            </span><span class="s">&quot; &amp;&amp; &quot;</span>
+<span class="w">                            </span><span class="nv">pdm-get-packages-cmd</span><span class="p">)</span>
+<span class="w">                  </span><span class="nv">pdm-get-packages-cmd</span><span class="p">)))</span>
+<span class="w">              </span><span class="s">&quot;/lib&quot;</span><span class="p">)))</span>
+
+<span class="w">  </span><span class="p">(</span><span class="nb">use-package</span><span class="w"> </span><span class="nv">lsp-python-ms</span>
+<span class="w">    </span><span class="nb">:ensure</span><span class="w"> </span><span class="no">t</span>
+<span class="w">    </span><span class="nb">:init</span><span class="w"> </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">lsp-python-ms-auto-install-server</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">:hook</span><span class="w"> </span><span class="p">(</span><span class="nv">python-mode</span>
+<span class="w">           </span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="nb">lambda</span><span class="w"> </span><span class="p">()</span>
+<span class="w">               </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">lsp-python-ms-python-executable</span><span class="w"> </span><span class="p">(</span><span class="nv">linw1995/pdm-get-python-executable</span><span class="p">))</span>
+<span class="w">               </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">lsp-python-ms-extra-paths</span><span class="w"> </span><span class="p">(</span><span class="nf">vector</span><span class="w"> </span><span class="p">(</span><span class="nv">linw1995/pdm-get-packages-path</span><span class="p">)))</span>
+<span class="w">               </span><span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="ss">&#39;lsp-python-ms</span><span class="p">)</span>
+<span class="w">               </span><span class="p">(</span><span class="nv">lsp</span><span class="p">))))</span><span class="w">  </span><span class="c1">; or lsp-deferred</span>
+</code></pre></div></td></tr></table></div>
 
 
   
@@ -1161,7 +1272,7 @@ project's <code>pyproject.toml</code>.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>

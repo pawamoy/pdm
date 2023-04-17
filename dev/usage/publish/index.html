@@ -9,15 +9,17 @@
       
       
       
-        <link rel="prev" href="../changelog/">
+        <link rel="prev" href="../dependency/">
       
+      
+        <link rel="next" href="../config/">
       
       <link rel="icon" href="../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
     
     
       
-        <title>Benchmark - PDM</title>
+        <title>Build and Publish - PDM</title>
       
     
     
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#benchmark" class="md-skip">
+        <a href="#build-and-publish" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Benchmark
+              Build and Publish
             
           </span>
         </div>
@@ -217,13 +219,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link md-tabs__link--active">
         Usage
       </a>
     </li>
@@ -249,15 +253,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../write/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../dev/write/" class="md-tabs__link">
         Development
       </a>
     </li>
@@ -331,18 +333,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_1" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_1" tabindex="0" aria-expanded="true">
           Usage
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -374,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/project/" class="md-nav__link">
+      <a href="../project/" class="md-nav__link">
         New Project
       </a>
     </li>
@@ -388,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/dependency/" class="md-nav__link">
+      <a href="../dependency/" class="md-nav__link">
         Manage Dependencies
       </a>
     </li>
@@ -400,11 +404,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../usage/publish/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Build and Publish
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Build and Publish
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build-and-publish-separately" class="md-nav__link">
+    Build and publish separately
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -416,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/config/" class="md-nav__link">
+      <a href="../config/" class="md-nav__link">
         Configure the Project
       </a>
     </li>
@@ -430,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/scripts/" class="md-nav__link">
+      <a href="../scripts/" class="md-nav__link">
         PDM Scripts
       </a>
     </li>
@@ -444,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/hooks/" class="md-nav__link">
+      <a href="../hooks/" class="md-nav__link">
         Lifecycle and Hooks
       </a>
     </li>
@@ -458,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/advanced/" class="md-nav__link">
+      <a href="../advanced/" class="md-nav__link">
         Advanced Usage
       </a>
     </li>
@@ -472,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/venv/" class="md-nav__link">
+      <a href="../venv/" class="md-nav__link">
         Working with Virtual Environments
       </a>
     </li>
@@ -486,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/pep582/" class="md-nav__link">
+      <a href="../pep582/" class="md-nav__link">
         Working with PEP 582
       </a>
     </li>
@@ -611,20 +656,18 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -642,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../write/" class="md-nav__link">
+      <a href="../../dev/write/" class="md-nav__link">
         Write a plugin
       </a>
     </li>
@@ -656,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fixtures/" class="md-nav__link">
+      <a href="../../dev/fixtures/" class="md-nav__link">
         Pytest fixtures
       </a>
     </li>
@@ -670,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/" class="md-nav__link">
+      <a href="../../dev/contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -684,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../../dev/changelog/" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -696,21 +739,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../dev/benchmark/" class="md-nav__link">
         Benchmark
       </a>
-      
     </li>
   
 
@@ -757,6 +790,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build-and-publish-separately" class="md-nav__link">
+    Build and publish separately
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -774,8 +822,24 @@
 
 
 
-<h1 id="benchmark">Benchmark<a class="headerlink" href="#benchmark" title="Permanent link">#</a></h1>
-<p>This page has been removed, please visit https://lincolnloop.github.io/python-package-manager-shootout/ for a detailed benchmark report.</p>
+<h1 id="build-and-publish">Build and Publish<a class="headerlink" href="#build-and-publish" title="Permanent link">#</a></h1>
+<p>If you are developing a library, after adding dependencies to your project, and finishing the coding, it's time to build and publish your package. It is as simple as one command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>publish
+</code></pre></div></td></tr></table></div>
+<p>This will automatically build a wheel and a source distribution(sdist), and upload them to the PyPI index.</p>
+<p>To specify another repository other than PyPI, use the <code>--repository</code> option, the parameter can be either the upload URL or the name of the repository stored in the config file.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>publish<span class="w"> </span>--repository<span class="w"> </span>testpypi
+pdm<span class="w"> </span>publish<span class="w"> </span>--repository<span class="w"> </span>https://test.pypi.org/legacy/
+</code></pre></div></td></tr></table></div>
+<h2 id="build-and-publish-separately">Build and publish separately<a class="headerlink" href="#build-and-publish-separately" title="Permanent link">#</a></h2>
+<p>You can also build the package and upload it in two steps, to allow you to inspect the built artifacts before uploading.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>build
+</code></pre></div></td></tr></table></div>
+<p>There are many options to control the build process, depending on the backend used. Refer to the <a href="../../reference/build/">build configuration</a> section for more details.</p>
+<p>The artifacts will be created at <code>dist/</code> and able to upload to PyPI.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>publish<span class="w"> </span>--no-build
+</code></pre></div></td></tr></table></div>
 
 
   

@@ -9,15 +9,17 @@
       
       
       
-        <link rel="prev" href="../changelog/">
+        <link rel="prev" href="../../usage/pep582/">
       
+      
+        <link rel="next" href="../configuration/">
       
       <link rel="icon" href="../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
     
     
       
-        <title>Benchmark - PDM</title>
+        <title>PEP 621 Metadata - PDM</title>
       
     
     
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#benchmark" class="md-skip">
+        <a href="#pep-621-metadata" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Benchmark
+              PEP 621 Metadata
             
           </span>
         </div>
@@ -233,13 +235,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../reference/pep621/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Reference
       </a>
     </li>
@@ -249,15 +253,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../write/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../dev/write/" class="md-tabs__link">
         Development
       </a>
     </li>
@@ -506,18 +508,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
           Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -533,11 +537,114 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../reference/pep621/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PEP 621 Metadata
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         PEP 621 Metadata
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multiline-description" class="md-nav__link">
+    Multiline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-version" class="md-nav__link">
+    Package version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-specification" class="md-nav__link">
+    Dependency specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-dependencies" class="md-nav__link">
+    Optional dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-variables-expansion" class="md-nav__link">
+    Context variables expansion
+  </a>
+  
+    <nav class="md-nav" aria-label="Context variables expansion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-paths" class="md-nav__link">
+    Relative paths
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console-scripts" class="md-nav__link">
+    Console scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-points" class="md-nav__link">
+    Entry points
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -549,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         Configurations
       </a>
     </li>
@@ -563,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/build/" class="md-nav__link">
+      <a href="../build/" class="md-nav__link">
         Build Configuration
       </a>
     </li>
@@ -577,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/cli/" class="md-nav__link">
+      <a href="../cli/" class="md-nav__link">
         CLI Reference
       </a>
     </li>
@@ -591,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/api/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         API Reference
       </a>
     </li>
@@ -611,20 +718,18 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -642,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../write/" class="md-nav__link">
+      <a href="../../dev/write/" class="md-nav__link">
         Write a plugin
       </a>
     </li>
@@ -656,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fixtures/" class="md-nav__link">
+      <a href="../../dev/fixtures/" class="md-nav__link">
         Pytest fixtures
       </a>
     </li>
@@ -670,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/" class="md-nav__link">
+      <a href="../../dev/contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -684,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../../dev/changelog/" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -696,21 +801,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../dev/benchmark/" class="md-nav__link">
         Benchmark
       </a>
-      
     </li>
   
 
@@ -757,6 +852,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multiline-description" class="md-nav__link">
+    Multiline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-version" class="md-nav__link">
+    Package version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-specification" class="md-nav__link">
+    Dependency specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-dependencies" class="md-nav__link">
+    Optional dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-variables-expansion" class="md-nav__link">
+    Context variables expansion
+  </a>
+  
+    <nav class="md-nav" aria-label="Context variables expansion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-paths" class="md-nav__link">
+    Relative paths
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#console-scripts" class="md-nav__link">
+    Console scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-points" class="md-nav__link">
+    Entry points
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -774,8 +946,179 @@
 
 
 
-<h1 id="benchmark">Benchmark<a class="headerlink" href="#benchmark" title="Permanent link">#</a></h1>
-<p>This page has been removed, please visit https://lincolnloop.github.io/python-package-manager-shootout/ for a detailed benchmark report.</p>
+<h1 id="pep-621-metadata">PEP 621 Metadata<a class="headerlink" href="#pep-621-metadata" title="Permanent link">#</a></h1>
+<p>The project metadata are stored in the <code>pyproject.toml</code>. The specifications are defined by <a href="https://www.python.org/dev/peps/pep-0621/">PEP 621</a>, <a href="https://www.python.org/dev/peps/pep-0631/">PEP 631</a> and <a href="https://www.python.org/dev/peps/pep-0639/">PEP 639</a>. Read the detailed specifications in the PEPs.</p>
+<p><em>In the following part of this document, metadata should be written under <code>[project]</code> table if not given explicitly.</em></p>
+<h2 id="multiline-description">Multiline description<a class="headerlink" href="#multiline-description" title="Permanent link">#</a></h2>
+<p>You can split a long description onto multiple lines, thanks to TOML support for multiline strings.
+Just remember to escape new lines, so the final description appears
+<a href="https://packaging.python.org/specifications/core-metadata/#summary">on one line only in your package metadata</a>.
+Indentation will be removed as well when escaping new lines:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;&quot;\</span>
+<span class="s">    Lorem ipsum dolor sit amet, consectetur adipiscing elit, \</span>
+<span class="s">    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \</span>
+<span class="s">    Ut enim ad minim veniam, quis nostrud exercitation ullamco \</span>
+<span class="s">    laboris nisi ut aliquip ex ea commodo consequat.\</span>
+<span class="s">&quot;&quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>See <a href="https://toml.io/en/v1.0.0#string">TOML's specification on strings</a>.</p>
+<h2 id="package-version">Package version<a class="headerlink" href="#package-version" title="Permanent link">#</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Static</label><label for="__tabbed_1_2">Dynamic</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project]</span>
+<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project]</span>
+<span class="p">...</span>
+<span class="n">dynamic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;version&quot;</span><span class="p">]</span>
+
+<span class="k">[tool.pdm]</span>
+<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;file&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mypackage/__version__.py&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>The version will be read from the <code>mypackage/__version__.py</code> file searching for the pattern: <code>__version__ = "{version}"</code>.</p>
+<p>Read more information about other configurations in <a href="../build/#dynamic-versioning">dynamic versioning</a>.</p>
+</div>
+</div>
+</div>
+<h2 id="dependency-specification">Dependency specification<a class="headerlink" href="#dependency-specification" title="Permanent link">#</a></h2>
+<p>The <code>project.dependencies</code> is an array of dependency specification strings following the <a href="https://www.python.org/dev/peps/pep-0440/">PEP 440</a>
+and <a href="https://www.python.org/dev/peps/pep-0508/">PEP 508</a>.</p>
+<p>Examples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project]</span>
+<span class="p">...</span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="c1"># Named requirement</span>
+<span class="w">    </span><span class="s">&quot;requests&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1"># Named requirement with version specifier</span>
+<span class="w">    </span><span class="s">&quot;flask &gt;= 1.1.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1"># Requirement with environment marker</span>
+<span class="w">    </span><span class="s">&quot;pywin32; sys_platform == &#39;win32&#39;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1"># URL requirement</span>
+<span class="w">    </span><span class="s">&quot;pip @ git+https://github.com/pypa/pip.git@20.3.1&quot;</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="optional-dependencies">Optional dependencies<a class="headerlink" href="#optional-dependencies" title="Permanent link">#</a></h2>
+<p>You can have some requirements optional, which is similar to <code>setuptools</code>' <code>extras_require</code> parameter.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project.optional-dependencies]</span>
+<span class="n">socks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s">&#39;PySocks &gt;= 1.5.6, != 1.5.7, &lt; 2&#39;</span><span class="w"> </span><span class="p">]</span>
+<span class="n">tests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s">&#39;ddt &gt;= 1.2.2, &lt; 2&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&#39;pytest &lt; 6&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&#39;mock &gt;= 1.0.1, &lt; 4; python_version &lt; &quot;3.4&quot;&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>To install a group of optional dependencies:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>install<span class="w"> </span>-G<span class="w"> </span>socks
+</code></pre></div></td></tr></table></div>
+<p><code>-G</code> option can be given multiple times to include more than one group.</p>
+<h2 id="context-variables-expansion">Context variables expansion<a class="headerlink" href="#context-variables-expansion" title="Permanent link">#</a></h2>
+<p>Depending on which build backend you are using, PDM will expand some variables in the dependency strings.</p>
+<h3 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">#</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">pdm-pep517</label><label for="__tabbed_2_2">hatchling</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project]</span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;flask @ https://${USERNAME}:${PASSWORD}/artifacts.io/Flask-1.1.2.tar.gz&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project]</span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;flask @ https://{env:USERNAME}:{env:PASSWORD}/artifacts.io/Flask-1.1.2.tar.gz&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>Find more usages <a href="https://hatch.pypa.io/dev/config/context/#environment-variables">here</a></p>
+</div>
+</div>
+</div>
+<p>Don't worry about credential leakage, the environment variables will be expanded when needed and kept untouched in the lock file.</p>
+<h3 id="relative-paths">Relative paths<a class="headerlink" href="#relative-paths" title="Permanent link">#</a></h3>
+<p>When you add a package from a relative path, PDM will automatically save it as a relative path for <code>pdm-pep517</code> and <code>hatchling</code>.</p>
+<p>For example, if you run <code>pdm add ./my-package</code>, it will result in the following line in <code>pyproject.toml</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">pdm-pep517</label><label for="__tabbed_3_2">hatchling</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project]</span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;my-package @ file:///${PROJECT_ROOT}/my-package&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project]</span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;my-package @ {root:uri}/my-package&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>By default, hatchling doesn't support <a href="https://hatch.pypa.io/dev/config/dependency/#direct-references">direct references</a>
+in the dependency string, you need to turn it on in <code>pyproject.toml</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.hatch.metadata]</span>
+<span class="n">allow-direct-references</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<p>The relative path will be expanded based on the project root when installing or locking.</p>
+<h2 id="console-scripts">Console scripts<a class="headerlink" href="#console-scripts" title="Permanent link">#</a></h2>
+<p>The following content:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project.scripts]</span>
+<span class="n">mycli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mycli.__main__:main&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>will be translated to <code>setuptools</code> style:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">entry_points</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;mycli=mycli.__main__:main&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Also, <code>[project.gui-scripts]</code> will be translated to <code>gui_scripts</code> entry points group in <code>setuptools</code> style.</p>
+<h2 id="entry-points">Entry points<a class="headerlink" href="#entry-points" title="Permanent link">#</a></h2>
+<p>Other types of entry points are given by <code>[project.entry-points.&lt;type&gt;]</code> section, with the same
+format of <code>[project.scripts]</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project.entry-points.pytest11]</span>
+<span class="n">myplugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mypackage.plugin:pytest_plugin&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>If the entry point name contains dots or other special characters, wrap it in quotes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[project.entry-points.&quot;flake8.extension&quot;]</span>
+<span class="n">myplugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;mypackage.plugin:flake8_plugin&quot;</span>
+</code></pre></div></td></tr></table></div>
 
 
   

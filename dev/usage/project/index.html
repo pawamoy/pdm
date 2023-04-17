@@ -12,14 +12,14 @@
         <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../venv/">
+        <link rel="next" href="../dependency/">
       
       <link rel="icon" href="../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
     
     
       
-        <title>Manage Project - PDM</title>
+        <title>New Project - PDM</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manage-project" class="md-skip">
+        <a href="#new-project" class="md-skip">
           Skip to content
         </a>
       
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Manage Project
+              New Project
             
           </span>
         </div>
@@ -243,8 +243,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../pyproject/pep621/" class="md-tabs__link">
-        Writing pyproject.toml
+      <a href="../../reference/pep621/" class="md-tabs__link">
+        Reference
       </a>
     </li>
   
@@ -259,23 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../plugin/write/" class="md-tabs__link">
-        Plugins
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../dev/contributing/" class="md-tabs__link">
+      <a href="../../dev/write/" class="md-tabs__link">
         Development
       </a>
     </li>
@@ -381,7 +365,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Home
+        Introduction
       </a>
     </li>
   
@@ -404,12 +388,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Manage Project
+          New Project
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Manage Project
+        New Project
       </a>
       
         
@@ -432,100 +416,39 @@
     Choose a Python interpreter
   </a>
   
-    <nav class="md-nav" aria-label="Choose a Python interpreter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-requires-python-controls-the-project" class="md-nav__link">
-    How requires-python controls the project
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualenv-or-not" class="md-nav__link">
+    Virtualenv or not
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#library-or-application" class="md-nav__link">
+    Library or Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-requires-python-value" class="md-nav__link">
+    Set requires-python value
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#working-with-python-37" class="md-nav__link">
     Working with Python &lt; 3.7
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#build-distribution-artifacts" class="md-nav__link">
-    Build distribution artifacts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-the-project" class="md-nav__link">
-    Configure the project
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-pypi-indexes" class="md-nav__link">
-    Configure PyPI indexes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publish-the-project-to-pypi" class="md-nav__link">
-    Publish the project to PyPI
-  </a>
-  
-    <nav class="md-nav" aria-label="Publish the project to PyPI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-repository-secrets-for-upload" class="md-nav__link">
-    Configure the repository secrets for upload
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cache-the-installation-of-wheels" class="md-nav__link">
-    Cache the installation of wheels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-the-current-python-environment" class="md-nav__link">
-    Show the current Python environment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-global-project" class="md-nav__link">
-    Manage global project
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#import-project-metadata-from-existing-project-files" class="md-nav__link">
-    Import project metadata from existing project files
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#export-locked-packages-to-alternative-formats" class="md-nav__link">
-    Export locked packages to alternative formats
+  <a href="#import-the-project-from-other-package-managers" class="md-nav__link">
+    Import the project from other package managers
   </a>
   
 </li>
@@ -538,15 +461,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hide-the-credentials-from-pyprojecttoml" class="md-nav__link">
-    Hide the credentials from pyproject.toml
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-caches" class="md-nav__link">
-    Manage caches
+  <a href="#show-the-current-python-environment" class="md-nav__link">
+    Show the current Python environment
   </a>
   
 </li>
@@ -566,36 +482,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../venv/" class="md-nav__link">
-        Working with virtualenv
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pep582/" class="md-nav__link">
-        Working with PEP 582
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../dependency/" class="md-nav__link">
         Manage Dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish/" class="md-nav__link">
+        Build and Publish
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        Configure the Project
       </a>
     </li>
   
@@ -623,7 +539,7 @@
   
     <li class="md-nav__item">
       <a href="../hooks/" class="md-nav__link">
-        Lifecycle and hooks
+        Lifecycle and Hooks
       </a>
     </li>
   
@@ -650,8 +566,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli_reference/" class="md-nav__link">
-        CLI Reference
+      <a href="../venv/" class="md-nav__link">
+        Working with Virtual Environments
       </a>
     </li>
   
@@ -664,8 +580,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
-        Configurations
+      <a href="../pep582/" class="md-nav__link">
+        Working with PEP 582
       </a>
     </li>
   
@@ -696,14 +612,14 @@
       
       
         <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
-          Writing pyproject.toml
+          Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Writing pyproject.toml" data-md-level="1">
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Writing pyproject.toml
+          Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -713,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyproject/pep621/" class="md-nav__link">
+      <a href="../../reference/pep621/" class="md-nav__link">
         PEP 621 Metadata
       </a>
     </li>
@@ -727,8 +643,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyproject/tool-pdm/" class="md-nav__link">
-        PDM Tool Settings
+      <a href="../../reference/configuration/" class="md-nav__link">
+        Configurations
       </a>
     </li>
   
@@ -741,8 +657,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyproject/build/" class="md-nav__link">
+      <a href="../../reference/build/" class="md-nav__link">
         Build Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/" class="md-nav__link">
+        CLI Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/api/" class="md-nav__link">
+        API Reference
       </a>
     </li>
   
@@ -773,14 +717,14 @@
       
       
         <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
-          Plugins
+          Development
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Plugins" data-md-level="1">
+      <nav class="md-nav" aria-label="Development" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Plugins
+          Development
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -790,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/write/" class="md-nav__link">
+      <a href="../../dev/write/" class="md-nav__link">
         Write a plugin
       </a>
     </li>
@@ -804,62 +748,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/reference/" class="md-nav__link">
-        API Reference
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../plugin/fixtures/" class="md-nav__link">
+      <a href="../../dev/fixtures/" class="md-nav__link">
         Pytest fixtures
       </a>
     </li>
   
 
             
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
-          Development
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Development" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Development
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -955,100 +850,39 @@
     Choose a Python interpreter
   </a>
   
-    <nav class="md-nav" aria-label="Choose a Python interpreter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-requires-python-controls-the-project" class="md-nav__link">
-    How requires-python controls the project
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualenv-or-not" class="md-nav__link">
+    Virtualenv or not
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#library-or-application" class="md-nav__link">
+    Library or Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-requires-python-value" class="md-nav__link">
+    Set requires-python value
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#working-with-python-37" class="md-nav__link">
     Working with Python &lt; 3.7
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#build-distribution-artifacts" class="md-nav__link">
-    Build distribution artifacts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-the-project" class="md-nav__link">
-    Configure the project
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-pypi-indexes" class="md-nav__link">
-    Configure PyPI indexes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publish-the-project-to-pypi" class="md-nav__link">
-    Publish the project to PyPI
-  </a>
-  
-    <nav class="md-nav" aria-label="Publish the project to PyPI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-repository-secrets-for-upload" class="md-nav__link">
-    Configure the repository secrets for upload
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cache-the-installation-of-wheels" class="md-nav__link">
-    Cache the installation of wheels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#show-the-current-python-environment" class="md-nav__link">
-    Show the current Python environment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-global-project" class="md-nav__link">
-    Manage global project
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#import-project-metadata-from-existing-project-files" class="md-nav__link">
-    Import project metadata from existing project files
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#export-locked-packages-to-alternative-formats" class="md-nav__link">
-    Export locked packages to alternative formats
+  <a href="#import-the-project-from-other-package-managers" class="md-nav__link">
+    Import the project from other package managers
   </a>
   
 </li>
@@ -1061,15 +895,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hide-the-credentials-from-pyprojecttoml" class="md-nav__link">
-    Hide the credentials from pyproject.toml
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manage-caches" class="md-nav__link">
-    Manage caches
+  <a href="#show-the-current-python-environment" class="md-nav__link">
+    Show the current Python environment
   </a>
   
 </li>
@@ -1093,24 +920,70 @@
 
 
 
-<h1 id="manage-project">Manage Project<a class="headerlink" href="#manage-project" title="Permanent link">#</a></h1>
+<h1 id="new-project">New Project<a class="headerlink" href="#new-project" title="Permanent link">#</a></h1>
+<p>To start with, create a new project with <a href="../../reference/cli/#exec-0--init"><code>pdm init</code></a>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>my-project<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>my-project
+pdm<span class="w"> </span>init
+</code></pre></div></td></tr></table></div>
+<p>You will need to answer a few questions, to help PDM to create a <code>pyproject.toml</code> file for you.</p>
 <h2 id="choose-a-python-interpreter">Choose a Python interpreter<a class="headerlink" href="#choose-a-python-interpreter" title="Permanent link">#</a></h2>
-<p>If you have used <a href="../cli_reference/#exec-0--init"><code>pdm init</code></a>, you must have already seen how PDM detects and selects the Python
-interpreter. After initialized, you can also change the settings by <code>pdm use &lt;python_version_or_path&gt;</code>.
-The argument can be either a version specifier of any length, or a relative or absolute path to the
-python interpreter, but remember the Python interpreter must conform with the <code>requires-python</code>
-constraint in the project file.</p>
-<div class="admonition note">
-<p class="admonition-title">Application or Library</p>
-<p>You may have noticed that PDM will ask you whether the project is a library to be uploaded to PyPI. <a href="https://pipenv.pypa.io/en/latest/advanced/#pipfile-vs-setup-py">Here is an good explanation</a> of the difference between them. PDM knows that by inspecting the <code>project.name</code> field in <code>pyproject.toml</code>. If it is not empty, it will be considered as a library. A library can be built by <code>pdm build</code> or other PEP 517 builders, and itself will be installed in <em>editable</em> mode every time you execute <code>pdm sync</code> or <code>pdm install</code>, unless opted out with <code>--no-self</code> option. On the contrary, an application isn't installable because it's missing the project <code>name</code>.</p>
-</div>
-<h3 id="how-requires-python-controls-the-project">How <code>requires-python</code> controls the project<a class="headerlink" href="#how-requires-python-controls-the-project" title="Permanent link">#</a></h3>
-<p>PDM respects the value of <code>requires-python</code> in the way that it tries to pick package candidates that can work
-on all python versions that <code>requires-python</code> contains. For example, if <code>requires-python</code> is <code>&gt;=2.7</code>, PDM will try
-to find the latest version of <code>foo</code>, whose <code>requires-python</code> version range is a <strong>superset</strong> of <code>&gt;=2.7</code>.</p>
-<p>So, make sure you write <code>requires-python</code> properly if you don't want any outdated packages to be locked.</p>
-<h3 id="working-with-python-37">Working with Python &lt; 3.7<a class="headerlink" href="#working-with-python-37" title="Permanent link">#</a></h3>
-<p>Although PDM run on Python 3.7 and above, you can still have lower Python versions for your <strong>working project</strong>. But remember, if your project is a library, which needs to be built, published or installed, you make sure the PEP 517 build backend being used supports the lowest Python version you need. For instance, the default backend <code>pdm-pep517</code> only works on Python 3.7+, so if you run <code>pdm build</code> on a project with Python 3.6, you will get an error. Most modern build backends have dropped the support for Python 3.6 and lower, so it is highly recommended to upgrade the Python version to 3.7+. Here are the supported Python range for some commonly used build backends, we only list those that support PEP 621 since otherwise PDM can't work with them.</p>
+<p>At first, you need to choose a Python interpreter from a list of Python versions installed on your machine. The interpreter path
+will be stored in <code>.pdm-python</code> and used by subsequent commands. You can also change it later with <a href="../../reference/cli/#exec-0--use"><code>pdm use</code></a>.</p>
+<p>Alternatively, you can specify the Python interpreter path via <code>PDM_PYTHON</code> environment variable. When it is set, the path saved in <code>.pdm-python</code> will be ignored.</p>
+<h2 id="virtualenv-or-not">Virtualenv or not<a class="headerlink" href="#virtualenv-or-not" title="Permanent link">#</a></h2>
+<p>After you select the Python interpreter, PDM will ask you whether you want to create a virtual environment for the project.
+If you choose yes, PDM will create a virtual environment in the project root directory, and use it as the Python interpreter
+for the project.</p>
+<p>If the selected Python interpreter is in a virtual environment, PDM will use it as the project environment and install dependencies
+into it. Otherwise, <code>__pypackages__</code> will be created in the project root and dependencies will be installed into it.</p>
+<p>For the difference between these two approaches, please refer to the corresponding sections in the docs:</p>
+<ul>
+<li><a href="../venv/">Virtualenv</a></li>
+<li><a href="../pep582/"><code>__pypackages__</code>(PEP 582)</a></li>
+</ul>
+<h2 id="library-or-application">Library or Application<a class="headerlink" href="#library-or-application" title="Permanent link">#</a></h2>
+<p>A library and an application differ in many ways, <a href="https://pipenv.pypa.io/en/latest/advanced/#pipfile-vs-setup-py">here is a good explanation</a> for them. In short, a library is a package that is intended to be installed and used by other projects.
+Usually it also needs to be uploaded to PyPI. An application, on the other hand, is one that is directly facing end users and may need to be deployed into production.</p>
+<p>In PDM, if you choose to create a library, PDM will add a <code>name</code>, <code>version</code> field to the <code>pyproject.toml</code> file, as well as a <code>[build-system]</code> table for the <a href="../../reference/build/">build backend</a>, which is only useful if your project needs to be built and distributed. So you need to manually add these fields to <code>pyproject.toml</code> if you want to change the project from an application to a library. Also, a library project will be installed into the environment when you run <code>pdm install</code> or <code>pdm sync</code>, unless <code>--no-self</code> is specified.</p>
+<h2 id="set-requires-python-value">Set <code>requires-python</code> value<a class="headerlink" href="#set-requires-python-value" title="Permanent link">#</a></h2>
+<p>You need to set an appropriate <code>requires-python</code> value for your project. This is an important property that affects how dependencies are resolved. Basically, each package's <code>requires-python</code> must <em>cover</em> the project's <code>requires-python</code> range. For example, consider the following setup:</p>
+<ul>
+<li>Project: <code>requires-python = "&gt;=3.9"</code></li>
+<li>Package <code>foo</code>: <code>requires-python = "&gt;=3.7,&lt;3.11"</code></li>
+</ul>
+<p>Resolving the dependencies will cause a <code>ResolutionImpossible</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Unable to find a resolution because the following dependencies don&#39;t work
+on all Python versions defined by the project&#39;s `requires-python`
+</code></pre></div></td></tr></table></div>
+<p>Because the dependency's <code>requires-python</code> is <code>&gt;=3.7,&lt;3.11</code>, it <em>doesn't</em> cover the project's <code>requires-python</code> range of <code>&gt;=3.9</code>. In other words, the project promises to work on Python 3.11 and above, but the dependency doesn't support it. Since PDM creates a cross-platform lockfile that should work on all Python versions within the <code>requires-python</code> range, it can't find a valid resolution.
+To fix this, you need add a maximum version to <code>requires-python</code>, like <code>&gt;=3.9,&lt;3.11</code>.</p>
+<p>The value of <code>requires-python</code> is a <a href="https://peps.python.org/pep-0440/#version-specifiers">version specifier as defined in PEP 440</a>. Here are some examples:</p>
+<table>
+<thead>
+<tr>
+<th><code>requires-python</code></th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;=3.7</code></td>
+<td>Python 3.7 and above</td>
+</tr>
+<tr>
+<td><code>&gt;=3.7,&lt;3.11</code></td>
+<td>Python 3.7, 3.8 and 3.10</td>
+</tr>
+<tr>
+<td><code>&gt;=3.6,!=3.8.*,!=3.9.*</code></td>
+<td>Python 3.6 and above, except 3.8 and 3.9</td>
+</tr>
+</tbody>
+</table>
+<h2 id="working-with-python-37">Working with Python &lt; 3.7<a class="headerlink" href="#working-with-python-37" title="Permanent link">#</a></h2>
+<p>Although PDM run on Python 3.7 and above, you can still have lower Python versions for your <strong>working project</strong>. But remember, if your project is a library, which needs to be built, published or installed, you make sure the PEP 517 build backend being used supports the lowest Python version you need. For instance, the default backend <code>pdm-pep517</code> only works on Python 3.7+, so if you run <a href="../../reference/cli/#exec-0--build"><code>pdm build</code></a> on a project with Python 3.6, you will get an error. Most modern build backends have dropped the support for Python 3.6 and lower, so it is highly recommended to upgrade the Python version to 3.7+. Here are the supported Python range for some commonly used build backends, we only list those that support PEP 621 since otherwise PDM can't work with them.</p>
 <table>
 <thead>
 <tr>
@@ -1148,159 +1021,30 @@ to find the latest version of <code>foo</code>, whose <code>requires-python</cod
 </tbody>
 </table>
 <p>Note that if your project is an application(without <code>name</code> metadata), the above limitation of backends don't apply, since you don't need a build backend after all, and you can use a Python version up to <code>2.7</code>.</p>
-<h2 id="build-distribution-artifacts">Build distribution artifacts<a class="headerlink" href="#build-distribution-artifacts" title="Permanent link">#</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>build
--<span class="w"> </span>Building<span class="w"> </span>sdist...
--<span class="w"> </span>Built<span class="w"> </span>pdm-test-0.0.0.tar.gz
--<span class="w"> </span>Building<span class="w"> </span>wheel...
--<span class="w"> </span>Built<span class="w"> </span>pdm_test-0.0.0-py3-none-any.whl
-</code></pre></div></td></tr></table></div>
-<p>The artifacts will be available at <code>dist/</code> and able to upload to PyPI.</p>
-<h2 id="configure-the-project">Configure the project<a class="headerlink" href="#configure-the-project" title="Permanent link">#</a></h2>
-<p>PDM's <code>config</code> command works just like <code>git config</code>, except that <code>--list</code> isn't needed to
-show configurations.</p>
-<p>Show the current configurations:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>config
-</code></pre></div></td></tr></table></div>
-<p>Get one single configuration:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>config<span class="w"> </span>pypi.url
-</code></pre></div></td></tr></table></div>
-<p>Change a configuration value and store in home configuration:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>config<span class="w"> </span>pypi.url<span class="w"> </span><span class="s2">&quot;https://test.pypi.org/simple&quot;</span>
-</code></pre></div></td></tr></table></div>
-<p>By default, the configuration are changed globally, if you want to make the config seen by this project only, add a <code>--local</code> flag:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>pypi.url<span class="w"> </span><span class="s2">&quot;https://test.pypi.org/simple&quot;</span>
-</code></pre></div></td></tr></table></div>
-<p>Any local configurations will be stored in <code>.pdm.toml</code> under the project root directory.</p>
-<p>The configuration files are searched in the following order:</p>
+<h2 id="import-the-project-from-other-package-managers">Import the project from other package managers<a class="headerlink" href="#import-the-project-from-other-package-managers" title="Permanent link">#</a></h2>
+<p>If you are already using other package manager tools like Pipenv or Poetry, it is easy to migrate to PDM.
+PDM provides <code>import</code> command so that you don't have to initialize the project manually, it now supports:</p>
 <ol>
-<li><code>&lt;PROJECT_ROOT&gt;/.pdm.toml</code> - The project configuration</li>
-<li><code>&lt;CONFIG_ROOT&gt;/config.toml</code> - The home configuration</li>
-<li><code>&lt;SITE_CONFIG_ROOT&gt;/config.toml</code> - The site configuration</li>
+<li>Pipenv's <code>Pipfile</code></li>
+<li>Poetry's section in <code>pyproject.toml</code></li>
+<li>Flit's section in <code>pyproject.toml</code></li>
+<li><code>requirements.txt</code> format used by pip</li>
+<li>setuptools <code>setup.py</code>(It requires <code>setuptools</code> to be installed in the project environment. You can do this by configuring <code>venv.with_pip</code> to <code>true</code> for venv and <code>pdm add setuptools</code> for <code>__pypackages__</code>)</li>
 </ol>
-<p>where <code>&lt;CONFIG_ROOT&gt;</code> is:</p>
-<ul>
-<li><code>$XDG_CONFIG_HOME/pdm</code> (<code>~/.config/pdm</code> in most cases) on Linux as defined by <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG Base Directory Specification</a></li>
-<li><code>~/Library/Preferences/pdm</code> on MacOS as defined by <a href="https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html">Apple File System Basics</a></li>
-<li><code>%USERPROFILE%\AppData\Local\pdm</code> on Windows as defined in <a href="https://docs.microsoft.com/en-us/windows/win32/shell/known-folders">Known folders</a></li>
-</ul>
-<p>and <code>&lt;SITE_CONFIG_ROOT&gt;</code> is:</p>
-<ul>
-<li><code>$XDG_CONFIG_DIRS/pdm</code> (<code>/etc/xdg/pdm</code> in most cases) on Linux as defined by <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG Base Directory Specification</a></li>
-<li><code>/Library/Preferences/pdm</code> on MacOS as defined by <a href="https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html">Apple File System Basics</a></li>
-<li><code>C:\ProgramData\pdm\pdm</code> on Windows as defined in <a href="https://docs.microsoft.com/en-us/windows/win32/shell/known-folders">Known folders</a></li>
-</ul>
-<p>If <code>-g/--global</code> option is used, the first item will be replaced by <code>&lt;CONFIG_ROOT&gt;/global-project/.pdm.toml</code>.</p>
-<p>You can find all available configuration items in <a href="../configuration/">Configuration Page</a>.</p>
-<h2 id="configure-pypi-indexes">Configure PyPI indexes<a class="headerlink" href="#configure-pypi-indexes" title="Permanent link">#</a></h2>
-<p>From 2.4.0, PDM supports multiple PyPI indexes in the configuration file. To add a new index, include the following in the configuration file:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[pypi.extra]</span>
-<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://extra.pypi.org/simple&quot;</span>
-<span class="n">verify_ssl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
-</code></pre></div></td></tr></table></div>
-<p>The available options are:</p>
-<ul>
-<li><code>url</code>: The URL of the index</li>
-<li><code>verify_ssl</code>: (Optional)Whether to verify SSL certificates, default to <code>true</code></li>
-<li><code>username</code>: (Optional)The username for the index</li>
-<li><code>password</code>: (Optional)The password for the index</li>
-<li><code>type</code>: (Optional) <code>index</code> or <code>find_links</code>, default to <code>index</code></li>
-</ul>
-<p>To configure the <strong>main</strong> index, omit the name of the index:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[pypi]</span>
-<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://pypi.org/simple&quot;</span>
-<span class="n">verify_ssl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-</code></pre></div></td></tr></table></div>
-<p>The index config can be also retrieved or updated via <code>pdm config</code> command:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Get the url of the index named &quot;extra&quot;</span>
-pdm<span class="w"> </span>config<span class="w"> </span>pypi.extra.url
-<span class="c1"># Set the username and password of the index named &quot;extra&quot;</span>
-pdm<span class="w"> </span>config<span class="w"> </span>pypi.extra.username<span class="w"> </span><span class="s2">&quot;foo&quot;</span>
-pdm<span class="w"> </span>config<span class="w"> </span>pypi.extra.password<span class="w"> </span><span class="s2">&quot;password4foo&quot;</span>
-</code></pre></div></td></tr></table></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Configured indexes will be tried <strong>after</strong> the sources in <code>pyproject.toml</code>, if you want to completely ignore the
-locally configured indexes, including the main index, set the config value <code>pypi.ignore_stored_index</code>
-to <code>False</code> and only the sources in <code>pyproject.toml</code> will be honored.</p>
+<p>Also, when you are executing <a href="../../reference/cli/#exec-0--init"><code>pdm init</code></a> or <a href="../../reference/cli/#exec-0--install"><code>pdm install</code></a>, PDM can auto-detect possible files to import if your PDM project has not been initialized yet.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Converting a <code>setup.py</code> will execute the file with the project interpreter. Make sure <code>setuptools</code> is installed with the interpreter and the <code>setup.py</code> is trusted.</p>
 </div>
-<h2 id="publish-the-project-to-pypi">Publish the project to PyPI<a class="headerlink" href="#publish-the-project-to-pypi" title="Permanent link">#</a></h2>
-<p>With PDM, you can build and then upload your project to PyPI in one step.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>publish
-</code></pre></div></td></tr></table></div>
-<p>You can specify which repository you would like to publish:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>publish<span class="w"> </span>-r<span class="w"> </span>pypi
-</code></pre></div></td></tr></table></div>
-<p>PDM will look for the repository named <code>pypi</code> from the configuration and use the URL for upload.
-You can also give the URL directly with <code>-r/--repository</code> option:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>publish<span class="w"> </span>-r<span class="w"> </span>https://test.pypi.org/simple
-</code></pre></div></td></tr></table></div>
-<p>See all supported options by typing <code>pdm publish --help</code>.</p>
-<h3 id="configure-the-repository-secrets-for-upload">Configure the repository secrets for upload<a class="headerlink" href="#configure-the-repository-secrets-for-upload" title="Permanent link">#</a></h3>
-<p>When using the <a href="../cli_reference/#exec-0--publish"><code>pdm publish</code></a> command, it reads the repository secrets from the <em>global</em> config file(<code>&lt;CONFIG_ROOT&gt;/config.toml</code>). The content of the config is as follows:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[repository.pypi]</span>
-<span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;frostming&quot;</span>
-<span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&lt;secret&gt;&quot;</span>
-
-<span class="k">[repository.company]</span>
-<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://pypi.company.org/legacy/&quot;</span>
-<span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;frostming&quot;</span>
-<span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&lt;secret&gt;&quot;</span>
-<span class="n">ca_certs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/path/to/custom-cacerts.pem&quot;</span>
-</code></pre></div></td></tr></table></div>
-<p>A PEM-encoded Certificate Authority bundle (<code>ca_certs</code>) can be used for local / custom PyPI repositories where the server certificate is not signed by the standard <a href="https://github.com/certifi/python-certifi/blob/master/certifi/cacert.pem">certifi</a> CA bundle.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Repositories are different from indexes in the previous section. Repositories are for publishing while indexes are for locking
-and resolving. They don't share the configuration.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>You don't need to configure the <code>url</code> for <code>pypi</code> and <code>testpypi</code> repositories, they are filled by default values.
-The username, password, and certificate authority bundle can be passed in from the command line for <code>pdm publish</code> via <code>--username</code>, <code>--password</code>, and <code>--ca-certs</code>, respectively.</p>
-</div>
-<p>To change the repository config from the command line, use the <a href="../cli_reference/#exec-0--config"><code>pdm config</code></a> command:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>config<span class="w"> </span>repository.pypi.username<span class="w"> </span><span class="s2">&quot;__token__&quot;</span>
-pdm<span class="w"> </span>config<span class="w"> </span>repository.pypi.password<span class="w"> </span><span class="s2">&quot;my-pypi-token&quot;</span>
-
-pdm<span class="w"> </span>config<span class="w"> </span>repository.company.url<span class="w"> </span><span class="s2">&quot;https://pypi.company.org/legacy/&quot;</span>
-pdm<span class="w"> </span>config<span class="w"> </span>repository.company.ca_certs<span class="w"> </span><span class="s2">&quot;/path/to/custom-cacerts.pem&quot;</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="cache-the-installation-of-wheels">Cache the installation of wheels<a class="headerlink" href="#cache-the-installation-of-wheels" title="Permanent link">#</a></h2>
-<p>If a package is required by many projects on the system, each project has to keep its own copy. This may become a waste of disk space especially for data science and machine learning libraries.</p>
-<p>PDM supports <em>caching</em> the installations of the same wheel by installing it into a centralized package repository and linking to that installation in different projects. To enabled it, run:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>config<span class="w"> </span>install.cache<span class="w"> </span>on
-</code></pre></div></td></tr></table></div>
-<p>It can be enabled on a project basis, by adding <code>--local</code> option to the command.</p>
-<p>The caches are located under <code>$(pdm config cache_dir)/packages</code>. One can view the cache usage by <code>pdm cache info</code>. But be noted the cached installations are managed automatically -- They get deleted when not linked from any projects. Manually deleting the caches from the disk may break some projects on the system.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Only the installation of <em>named requirements</em> resolved from PyPI can be cached.</p>
-</div>
+<h2 id="working-with-version-control">Working with version control<a class="headerlink" href="#working-with-version-control" title="Permanent link">#</a></h2>
+<p>You <strong>must</strong> commit the <code>pyproject.toml</code> file. You <strong>should</strong> commit the <code>pdm.lock</code> and <code>pdm.toml</code> file. <strong>Do not</strong> commit the <code>.pdm-python</code> file.</p>
+<p>The <code>pyproject.toml</code> file must be committed as it contains the project's build metadata and dependencies needed for PDM.
+It is also commonly used by other python tools for configuration. Read more about the <code>pyproject.toml</code> file at
+<a href="https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/">Pip documentation</a>.</p>
+<p>You should be committing the <code>pdm.lock</code> file, by doing so you ensure that all installers are using the same versions of dependencies.
+To learn how to update dependencies see <a href="../dependency/#update-existing-dependencies">update existing dependencies</a>.</p>
+<p><code>pdm.toml</code> contains some project-wide configuration and it may be useful to commit it for sharing.</p>
+<p><code>.pdm-python</code> stores the <strong>Python path</strong> used by the <strong>current</strong> project and doesn't need to be shared.</p>
 <h2 id="show-the-current-python-environment">Show the current Python environment<a class="headerlink" href="#show-the-current-python-environment" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1352,107 +1096,13 @@ $<span class="w"> </span>pdm<span class="w"> </span>info<span class="w"> </span>
 <span class="w">  </span><span class="s2">&quot;sys_platform&quot;</span>:<span class="w"> </span><span class="s2">&quot;win32&quot;</span>
 <span class="o">}</span>
 </code></pre></div></td></tr></table></div>
-<p><a href="../cli_reference/#exec-0--info">This command</a> is useful for checking which mode is being used by the project:</p>
+<p><a href="../../reference/cli/#exec-0--info">This command</a> is useful for checking which mode is being used by the project:</p>
 <ul>
 <li>If <em>Project Packages</em> is <code>None</code>, <a href="../venv/">virtualenv mode</a> is enabled.</li>
 <li>Otherwise, <a href="../pep582/">PEP 582 mode</a> is enabled.</li>
 </ul>
-<h2 id="manage-global-project">Manage global project<a class="headerlink" href="#manage-global-project" title="Permanent link">#</a></h2>
-<p>Sometimes users may want to keep track of the dependencies of global Python interpreter as well.
-It is easy to do so with PDM, via <code>-g/--global</code> option which is supported by most subcommands.</p>
-<p>If the option is passed, <code>&lt;CONFIG_ROOT&gt;/global-project</code> will be used as the project directory, which is
-almost the same as normal project except that <code>pyproject.toml</code> will be created automatically for you
-and it doesn't support build features. The idea is taken from Haskell's <a href="https://docs.haskellstack.org">stack</a>.</p>
-<p>However, unlike <code>stack</code>, by default, PDM won't use global project automatically if a local project is not found.
-Users should pass <code>-g/--global</code> explicitly to activate it, since it is not very pleasing if packages go to a wrong place.
-But PDM also leave the decision to users, just set the config <code>global_project.fallback</code> to <code>true</code>.</p>
-<p>By default, when <code>pdm</code> uses global project implicitly the following message is printed: <code>Project is not found, fallback to the global project</code>. To disable this message set the config <code>global_project.fallback_verbose</code> to <code>false</code>.</p>
-<p>If you want global project to track another project file other than <code>&lt;CONFIG_ROOT&gt;/global-project</code>, you can provide the
-project path via <code>-p/--project &lt;path&gt;</code> option.</p>
-<div class="admonition attention">
-<p class="admonition-title">CAUTION</p>
-<p>Be careful with <code>remove</code> and <code>sync --clean/--pure</code> commands when global project is used, because it may remove packages installed in your system Python.</p>
-</div>
-<h2 id="import-project-metadata-from-existing-project-files">Import project metadata from existing project files<a class="headerlink" href="#import-project-metadata-from-existing-project-files" title="Permanent link">#</a></h2>
-<p>If you are already using other package manager tools like Pipenv or Poetry, it is easy to migrate to PDM.
-PDM provides <code>import</code> command so that you don't have to initialize the project manually, it now supports:</p>
-<ol>
-<li>Pipenv's <code>Pipfile</code></li>
-<li>Poetry's section in <code>pyproject.toml</code></li>
-<li>Flit's section in <code>pyproject.toml</code></li>
-<li><code>requirements.txt</code> format used by pip</li>
-<li>setuptools <code>setup.py</code>(It requires <code>setuptools</code> to be installed in the project environment. You can do this by configuring <code>venv.with_pip</code> to <code>true</code> for venv and <code>pdm add setuptools</code> for <code>__pypackages__</code>)</li>
-</ol>
-<p>Also, when you are executing <a href="../cli_reference/#exec-0--init"><code>pdm init</code></a> or <a href="../cli_reference/#exec-0--install"><code>pdm install</code></a>, PDM can auto-detect possible files to import if your PDM project has not been initialized yet.</p>
-<div class="admonition attention">
-<p class="admonition-title">CAUTION</p>
-<p>Converting a <code>setup.py</code> will execute the file with the project interpreter. Make sure <code>setuptools</code> is installed with the interpreter and the <code>setup.py</code> is trusted.</p>
-</div>
-<h2 id="export-locked-packages-to-alternative-formats">Export locked packages to alternative formats<a class="headerlink" href="#export-locked-packages-to-alternative-formats" title="Permanent link">#</a></h2>
-<p>You can also export <a href="../cli_reference/#exec-0--lock"><code>pdm lock</code></a> to other formats, to ease the CI flow or image building process. Currently,
-only <code>requirements.txt</code> format is supported:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span><span class="nb">export</span><span class="w"> </span>-o<span class="w"> </span>requirements.txt
-</code></pre></div></td></tr></table></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can also run <code>pdm export</code> with a <a href="../advanced/#hooks-for-pre-commit"><code>.pre-commit</code> hook</a>.</p>
-</div>
-<h2 id="working-with-version-control">Working with version control<a class="headerlink" href="#working-with-version-control" title="Permanent link">#</a></h2>
-<p>You <strong>must</strong> commit the <code>pyproject.toml</code> file. You <strong>should</strong> commit the <code>pdm.lock</code> file. <strong>Do not</strong> commit the <code>.pdm.toml</code> file.</p>
-<p>The <code>pyproject.toml</code> file must be committed as it contains the project's build metadata and dependencies needed for PDM.
-It is also commonly used by other python tools for configuration. Read more about the <code>pyproject.toml</code> file at
-<a href="https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/">pip.pypa.io/en/stable/reference/build-system/pyproject-toml/</a>.</p>
-<p>You should be committing the <code>pdm.lock</code> file, by doing so you ensure that all installers are using the same versions of dependencies.
-To learn how to update dependencies see <a href="../dependency/#update-existing-dependencies">update existing dependencies</a>.</p>
-<p>It is not necessary to commit your <code>.pdm.toml</code> file as it contains configuration specific to your system.
-If you are using git you can safely add <code>.pdm.toml</code> to your <code>.gitignore</code> file.</p>
-<h2 id="hide-the-credentials-from-pyprojecttoml">Hide the credentials from pyproject.toml<a class="headerlink" href="#hide-the-credentials-from-pyprojecttoml" title="Permanent link">#</a></h2>
-<p>There are many times when we need to use sensitive information, such as login credentials for the PyPI server
-and username passwords for VCS repositories. We do not want to expose this information in <code>pyproject.toml</code> and upload it to git.</p>
-<p>PDM provides several methods to achieve this:</p>
-<ol>
-<li>User can give the auth information with environment variables which are encoded in the URL directly:</li>
-</ol>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[[tool.pdm.source]]</span>
-<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://${INDEX_USER}:${INDEX_PASSWD}@test.pypi.org/simple&quot;</span>
-<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;test&quot;</span>
-<span class="n">verify_ssl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
-
-<span class="k">[project]</span>
-<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">  </span><span class="s">&quot;mypackage @ git+http://${VCS_USER}:${VCS_PASSWD}@test.git.com/test/mypackage.git@master&quot;</span>
-<span class="p">]</span>
-</code></pre></div></td></tr></table></div>
-<p>Environment variables must be encoded in the form <code>${ENV_NAME}</code>, other forms are not supported. Besides, only auth part will be expanded.</p>
-<ol>
-<li>
-<p>If the credentials are not provided in the URL and a 401 response is received from the server, PDM will prompt for username and password when <code>-v/--verbose</code>
-   is passed as command line argument, otherwise PDM will fail with an error telling users what happens. Users can then choose to store the credentials in the
-   keyring after a confirmation question.</p>
-</li>
-<li>
-<p>A VCS repository applies the first method only, and an index server applies both methods.</p>
-</li>
-</ol>
-<h2 id="manage-caches">Manage caches<a class="headerlink" href="#manage-caches" title="Permanent link">#</a></h2>
-<p>PDM provides a convenient command group to manage the cache, there are five different caches:</p>
-<ol>
-<li><code>wheels/</code> stores the built results of non-wheel distributions and files.</li>
-<li><code>http/</code> stores the HTTP response content.</li>
-<li><code>metadata/</code> stores package metadata retrieved by the resolver.</li>
-<li><code>hashes/</code> stores the file hashes fetched from the package index or calculated locally.</li>
-<li><code>packages/</code> The centralized repository for installed wheels.</li>
-</ol>
-<p>See the current cache usage by typing <code>pdm cache info</code>. Besides, you can use <code>add</code>, <code>remove</code> and <code>list</code> subcommands to manage the cache content.
-Find the usage by the <code>--help</code> option of each command.</p>
+<p>Now, you have setup a new PDM project and get a <code>pyproject.toml</code> file. Refer to <a href="../../reference/pep621/">metadata section</a>
+about how to write <code>pyproject.toml</code> properly.</p>
 
 
   
@@ -1527,7 +1177,7 @@ Find the usage by the <code>--help</code> option of each command.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>

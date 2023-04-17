@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../project/">
+        <link rel="prev" href="../advanced/">
       
       
         <link rel="next" href="../pep582/">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Working with virtualenv - PDM</title>
+        <title>Working with Virtual Environments - PDM</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-virtualenv" class="md-skip">
+        <a href="#working-with-virtual-environments" class="md-skip">
           Skip to content
         </a>
       
@@ -133,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with virtualenv
+              Working with Virtual Environments
             
           </span>
         </div>
@@ -243,8 +243,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../pyproject/pep621/" class="md-tabs__link">
-        Writing pyproject.toml
+      <a href="../../reference/pep621/" class="md-tabs__link">
+        Reference
       </a>
     </li>
   
@@ -259,23 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../plugin/write/" class="md-tabs__link">
-        Plugins
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../dev/contributing/" class="md-tabs__link">
+      <a href="../../dev/write/" class="md-tabs__link">
         Development
       </a>
     </li>
@@ -381,7 +365,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Home
+        Introduction
       </a>
     </li>
   
@@ -395,7 +379,91 @@
   
     <li class="md-nav__item">
       <a href="../project/" class="md-nav__link">
-        Manage Project
+        New Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency/" class="md-nav__link">
+        Manage Dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish/" class="md-nav__link">
+        Build and Publish
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        Configure the Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scripts/" class="md-nav__link">
+        PDM Scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hooks/" class="md-nav__link">
+        Lifecycle and Hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        Advanced Usage
       </a>
     </li>
   
@@ -418,12 +486,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Working with virtualenv
+          Working with Virtual Environments
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Working with virtualenv
+        Working with Virtual Environments
       </a>
       
         
@@ -477,6 +545,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#show-the-path-or-python-interpreter-of-a-virtualenv" class="md-nav__link">
+    Show the path or python interpreter of a virtualenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#remove-a-virtualenv" class="md-nav__link">
     Remove a virtualenv
   </a>
@@ -493,6 +568,20 @@
         <li class="md-nav__item">
   <a href="#prompt-customization" class="md-nav__link">
     Prompt customization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-a-command-in-a-virtual-environment-without-activating-it" class="md-nav__link">
+    Run a command in a virtual environment without activating it
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switch-to-a-virtualenv-as-the-project-environment" class="md-nav__link">
+    Switch to a virtualenv as the project environment
   </a>
   
 </li>
@@ -527,90 +616,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dependency/" class="md-nav__link">
-        Manage Dependencies
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../scripts/" class="md-nav__link">
-        PDM Scripts
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hooks/" class="md-nav__link">
-        Lifecycle and hooks
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../advanced/" class="md-nav__link">
-        Advanced Usage
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cli_reference/" class="md-nav__link">
-        CLI Reference
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
-        Configurations
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -635,14 +640,14 @@
       
       
         <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
-          Writing pyproject.toml
+          Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Writing pyproject.toml" data-md-level="1">
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Writing pyproject.toml
+          Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -652,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyproject/pep621/" class="md-nav__link">
+      <a href="../../reference/pep621/" class="md-nav__link">
         PEP 621 Metadata
       </a>
     </li>
@@ -666,8 +671,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyproject/tool-pdm/" class="md-nav__link">
-        PDM Tool Settings
+      <a href="../../reference/configuration/" class="md-nav__link">
+        Configurations
       </a>
     </li>
   
@@ -680,8 +685,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pyproject/build/" class="md-nav__link">
+      <a href="../../reference/build/" class="md-nav__link">
         Build Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/" class="md-nav__link">
+        CLI Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/api/" class="md-nav__link">
+        API Reference
       </a>
     </li>
   
@@ -712,14 +745,14 @@
       
       
         <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
-          Plugins
+          Development
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Plugins" data-md-level="1">
+      <nav class="md-nav" aria-label="Development" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Plugins
+          Development
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -729,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/write/" class="md-nav__link">
+      <a href="../../dev/write/" class="md-nav__link">
         Write a plugin
       </a>
     </li>
@@ -743,62 +776,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/reference/" class="md-nav__link">
-        API Reference
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../plugin/fixtures/" class="md-nav__link">
+      <a href="../../dev/fixtures/" class="md-nav__link">
         Pytest fixtures
       </a>
     </li>
   
 
             
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
-          Development
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Development" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Development
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -925,6 +909,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#show-the-path-or-python-interpreter-of-a-virtualenv" class="md-nav__link">
+    Show the path or python interpreter of a virtualenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#remove-a-virtualenv" class="md-nav__link">
     Remove a virtualenv
   </a>
@@ -941,6 +932,20 @@
         <li class="md-nav__item">
   <a href="#prompt-customization" class="md-nav__link">
     Prompt customization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-a-command-in-a-virtual-environment-without-activating-it" class="md-nav__link">
+    Run a command in a virtual environment without activating it
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switch-to-a-virtualenv-as-the-project-environment" class="md-nav__link">
+    Switch to a virtualenv as the project environment
   </a>
   
 </li>
@@ -971,10 +976,10 @@
 
 
 
-<h1 id="working-with-virtualenv">Working with virtualenv<a class="headerlink" href="#working-with-virtualenv" title="Permanent link">#</a></h1>
-<p>When you run <a href="../cli_reference/#exec-0--init"><code>pdm init</code></a> command, PDM will <a href="../project/#choose-a-python-interpreter">ask for the Python interpreter to use</a> in the project, which is the base interpreter to install dependencies and run tasks.</p>
+<h1 id="working-with-virtual-environments">Working with Virtual Environments<a class="headerlink" href="#working-with-virtual-environments" title="Permanent link">#</a></h1>
+<p>When you run <a href="../../reference/cli/#exec-0--init"><code>pdm init</code></a> command, PDM will <a href="../project/#choose-a-python-interpreter">ask for the Python interpreter to use</a> in the project, which is the base interpreter to install dependencies and run tasks.</p>
 <p>Compared to <a href="https://www.python.org/dev/peps/pep-0582/">PEP 582</a>, virtual environments are considered more mature and have better support in the Python ecosystem as well as IDEs. Therefore, virtualenv is the default mode if not configured otherwise.</p>
-<p><strong>Virtual environments will be used if the project interpreter(the interpreter stored in <code>.pdm.toml</code>, which can be checked by <code>pdm info</code>) is from a virtualenv.</strong></p>
+<p><strong>Virtual environments will be used if the project interpreter(the interpreter stored in <code>.pdm-python</code>, which can be checked by <code>pdm info</code>) is from a virtualenv.</strong></p>
 <h2 id="virtualenv-auto-creation">Virtualenv auto-creation<a class="headerlink" href="#virtualenv-auto-creation" title="Permanent link">#</a></h2>
 <p>By default, PDM prefers to use the virtualenv layout as other package managers do. When you run <code>pdm install</code> the first time on a new PDM-managed project, whose Python interpreter is not decided yet, PDM will create a virtualenv in <code>&lt;project_root&gt;/.venv</code>, and install dependencies into it. In the interactive session of <code>pdm init</code>, PDM will also ask to create a virtualenv for you.</p>
 <p>You can choose the backend used by PDM to create a virtualenv. Currently it supports three backends:</p>
@@ -1005,7 +1010,7 @@ Other virtualenvs go to the location specified by the <code>venv.location</code>
 <p>When no interpreter is stored in the project config or <code>PDM_IGNORE_SAVED_PYTHON</code> env var is set, PDM will try to detect possible virtualenvs to use:</p>
 <ul>
 <li><code>venv</code>, <code>env</code>, <code>.venv</code> directories in the project root</li>
-<li>The currently activated virtualenv</li>
+<li>The currently activated virtualenv, unless <code>PDM_IGNORE_ACTIVE_VENV</code> is set</li>
 </ul>
 <h2 id="list-all-virtualenvs-created-with-this-project">List all virtualenvs created with this project<a class="headerlink" href="#list-all-virtualenvs-created-with-this-project" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1019,6 +1024,11 @@ Virtualenvs<span class="w"> </span>created<span class="w"> </span>with<span clas
 -<span class="w">  </span><span class="m">3</span>.8.6:<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\F</span>rost<span class="w"> </span>Ming<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>dm<span class="se">\p</span>dm<span class="se">\v</span>envs<span class="se">\t</span>est-project-8Sgn_62n-3.8.6
 -<span class="w">  </span><span class="k">for</span>-test:<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\F</span>rost<span class="w"> </span>Ming<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>dm<span class="se">\p</span>dm<span class="se">\v</span>envs<span class="se">\t</span>est-project-8Sgn_62n-for-test
 -<span class="w">  </span><span class="m">3</span>.9.1:<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\F</span>rost<span class="w"> </span>Ming<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>dm<span class="se">\p</span>dm<span class="se">\v</span>envs<span class="se">\t</span>est-project-8Sgn_62n-3.9.1
+</code></pre></div></td></tr></table></div>
+<h2 id="show-the-path-or-python-interpreter-of-a-virtualenv">Show the path or python interpreter of a virtualenv<a class="headerlink" href="#show-the-path-or-python-interpreter-of-a-virtualenv" title="Permanent link">#</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>venv<span class="w"> </span>--path<span class="w"> </span><span class="k">for</span>-test
+$<span class="w"> </span>pdm<span class="w"> </span>venv<span class="w"> </span>--python<span class="w"> </span><span class="k">for</span>-test
 </code></pre></div></td></tr></table></div>
 <h2 id="remove-a-virtualenv">Remove a virtualenv<a class="headerlink" href="#remove-a-virtualenv" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1064,7 +1074,7 @@ $<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><sp
 <p class="admonition-title">Note</p>
 <p><code>venv activate</code> <strong>does not</strong> switch the Python interpreter used by the project. It only changes the shell by injecting the virtualenv paths to environment variables. For the forementioned purpose, use the <code>pdm use</code> command.</p>
 </div>
-<p>For more CLI usage, see the <a href="../cli_reference/#exec-0--venv"><code>pdm venv</code></a> documentation.</p>
+<p>For more CLI usage, see the <a href="../../reference/cli/#exec-0--venv"><code>pdm venv</code></a> documentation.</p>
 <h2 id="prompt-customization">Prompt customization<a class="headerlink" href="#prompt-customization" title="Permanent link">#</a></h2>
 <p>By default when you activate a virtualenv, the prompt will show: <code>{project_name}-{python_version}</code>.</p>
 <p>For example if your project is named <code>test-project</code>:</p>
@@ -1072,7 +1082,7 @@ $<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><sp
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>pdm<span class="w"> </span>venv<span class="w"> </span>activate<span class="w"> </span><span class="k">for</span>-test<span class="k">)</span>
 <span class="o">(</span>test-project-3.10<span class="o">)</span><span class="w"> </span>$<span class="w">  </span><span class="c1"># {project_name} == test-project and {python_version} == 3.10</span>
 </code></pre></div></td></tr></table></div>
-<p>The format can be customized before virtualenv creation with the <a href="../configuration/"><code>venv.prompt</code></a> configuration or <code>PDM_VENV_PROMPT</code> environment variable (before a <code>pdm init</code> or <code>pdm venv create</code>).
+<p>The format can be customized before virtualenv creation with the <a href="../../reference/configuration/"><code>venv.prompt</code></a> configuration or <code>PDM_VENV_PROMPT</code> environment variable (before a <code>pdm init</code> or <code>pdm venv create</code>).
 Available variables are:</p>
 <ul>
 <li><code>project_name</code>: name of your project</li>
@@ -1083,6 +1093,30 @@ Available variables are:</p>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span><span class="nv">PDM_VENV_PROMPT</span><span class="o">=</span><span class="s1">&#39;{project_name}-py{python_version}&#39;</span><span class="w"> </span>pdm<span class="w"> </span>venv<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>test-prompt
 $<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>pdm<span class="w"> </span>venv<span class="w"> </span>activate<span class="w"> </span>test-prompt<span class="k">)</span>
 <span class="o">(</span>test-project-py3.10<span class="o">)</span><span class="w"> </span>$
+</code></pre></div></td></tr></table></div>
+<h2 id="run-a-command-in-a-virtual-environment-without-activating-it">Run a command in a virtual environment without activating it<a class="headerlink" href="#run-a-command-in-a-virtual-environment-without-activating-it" title="Permanent link">#</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Run a script</span>
+$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>--venv<span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="nb">test</span>
+<span class="c1"># Install packages</span>
+$<span class="w"> </span>pdm<span class="w"> </span>sync<span class="w"> </span>--venv<span class="w"> </span><span class="nb">test</span>
+<span class="c1"># List the packages installed</span>
+$<span class="w"> </span>pdm<span class="w"> </span>list<span class="w"> </span>--venv<span class="w"> </span><span class="nb">test</span>
+</code></pre></div></td></tr></table></div>
+<p>There are other commands supporting <code>--venv</code> flag or <code>PDM_IN_VENV</code> environment variable, see the <a href="../../reference/cli/">CLI reference</a>. You should create the virtualenv with <code>pdm venv create --name &lt;name&gt;</code> before using this feature.</p>
+<h2 id="switch-to-a-virtualenv-as-the-project-environment">Switch to a virtualenv as the project environment<a class="headerlink" href="#switch-to-a-virtualenv-as-the-project-environment" title="Permanent link">#</a></h2>
+<p>By default, if you use <code>pdm use</code> and select a non-venv Python, the project will be switched to <a href="../pep582.md">PEP 582 mode</a>. We also allow you to switch to a named virtual environment via the <code>--venv</code> flag:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Switch to a virtualenv named test</span>
+$<span class="w"> </span>pdm<span class="w"> </span>use<span class="w"> </span>--venv<span class="w"> </span><span class="nb">test</span>
+<span class="c1"># Switch to the in-project venv located at $PROJECT_ROOT/.venv</span>
+$<span class="w"> </span>pdm<span class="w"> </span>use<span class="w"> </span>--venv
 </code></pre></div></td></tr></table></div>
 <h2 id="disable-virtualenv-mode">Disable virtualenv mode<a class="headerlink" href="#disable-virtualenv-mode" title="Permanent link">#</a></h2>
 <p>You can disable the auto-creation and auto-detection for virtualenv by <code>pdm config python.use_venv false</code>.
@@ -1161,7 +1195,7 @@ $<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><sp
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>

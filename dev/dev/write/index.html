@@ -9,15 +9,17 @@
       
       
       
-        <link rel="prev" href="../changelog/">
+        <link rel="prev" href="../../reference/api/">
       
+      
+        <link rel="next" href="../fixtures/">
       
       <link rel="icon" href="../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
     
     
       
-        <title>Benchmark - PDM</title>
+        <title>Write a plugin - PDM</title>
       
     
     
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#benchmark" class="md-skip">
+        <a href="#write-a-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Benchmark
+              Write a plugin
             
           </span>
         </div>
@@ -257,7 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../write/" class="md-tabs__link md-tabs__link--active">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Development
       </a>
     </li>
@@ -640,11 +642,121 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../write/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Write a plugin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Write a plugin
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-should-a-plugin-do" class="md-nav__link">
+    What should a plugin do
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-your-own-plugin" class="md-nav__link">
+    Write your own plugin
+  </a>
+  
+    <nav class="md-nav" aria-label="Write your own plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#write-the-command" class="md-nav__link">
+    Write the command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-the-command-to-the-core-object" class="md-nav__link">
+    Register the command to the core object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-new-config-item" class="md-nav__link">
+    Add a new config item
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-plugin-points" class="md-nav__link">
+    Other plugin points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-about-developing-a-pdm-plugin" class="md-nav__link">
+    Tips about developing a PDM plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-your-plugin" class="md-nav__link">
+    Testing your plugin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-your-plugin" class="md-nav__link">
+    Publish your plugin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-the-plugin" class="md-nav__link">
+    Activate the plugin
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -696,21 +808,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../benchmark/" class="md-nav__link">
         Benchmark
       </a>
-      
     </li>
   
 
@@ -757,6 +859,90 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-should-a-plugin-do" class="md-nav__link">
+    What should a plugin do
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-your-own-plugin" class="md-nav__link">
+    Write your own plugin
+  </a>
+  
+    <nav class="md-nav" aria-label="Write your own plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#write-the-command" class="md-nav__link">
+    Write the command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-the-command-to-the-core-object" class="md-nav__link">
+    Register the command to the core object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-new-config-item" class="md-nav__link">
+    Add a new config item
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-plugin-points" class="md-nav__link">
+    Other plugin points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-about-developing-a-pdm-plugin" class="md-nav__link">
+    Tips about developing a PDM plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-your-plugin" class="md-nav__link">
+    Testing your plugin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-your-plugin" class="md-nav__link">
+    Publish your plugin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-the-plugin" class="md-nav__link">
+    Activate the plugin
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -774,8 +960,214 @@
 
 
 
-<h1 id="benchmark">Benchmark<a class="headerlink" href="#benchmark" title="Permanent link">#</a></h1>
-<p>This page has been removed, please visit https://lincolnloop.github.io/python-package-manager-shootout/ for a detailed benchmark report.</p>
+<h1 id="write-a-plugin">Write a plugin<a class="headerlink" href="#write-a-plugin" title="Permanent link">#</a></h1>
+<p>PDM is aiming at being a community driven package manager.
+It is shipped with a full-featured plug-in system, with which you can:</p>
+<ul>
+<li>Develop a new command for PDM</li>
+<li>Add additional options to existing PDM commands</li>
+<li>Change PDM's behavior by reading additional config items</li>
+<li>Control the process of dependency resolution or installation</li>
+</ul>
+<h2 id="what-should-a-plugin-do">What should a plugin do<a class="headerlink" href="#what-should-a-plugin-do" title="Permanent link">#</a></h2>
+<p>The core PDM project focuses on dependency management and package publishing. Other
+functionalities you wish to integrate with PDM are preferred to lie in their own plugins
+and released as standalone PyPI projects. In case the plugin is considered a good supplement
+of the core project it may have a chance to be absorbed into PDM.</p>
+<h2 id="write-your-own-plugin">Write your own plugin<a class="headerlink" href="#write-your-own-plugin" title="Permanent link">#</a></h2>
+<p>In the following sections, I will show an example of adding a new command <code>hello</code> which reads the <code>hello.name</code> config.</p>
+<h3 id="write-the-command">Write the command<a class="headerlink" href="#write-the-command" title="Permanent link">#</a></h3>
+<p>The PDM's CLI module is designed in a way that user can easily "inherit and modify". To write a new command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">pdm.cli.commands.base</span> <span class="kn">import</span> <span class="n">BaseCommand</span>
+
+<span class="k">class</span> <span class="nc">HelloCommand</span><span class="p">(</span><span class="n">BaseCommand</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Say hello to the specified person.</span>
+<span class="sd">    If none is given, will read from &quot;hello.name&quot; config.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">add_arguments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parser</span><span class="p">):</span>
+        <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;-n&quot;</span><span class="p">,</span> <span class="s2">&quot;--name&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;the person&#39;s name to whom you greet&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">options</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;hello.name&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>First, let's create a new <code>HelloCommand</code> class inheriting from <code>pdm.cli.commands.base.BaseCommand</code>. It has two major functions:</p>
+<ul>
+<li><code>add_arguments()</code> to manipulate the argument parser passed as the only argument,
+  where you can add additional command line arguments to it</li>
+<li><code>handle()</code> to do something when the subcommand is matched, you can do nothing by writing a single <code>pass</code> statement.
+  It accepts two arguments: an <code>pdm.project.Project</code> object as the first one and the parsed <code>argparse.Namespace</code> object as the second.</li>
+</ul>
+<p>The document string will serve as the command help text, which will be shown in <code>pdm --help</code>.</p>
+<p>Besides, PDM's subcommand has two default options: <code>-v/--verbose</code> to change the verbosity level and <code>-g/--global</code> to enable global project.
+If you don't want these default options, override the <code>arguments</code> class attribute to a list of <code>pdm.cli.options.Option</code> objects, or
+assign it to an empty list to have no default options:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">HelloCommand</span><span class="p">(</span><span class="n">BaseCommand</span><span class="p">):</span>
+
+<span class="hll">    <span class="n">arguments</span> <span class="o">=</span> <span class="p">[]</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default options are loaded first, then <code>add_arguments()</code> is called.</p>
+</div>
+<h3 id="register-the-command-to-the-core-object">Register the command to the core object<a class="headerlink" href="#register-the-command-to-the-core-object" title="Permanent link">#</a></h3>
+<p>Write a function somewhere in your plugin project. There is no limit on what the name of the function is,
+but the function should take only one argument -- the PDM core object:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hello_plugin</span><span class="p">(</span><span class="n">core</span><span class="p">):</span>
+<span class="hll">    <span class="n">core</span><span class="o">.</span><span class="n">register_command</span><span class="p">(</span><span class="n">HelloCommand</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Call <code>core.register_command()</code> to register the command. The second argument as the name of the subcommand is optional.
+PDM will look for the <code>HelloCommand</code>'s <code>name</code> attribute if the name is not passed.</p>
+<h3 id="add-a-new-config-item">Add a new config item<a class="headerlink" href="#add-a-new-config-item" title="Permanent link">#</a></h3>
+<p>Let's recall the first code snippet, <code>hello.name</code> config key is consulted for the name if not passed via the command line.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">HelloCommand</span><span class="p">(</span><span class="n">BaseCommand</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Say hello to the specified person.</span>
+<span class="sd">    If none is given, will read from &quot;hello.name&quot; config.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">add_arguments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parser</span><span class="p">):</span>
+        <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;-n&quot;</span><span class="p">,</span> <span class="s2">&quot;--name&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;the person&#39;s name to whom you greet&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">options</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
+<span class="hll">            <span class="n">name</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;hello.name&quot;</span><span class="p">]</span>
+</span>        <span class="k">else</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Till now, if you query the config value by <code>pdm config get hello.name</code>, an error will pop up saying it is not a valid config key.
+You need to register the config item, too:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">pdm.project.config</span> <span class="kn">import</span> <span class="n">ConfigItem</span>
+
+<span class="k">def</span> <span class="nf">hello_plugin</span><span class="p">(</span><span class="n">core</span><span class="p">):</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">register_command</span><span class="p">(</span><span class="n">HelloCommand</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="hll">    <span class="n">core</span><span class="o">.</span><span class="n">add_config</span><span class="p">(</span><span class="s2">&quot;hello.name&quot;</span><span class="p">,</span> <span class="n">ConfigItem</span><span class="p">(</span><span class="s2">&quot;The person&#39;s name&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">))</span>
+</span></code></pre></div></td></tr></table></div>
+<p>where <code>ConfigItem</code> class takes 4 parameters, in the following order:</p>
+<ul>
+<li><code>description</code>: a description of the config item</li>
+<li><code>default</code>: default value of the config item</li>
+<li><code>global_only</code>: whether the config is allowed to set in home config only</li>
+<li><code>env_var</code>: the name of environment variable which will be read as the config value</li>
+</ul>
+<h3 id="other-plugin-points">Other plugin points<a class="headerlink" href="#other-plugin-points" title="Permanent link">#</a></h3>
+<p>Besides of commands and configurations, the <code>core</code> object exposes some other methods and attributes to override.
+PDM also provides some signals you can listen to.
+Please read the <a href="../../reference/api/">API reference</a> for more details.</p>
+<h3 id="tips-about-developing-a-pdm-plugin">Tips about developing a PDM plugin<a class="headerlink" href="#tips-about-developing-a-pdm-plugin" title="Permanent link">#</a></h3>
+<p>When developing a plugin, one hopes to activate and plugin in development and get updated when the code changes. This is usually done
+by <code>pip install -e .</code> or <code>python setup.py develop</code> in the <strong>traditional</strong> Python packaging world which leverages <code>setup.py</code> to do so. However,
+as there is no such <code>setup.py</code> in a PDM project, how can we do that?</p>
+<p>Fortunately, it becomes even easier with PDM and PEP 582. First, you should enable PEP 582 globally following the
+<a href="../../usage/pep582/#enable-pep-582-globally">corresponding part of this doc</a>. Then you just need to install all dependencies into the <code>__pypackages__</code> directory by:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>install
+</code></pre></div></td></tr></table></div>
+<p>After that, all the dependencies are available with a compatible Python interpreter, including the plugin itself, in editable mode. That means any change
+to the codebase will take effect immediately without re-installation. The <code>pdm</code> executable also uses a Python interpreter under the hood,
+so if you run <code>pdm</code> from inside the plugin project, the plugin in development will be activated automatically, and you can do some testing to see how it works.
+That is how PEP 582 benefits our development workflow.</p>
+<h3 id="testing-your-plugin">Testing your plugin<a class="headerlink" href="#testing-your-plugin" title="Permanent link">#</a></h3>
+<p>PDM exposes some pytest fixtures as a plugin in the <a href="../fixtures/"><code>pdm.pytest</code></a> module.
+To benefit from them, you must add <code>pdm[pytest]</code> as a test dependency.</p>
+<p>To enable them in your test, add <code>pdm.pytest</code> as a plugin. You can do so by in your root <code>conftest.py</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">conftest.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># single plugin</span>
+<span class="n">pytest_plugins</span> <span class="o">=</span> <span class="s2">&quot;pytest.plugin&quot;</span>
+
+<span class="c1"># many plugins</span>
+<span class="n">pytest_plugins</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="o">...</span>
+    <span class="s2">&quot;pdm.pytest&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>You can see some usage examples into PDM own <a href="https://github.com/pdm-project/pdm/tree/main/tests">tests</a>, especially the <a href="https://github.com/pdm-project/pdm/blob/main/tests/conftest.py">conftest.py file</a> for configuration.</p>
+<p>See the <a href="../fixtures/">pytest fixtures documentation</a> for more details.</p>
+<h2 id="publish-your-plugin">Publish your plugin<a class="headerlink" href="#publish-your-plugin" title="Permanent link">#</a></h2>
+<p>Now you have defined your plugin already, let's distribute it to PyPI. PDM's plugins are discovered by entry point types.
+Create an <code>pdm</code> entry point and point to your plugin callable (yeah, it doesn't need to be a function, any callable object can work):</p>
+<p><strong>PEP 621</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># pyproject.toml</span>
+
+<span class="k">[project.entry-points.pdm]</span>
+<span class="n">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;my_plugin:hello_plugin&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>setuptools</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># setup.py</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;pdm&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;hello = my_plugin:hello_plugin&quot;</span><span class="p">]}</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="activate-the-plugin">Activate the plugin<a class="headerlink" href="#activate-the-plugin" title="Permanent link">#</a></h2>
+<p>As plugins are loaded via entry points, they can be activated with no more steps than just installing the plugin.
+For convenience, PDM provides a <code>plugin</code> command group to manage plugins.</p>
+<p>Assume your plugin is published as <code>pdm-hello</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>self<span class="w"> </span>add<span class="w"> </span>pdm-hello
+</code></pre></div></td></tr></table></div>
+<p>Now type <code>pdm --help</code> in the terminal, you will see the new added <code>hello</code> command and use it:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>hello<span class="w"> </span>Jack
+Hello,<span class="w"> </span>Jack
+</code></pre></div></td></tr></table></div>
+<p>See more plugin management subcommands by typing <code>pdm self --help</code> in the terminal.</p>
 
 
   
