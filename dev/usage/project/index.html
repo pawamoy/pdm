@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../assets/extra.css">
@@ -921,7 +923,7 @@
 
 
 <h1 id="new-project">New Project<a class="headerlink" href="#new-project" title="Permanent link">#</a></h1>
-<p>To start with, create a new project with <a href="../../reference/cli/#exec-0--init"><code>pdm init</code></a>:</p>
+<p>To start with, create a new project with <a href="../../reference/cli/#init"><code>pdm init</code></a>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>my-project<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>my-project
 pdm<span class="w"> </span>init
@@ -929,7 +931,7 @@ pdm<span class="w"> </span>init
 <p>You will need to answer a few questions, to help PDM to create a <code>pyproject.toml</code> file for you.</p>
 <h2 id="choose-a-python-interpreter">Choose a Python interpreter<a class="headerlink" href="#choose-a-python-interpreter" title="Permanent link">#</a></h2>
 <p>At first, you need to choose a Python interpreter from a list of Python versions installed on your machine. The interpreter path
-will be stored in <code>.pdm-python</code> and used by subsequent commands. You can also change it later with <a href="../../reference/cli/#exec-0--use"><code>pdm use</code></a>.</p>
+will be stored in <code>.pdm-python</code> and used by subsequent commands. You can also change it later with <a href="../../reference/cli/#use"><code>pdm use</code></a>.</p>
 <p>Alternatively, you can specify the Python interpreter path via <code>PDM_PYTHON</code> environment variable. When it is set, the path saved in <code>.pdm-python</code> will be ignored.</p>
 <h2 id="virtualenv-or-not">Virtualenv or not<a class="headerlink" href="#virtualenv-or-not" title="Permanent link">#</a></h2>
 <p>After you select the Python interpreter, PDM will ask you whether you want to create a virtual environment for the project.
@@ -943,8 +945,7 @@ into it. Otherwise, <code>__pypackages__</code> will be created in the project r
 <li><a href="../pep582/"><code>__pypackages__</code>(PEP 582)</a></li>
 </ul>
 <h2 id="library-or-application">Library or Application<a class="headerlink" href="#library-or-application" title="Permanent link">#</a></h2>
-<p>A library and an application differ in many ways, <a href="https://pipenv.pypa.io/en/latest/advanced/#pipfile-vs-setup-py">here is a good explanation</a> for them. In short, a library is a package that is intended to be installed and used by other projects.
-Usually it also needs to be uploaded to PyPI. An application, on the other hand, is one that is directly facing end users and may need to be deployed into production.</p>
+<p>A library and an application differ in many ways. In short, a library is a package that is intended to be installed and used by other projects. In most cases it also needs to be uploaded to PyPI. An application, on the other hand, is one that is directly facing end users and may need to be deployed into some production environments.</p>
 <p>In PDM, if you choose to create a library, PDM will add a <code>name</code>, <code>version</code> field to the <code>pyproject.toml</code> file, as well as a <code>[build-system]</code> table for the <a href="../../reference/build/">build backend</a>, which is only useful if your project needs to be built and distributed. So you need to manually add these fields to <code>pyproject.toml</code> if you want to change the project from an application to a library. Also, a library project will be installed into the environment when you run <code>pdm install</code> or <code>pdm sync</code>, unless <code>--no-self</code> is specified.</p>
 <h2 id="set-requires-python-value">Set <code>requires-python</code> value<a class="headerlink" href="#set-requires-python-value" title="Permanent link">#</a></h2>
 <p>You need to set an appropriate <code>requires-python</code> value for your project. This is an important property that affects how dependencies are resolved. Basically, each package's <code>requires-python</code> must <em>cover</em> the project's <code>requires-python</code> range. For example, consider the following setup:</p>
@@ -983,7 +984,7 @@ To fix this, you need add a maximum version to <code>requires-python</code>, lik
 </tbody>
 </table>
 <h2 id="working-with-python-37">Working with Python &lt; 3.7<a class="headerlink" href="#working-with-python-37" title="Permanent link">#</a></h2>
-<p>Although PDM run on Python 3.7 and above, you can still have lower Python versions for your <strong>working project</strong>. But remember, if your project is a library, which needs to be built, published or installed, you make sure the PEP 517 build backend being used supports the lowest Python version you need. For instance, the default backend <code>pdm-pep517</code> only works on Python 3.7+, so if you run <a href="../../reference/cli/#exec-0--build"><code>pdm build</code></a> on a project with Python 3.6, you will get an error. Most modern build backends have dropped the support for Python 3.6 and lower, so it is highly recommended to upgrade the Python version to 3.7+. Here are the supported Python range for some commonly used build backends, we only list those that support PEP 621 since otherwise PDM can't work with them.</p>
+<p>Although PDM run on Python 3.7 and above, you can still have lower Python versions for your <strong>working project</strong>. But remember, if your project is a library, which needs to be built, published or installed, you make sure the PEP 517 build backend being used supports the lowest Python version you need. For instance, the default backend <code>pdm-pep517</code> only works on Python 3.7+, so if you run <a href="../../reference/cli/#build"><code>pdm build</code></a> on a project with Python 3.6, you will get an error. Most modern build backends have dropped the support for Python 3.6 and lower, so it is highly recommended to upgrade the Python version to 3.7+. Here are the supported Python range for some commonly used build backends, we only list those that support PEP 621 since otherwise PDM can't work with them.</p>
 <table>
 <thead>
 <tr>
@@ -1031,7 +1032,7 @@ PDM provides <code>import</code> command so that you don't have to initialize th
 <li><code>requirements.txt</code> format used by pip</li>
 <li>setuptools <code>setup.py</code>(It requires <code>setuptools</code> to be installed in the project environment. You can do this by configuring <code>venv.with_pip</code> to <code>true</code> for venv and <code>pdm add setuptools</code> for <code>__pypackages__</code>)</li>
 </ol>
-<p>Also, when you are executing <a href="../../reference/cli/#exec-0--init"><code>pdm init</code></a> or <a href="../../reference/cli/#exec-0--install"><code>pdm install</code></a>, PDM can auto-detect possible files to import if your PDM project has not been initialized yet.</p>
+<p>Also, when you are executing <a href="../../reference/cli/#init"><code>pdm init</code></a> or <a href="../../reference/cli/#install"><code>pdm install</code></a>, PDM can auto-detect possible files to import if your PDM project has not been initialized yet.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Converting a <code>setup.py</code> will execute the file with the project interpreter. Make sure <code>setuptools</code> is installed with the interpreter and the <code>setup.py</code> is trusted.</p>
@@ -1096,7 +1097,7 @@ $<span class="w"> </span>pdm<span class="w"> </span>info<span class="w"> </span>
 <span class="w">  </span><span class="s2">&quot;sys_platform&quot;</span>:<span class="w"> </span><span class="s2">&quot;win32&quot;</span>
 <span class="o">}</span>
 </code></pre></div></td></tr></table></div>
-<p><a href="../../reference/cli/#exec-0--info">This command</a> is useful for checking which mode is being used by the project:</p>
+<p><a href="../../reference/cli/#info">This command</a> is useful for checking which mode is being used by the project:</p>
 <ul>
 <li>If <em>Project Packages</em> is <code>None</code>, <a href="../venv/">virtualenv mode</a> is enabled.</li>
 <li>Otherwise, <a href="../pep582/">PEP 582 mode</a> is enabled.</li>

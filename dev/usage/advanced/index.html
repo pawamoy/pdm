@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../assets/extra.css">
@@ -1012,9 +1014,9 @@ You can configure a <code>tox.ini</code> like the following to integrate your te
 <span class="w">    </span><span class="na">flake8 src/</span>
 </code></pre></div></td></tr></table></div>
 <p>To use the virtualenv created by Tox, you should make sure you have set <code>pdm config python.use_venv true</code>. PDM then will install
-dependencies from <a href="../../reference/cli/#exec-0--lock"><code>pdm lock</code></a> into the virtualenv. In the dedicated venv you can directly run tools by <code>pytest tests/</code> instead
+dependencies from <a href="../../reference/cli/#lock"><code>pdm lock</code></a> into the virtualenv. In the dedicated venv you can directly run tools by <code>pytest tests/</code> instead
 of <code>pdm run pytest tests/</code>.</p>
-<p>You should also make sure you don't run <code>pdm add/pdm remove/pdm update/pdm lock</code> in the test commands, otherwise the <a href="../../reference/cli/#exec-0--lock"><code>pdm lock</code></a>
+<p>You should also make sure you don't run <code>pdm add/pdm remove/pdm update/pdm lock</code> in the test commands, otherwise the <a href="../../reference/cli/#lock"><code>pdm lock</code></a>
 file will be modified unexpectedly. Additional dependencies can be supplied with the <code>deps</code> config. Besides, <code>isolated_buid</code> and <code>passenv</code>
 config should be set as the above example to make PDM work properly.</p>
 <p>To get rid of these constraints, there is a Tox plugin <a href="https://github.com/pdm-project/tox-pdm">tox-pdm</a> which can ease the usage. You can install it by</p>
@@ -1083,7 +1085,7 @@ config should be set as the above example to make PDM work properly.</p>
 <p>Note that <code>PDM_IGNORE_SAVED_PYTHON</code> should be set so that PDM can pick up the Python in the virtualenv correctly. Also make sure <code>pdm</code> is available in the <code>PATH</code>.
 Before running nox, you should also ensure configuration item <code>python.use_venv</code> is true to enable venv reusing.</p>
 <h3 id="about-pep-582-__pypackages__-directory">About PEP 582 <code>__pypackages__</code> directory<a class="headerlink" href="#about-pep-582-__pypackages__-directory" title="Permanent link">#</a></h3>
-<p>By default, if you run tools by <a href="../../reference/cli/#exec-0--run"><code>pdm run</code></a>, <code>__pypackages__</code> will be seen by the program and all subprocesses created by it. This means virtual environments created by those tools are also aware of the packages inside <code>__pypackages__</code>, which result in unexpected behavior in some cases.
+<p>By default, if you run tools by <a href="../../reference/cli/#run"><code>pdm run</code></a>, <code>__pypackages__</code> will be seen by the program and all subprocesses created by it. This means virtual environments created by those tools are also aware of the packages inside <code>__pypackages__</code>, which result in unexpected behavior in some cases.
 For <code>nox</code>, you can avoid this by adding a line in <code>noxfile.py</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;PYTHONPATH&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -1229,7 +1231,7 @@ and then copy this folder into the final stage, adding it to <code>PYTHONPATH</c
 <h2 id="hooks-for-pre-commit">Hooks for <code>pre-commit</code><a class="headerlink" href="#hooks-for-pre-commit" title="Permanent link">#</a></h2>
 <p><a href="https://pre-commit.com/"><code>pre-commit</code></a> is a powerful framework for managing git hooks in a centralized fashion. PDM already uses <code>pre-commit</code> <a href="https://github.com/pdm-project/pdm/blob/main/.pre-commit-config.yaml">hooks</a> for its internal QA checks. PDM exposes also several hooks that can be run locally or in CI pipelines.</p>
 <h3 id="export-requirementstxt-or-setuppy">Export <code>requirements.txt</code> or <code>setup.py</code><a class="headerlink" href="#export-requirementstxt-or-setuppy" title="Permanent link">#</a></h3>
-<p>This hook wraps the command <code>pdm export</code> along with any valid argument. It can be used as a hook (e.g., for CI) to ensure that you are going to check in the codebase a <code>requirements.txt</code> or a <code>setup.py</code> file, which reflects the actual content of <a href="../../reference/cli/#exec-0--lock"><code>pdm lock</code></a>.</p>
+<p>This hook wraps the command <code>pdm export</code> along with any valid argument. It can be used as a hook (e.g., for CI) to ensure that you are going to check in the codebase a <code>requirements.txt</code> or a <code>setup.py</code> file, which reflects the actual content of <a href="../../reference/cli/#lock"><code>pdm lock</code></a>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>

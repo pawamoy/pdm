@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../assets/extra.css">
@@ -1295,6 +1297,10 @@ access to <code>sys.argv</code> directly to handle such complexe cases and more.
 ╰─────────────┴───────┴───────────────────────────╯
 </code></pre></div></td></tr></table></div>
 <p>You can add an <code>help</code> option with the description of the script, and it will be displayed in the <code>Description</code> column in the above output.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tasks with a name starting with an underscore (<code>_</code>) are considered internal (helpers...) and are not shown in the listing.</p>
+</div>
 <h2 id="pre-post-scripts">Pre &amp; Post Scripts<a class="headerlink" href="#pre-post-scripts" title="Permanent link">#</a></h2>
 <p>Like <code>npm</code>, PDM also supports tasks composition by pre and post scripts, pre script will be run before the given task and post script will be run after.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>

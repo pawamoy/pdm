@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../assets/extra.css">
@@ -593,6 +595,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#including-pip-in-your-virtual-environment" class="md-nav__link">
+    Including pip in your virtual environment
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -957,6 +966,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#including-pip-in-your-virtual-environment" class="md-nav__link">
+    Including pip in your virtual environment
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -977,7 +993,7 @@
 
 
 <h1 id="working-with-virtual-environments">Working with Virtual Environments<a class="headerlink" href="#working-with-virtual-environments" title="Permanent link">#</a></h1>
-<p>When you run <a href="../../reference/cli/#exec-0--init"><code>pdm init</code></a> command, PDM will <a href="../project/#choose-a-python-interpreter">ask for the Python interpreter to use</a> in the project, which is the base interpreter to install dependencies and run tasks.</p>
+<p>When you run <a href="../../reference/cli/#init"><code>pdm init</code></a> command, PDM will <a href="../project/#choose-a-python-interpreter">ask for the Python interpreter to use</a> in the project, which is the base interpreter to install dependencies and run tasks.</p>
 <p>Compared to <a href="https://www.python.org/dev/peps/pep-0582/">PEP 582</a>, virtual environments are considered more mature and have better support in the Python ecosystem as well as IDEs. Therefore, virtualenv is the default mode if not configured otherwise.</p>
 <p><strong>Virtual environments will be used if the project interpreter(the interpreter stored in <code>.pdm-python</code>, which can be checked by <code>pdm info</code>) is from a virtualenv.</strong></p>
 <h2 id="virtualenv-auto-creation">Virtualenv auto-creation<a class="headerlink" href="#virtualenv-auto-creation" title="Permanent link">#</a></h2>
@@ -1074,7 +1090,7 @@ $<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><sp
 <p class="admonition-title">Note</p>
 <p><code>venv activate</code> <strong>does not</strong> switch the Python interpreter used by the project. It only changes the shell by injecting the virtualenv paths to environment variables. For the forementioned purpose, use the <code>pdm use</code> command.</p>
 </div>
-<p>For more CLI usage, see the <a href="../../reference/cli/#exec-0--venv"><code>pdm venv</code></a> documentation.</p>
+<p>For more CLI usage, see the <a href="../../reference/cli/#venv"><code>pdm venv</code></a> documentation.</p>
 <h2 id="prompt-customization">Prompt customization<a class="headerlink" href="#prompt-customization" title="Permanent link">#</a></h2>
 <p>By default when you activate a virtualenv, the prompt will show: <code>{project_name}-{python_version}</code>.</p>
 <p>For example if your project is named <code>test-project</code>:</p>
@@ -1109,7 +1125,7 @@ $<span class="w"> </span>pdm<span class="w"> </span>list<span class="w"> </span>
 </code></pre></div></td></tr></table></div>
 <p>There are other commands supporting <code>--venv</code> flag or <code>PDM_IN_VENV</code> environment variable, see the <a href="../../reference/cli/">CLI reference</a>. You should create the virtualenv with <code>pdm venv create --name &lt;name&gt;</code> before using this feature.</p>
 <h2 id="switch-to-a-virtualenv-as-the-project-environment">Switch to a virtualenv as the project environment<a class="headerlink" href="#switch-to-a-virtualenv-as-the-project-environment" title="Permanent link">#</a></h2>
-<p>By default, if you use <code>pdm use</code> and select a non-venv Python, the project will be switched to <a href="../pep582.md">PEP 582 mode</a>. We also allow you to switch to a named virtual environment via the <code>--venv</code> flag:</p>
+<p>By default, if you use <code>pdm use</code> and select a non-venv Python, the project will be switched to <a href="../pep582/">PEP 582 mode</a>. We also allow you to switch to a named virtual environment via the <code>--venv</code> flag:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1121,6 +1137,25 @@ $<span class="w"> </span>pdm<span class="w"> </span>use<span class="w"> </span>-
 <h2 id="disable-virtualenv-mode">Disable virtualenv mode<a class="headerlink" href="#disable-virtualenv-mode" title="Permanent link">#</a></h2>
 <p>You can disable the auto-creation and auto-detection for virtualenv by <code>pdm config python.use_venv false</code>.
 <strong>If venv is disabled, PEP 582 mode will always be used even if the selected interpreter is from a virtualenv.</strong></p>
+<h2 id="including-pip-in-your-virtual-environment">Including pip in your virtual environment<a class="headerlink" href="#including-pip-in-your-virtual-environment" title="Permanent link">#</a></h2>
+<p>By default PDM will not include <code>pip</code> in virtual environments.
+This increases isolation by ensuring that <em>only your dependencies</em> are installed in the virtual environment.</p>
+<p>To install <code>pip</code> once (if for example you want to install arbitrary dependencies in CI) you can run:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install pip in the virtual environment</span>
+$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>ensurepip
+<span class="c1"># Install arbitrary dependencies</span>
+<span class="c1"># These dependencies are not checked for conflicts against lockfile dependencies!</span>
+$<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>coverage
+</code></pre></div></td></tr></table></div>
+<p>Or you can create the virtual environment with <code>--with-pip</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>venv<span class="w"> </span>create<span class="w"> </span>--with-pip<span class="w"> </span><span class="m">3</span>.9
+</code></pre></div></td></tr></table></div>
+<p>See the <a href="https://docs.python.org/3/library/ensurepip.html">ensurepip docs</a> for more details on <code>ensurepip</code>.</p>
+<p>If you want to permanently configure PDM to include <code>pip</code> in virtual environments you can use the <a href="../../reference/configuration/"><code>venv.with_pip</code></a> configuration.</p>
 
 
   

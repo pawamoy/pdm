@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../assets/extra.css">
@@ -1086,7 +1088,7 @@ pdm<span class="w"> </span>config<span class="w"> </span>pypi.private.password<s
 <p>Only the installation of <em>named requirements</em> resolved from PyPI can be cached.</p>
 </div>
 <h2 id="configure-the-repositories-for-upload">Configure the repositories for upload<a class="headerlink" href="#configure-the-repositories-for-upload" title="Permanent link">#</a></h2>
-<p>When using the <a href="../../reference/cli/#exec-0--publish"><code>pdm publish</code></a> command, it reads the repository secrets from the <em>global</em> config file(<code>&lt;CONFIG_ROOT&gt;/config.toml</code>). The content of the config is as follows:</p>
+<p>When using the <a href="../../reference/cli/#publish"><code>pdm publish</code></a> command, it reads the repository secrets from the <em>global</em> config file(<code>&lt;CONFIG_ROOT&gt;/config.toml</code>). The content of the config is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1116,7 +1118,7 @@ and resolving. They don't share the configuration.</p>
 <p>You don't need to configure the <code>url</code> for <code>pypi</code> and <code>testpypi</code> repositories, they are filled by default values.
 The username, password, and certificate authority bundle can be passed in from the command line for <code>pdm publish</code> via <code>--username</code>, <code>--password</code>, and <code>--ca-certs</code>, respectively.</p>
 </div>
-<p>To change the repository config from the command line, use the <a href="../../reference/cli/#exec-0--config"><code>pdm config</code></a> command:</p>
+<p>To change the repository config from the command line, use the <a href="../../reference/cli/#config"><code>pdm config</code></a> command:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>

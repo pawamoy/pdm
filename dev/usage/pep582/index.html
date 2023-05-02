@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../assets/extra.css">
@@ -959,6 +961,11 @@
 
 
 <h1 id="working-with-pep-582">Working with PEP 582<a class="headerlink" href="#working-with-pep-582" title="Permanent link">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">PEP 582 has been rejected</p>
+<p>This is a rejected PEP. However, due to the fact that this feature is the reason for PDM's birth, PDM will retain the support.
+We recommend using <a href="../venv/">virtual environments</a> instead.</p>
+</div>
 <p>With <a href="https://www.python.org/dev/peps/pep-0582/">PEP 582</a>, dependencies will be installed into <code>__pypackages__</code> directory under the project root. With <a href="#enable-pep-582-globally">PEP 582 enabled globally</a>, you can also use the project interpreter to run scripts directly.</p>
 <p><strong>When the project interpreter is a normal Python, this mode is enabled.</strong></p>
 <p>Besides, on a project you work with for the first time on your machine, if it contains an empty <code>__pypackages__</code> directory, PEP 582 is enabled automatically, and virtualenv won't be created.</p>

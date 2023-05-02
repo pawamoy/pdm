@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../assets/extra.css">
@@ -779,7 +781,7 @@
 <h1 id="build-configuration">Build Configuration<a class="headerlink" href="#build-configuration" title="Permanent link">#</a></h1>
 <p><code>pdm</code> uses the <a href="https://www.python.org/dev/peps/pep-0517/">PEP 517</a> to build the package. It acts as a build frontend that calls the build backend to build the package.</p>
 <p>A build backend is what drives the build system to build source distributions and wheels from arbitrary source trees.</p>
-<p>If you run <a href="../cli/#exec-0--init"><code>pdm init</code></a>, PDM will let you choose the build backend to use. Unlike other package managers, PDM does not force you to use a specific build backend. You can choose the one you like. Here is a list of build backends and corresponding configurations initially supported by PDM:</p>
+<p>If you run <a href="../cli/#init"><code>pdm init</code></a>, PDM will let you choose the build backend to use. Unlike other package managers, PDM does not force you to use a specific build backend. You can choose the one you like. Here is a list of build backends and corresponding configurations initially supported by PDM:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pdm-backend</label><label for="__tabbed_1_2">setuptools</label><label for="__tabbed_1_3">flit</label><label for="__tabbed_1_4">hatchling</label><label for="__tabbed_1_5">pdm-pep517(deprecated)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">

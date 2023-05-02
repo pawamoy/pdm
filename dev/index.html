@@ -40,6 +40,8 @@
       
     
     
+      <link rel="stylesheet" href="assets/_markdown_exec_ansi.css">
+    
       <link rel="stylesheet" href="assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="assets/extra.css">
@@ -969,7 +971,6 @@ in a similar way to <code>npm</code> that doesn't need to create a virtualenv at
 
 <h2 id="feature-highlights">Feature highlights<a class="headerlink" href="#feature-highlights" title="Permanent link">#</a></h2>
 <ul>
-<li>Opt-in <a href="https://www.python.org/dev/peps/pep-0582">PEP 582</a> support, no virtualenv involved at all.</li>
 <li>Simple and fast dependency resolver, mainly for large binary distributions.</li>
 <li>A <a href="https://www.python.org/dev/peps/pep-0517">PEP 517</a> build backend.</li>
 <li><a href="https://www.python.org/dev/peps/pep-0621">PEP 621</a> project metadata.</li>
@@ -1140,8 +1141,8 @@ pdm<span class="w"> </span>completion<span class="w"> </span>zsh<span class="w">
 </div>
 </div>
 <h2 id="virtualenv-and-pep-582">Virtualenv and PEP 582<a class="headerlink" href="#virtualenv-and-pep-582" title="Permanent link">#</a></h2>
-<p>In addition to the virtualenv management, PDM supports <a href="https://www.python.org/dev/peps/pep-0582/">PEP 582</a> as an opt-in feature.
-You can learn more about the two modes in the corresponding chapters in <a href="usage/venv/">Working with virtualenv</a> and <a href="usage/pep582/">Working with PEP 582</a></p>
+<p>PDM offers experimental support for <a href="https://www.python.org/dev/peps/pep-0582/">PEP 582</a> as an opt-in feature, in addition to virtualenv management. Although <a href="https://discuss.python.org/t/pep-582-python-local-packages-directory/963/430">the Python Steering Council has rejected PEP 582</a>, you can still test it out using PDM.</p>
+<p>To learn more about the two modes, refer to the relevant chapters on <a href="usage/venv/">Working with virtualenv</a> and <a href="usage/pep582/">Working with PEP 582</a>.</p>
 <h2 id="pdm-eco-system">PDM Eco-system<a class="headerlink" href="#pdm-eco-system" title="Permanent link">#</a></h2>
 <p><a href="https://github.com/pdm-project/awesome-pdm">Awesome PDM</a> is a curated list of awesome PDM plugins and resources.</p>
 <h2 id="sponsors">Sponsors<a class="headerlink" href="#sponsors" title="Permanent link">#</a></h2>

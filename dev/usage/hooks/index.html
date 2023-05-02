@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../assets/extra.css">
@@ -923,7 +925,7 @@ of a Python project lifecycle and PDM provides commands to perform the expected 
 this is why PDM lets you define your own tasks/phases using <a href="#user-scripts">user scripts</a>.</p>
 <p>To provides full flexibility, PDM allows to <a href="#skipping">skip some hooks and tasks</a> on demand.</p>
 <h2 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">#</a></h2>
-<p>The initialization phase should occur only once in a project lifetime by running the <a href="../../reference/cli/#exec-0--init"><code>pdm init</code></a>
+<p>The initialization phase should occur only once in a project lifetime by running the <a href="../../reference/cli/#init"><code>pdm init</code></a>
 command to initialize an existing project (prompt to fill the <code>pyproject.toml</code> file).</p>
 <p>They trigger the following hooks:</p>
 <ul>
@@ -945,12 +947,12 @@ command to initialize an existing project (prompt to fill the <code>pyproject.to
 </ul>
 <p>All those steps are directly available with the following commands:</p>
 <ul>
-<li><a href="../../reference/cli/#exec-0--lock"><code>pdm lock</code></a>: execute the <code>lock</code> task</li>
-<li><a href="../../reference/cli/#exec-0--sync"><code>pdm sync</code></a>: execute the <code>sync</code> task</li>
-<li><a href="../../reference/cli/#exec-0--install"><code>pdm install</code></a>: execute the <code>sync</code> task, preceded from <code>lock</code> if required</li>
-<li><a href="../../reference/cli/#exec-0--add"><code>pdm add</code></a>: add a dependency requirement, re-lock and then sync</li>
-<li><a href="../../reference/cli/#exec-0--remove"><code>pdm remove</code></a>: remove a dependency requirement, re-lock and then sync</li>
-<li><a href="../../reference/cli/#exec-0--update"><code>pdm update</code></a>: re-lock dependencies from their latest versions and then sync</li>
+<li><a href="../../reference/cli/#lock"><code>pdm lock</code></a>: execute the <code>lock</code> task</li>
+<li><a href="../../reference/cli/#sync"><code>pdm sync</code></a>: execute the <code>sync</code> task</li>
+<li><a href="../../reference/cli/#install"><code>pdm install</code></a>: execute the <code>sync</code> task, preceded from <code>lock</code> if required</li>
+<li><a href="../../reference/cli/#add"><code>pdm add</code></a>: add a dependency requirement, re-lock and then sync</li>
+<li><a href="../../reference/cli/#remove"><code>pdm remove</code></a>: remove a dependency requirement, re-lock and then sync</li>
+<li><a href="../../reference/cli/#update"><code>pdm update</code></a>: re-lock dependencies from their latest versions and then sync</li>
 </ul>
 <p>They trigger the following hooks:</p>
 <ul>
@@ -981,7 +983,7 @@ command to initialize an existing project (prompt to fill the <code>pyproject.to
   end</code></pre>
 <h3 id="switching-python-version">Switching Python version<a class="headerlink" href="#switching-python-version" title="Permanent link">#</a></h3>
 <p>This is a special case in dependency management:
-you can switch the current Python version using <a href="../../reference/cli/#exec-0--use"><code>pdm use</code></a>
+you can switch the current Python version using <a href="../../reference/cli/#use"><code>pdm use</code></a>
 and it will emit the <a class="autorefs autorefs-internal" href="../../reference/api/#pdm.signals.post_use"><code>post_use</code></a> signal with the new Python interpreter.</p>
 <pre class="mermaid"><code>flowchart LR
   subgraph pdm-use [pdm use]
@@ -997,8 +999,8 @@ and it will emit the <a class="autorefs autorefs-internal" href="../../reference
 </ul>
 <p>All those steps are available with the following commands:</p>
 <ul>
-<li><a href="../../reference/cli/#exec-0--build"><code>pdm build</code></a></li>
-<li><a href="../../reference/cli/#exec-0--publish"><code>pdm publish</code></a></li>
+<li><a href="../../reference/cli/#build"><code>pdm build</code></a></li>
+<li><a href="../../reference/cli/#publish"><code>pdm publish</code></a></li>
 </ul>
 <p>They trigger the following hooks:</p>
 <ul>
@@ -1052,7 +1054,7 @@ and it will emit the <a class="autorefs autorefs-internal" href="../../reference
 <span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 <span class="n">pre_composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 <span class="n">post_composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<span class="n">composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">composite</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;test&quot;</span><span class="p">]}</span>
+<span class="n">composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">composite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;test&quot;</span><span class="p">]}</span>
 </code></pre></div></td></tr></table></div>
 <p>a <code>pdm run test</code> will have the following lifecycle:</p>
 <pre class="mermaid"><code>flowchart LR
