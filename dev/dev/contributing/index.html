@@ -15,7 +15,7 @@
         <link rel="next" href="../changelog/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
     
     
       
@@ -82,6 +82,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#contributing-to-pdm" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -681,10 +686,104 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Contributing
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-recommended-flow-of-contributing-to-an-open-source-project" class="md-nav__link">
+    A recommended flow of contributing to an Open Source project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    Local development
+  </a>
+  
+    <nav class="md-nav" aria-label="Local development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-tests" class="md-nav__link">
+    Run tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-style" class="md-nav__link">
+    Code style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#news-fragments" class="md-nav__link">
+    News fragments
+  </a>
+  
+    <nav class="md-nav" aria-label="News fragments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-types" class="md-nav__link">
+    Issue Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preview-the-documentation" class="md-nav__link">
+    Preview the documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release" class="md-nav__link">
+    Release
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -757,6 +856,84 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-recommended-flow-of-contributing-to-an-open-source-project" class="md-nav__link">
+    A recommended flow of contributing to an Open Source project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    Local development
+  </a>
+  
+    <nav class="md-nav" aria-label="Local development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-tests" class="md-nav__link">
+    Run tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-style" class="md-nav__link">
+    Code style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#news-fragments" class="md-nav__link">
+    News fragments
+  </a>
+  
+    <nav class="md-nav" aria-label="News fragments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-types" class="md-nav__link">
+    Issue Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preview-the-documentation" class="md-nav__link">
+    Preview the documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release" class="md-nav__link">
+    Release
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -774,9 +951,130 @@
   
 
 
-  <h1>Contributing</h1>
-
-
+<h1 id="contributing-to-pdm">Contributing to PDM<a class="headerlink" href="#contributing-to-pdm" title="Permanent link">#</a></h1>
+<p>First off, thanks for taking the time to contribute! Contributions include but are not restricted to:</p>
+<ul>
+<li>Reporting bugs</li>
+<li>Contributing to code</li>
+<li>Writing tests</li>
+<li>Writing documentation</li>
+</ul>
+<p>The following is a set of guidelines for contributing.</p>
+<h2 id="a-recommended-flow-of-contributing-to-an-open-source-project">A recommended flow of contributing to an Open Source project<a class="headerlink" href="#a-recommended-flow-of-contributing-to-an-open-source-project" title="Permanent link">#</a></h2>
+<p>This section is for beginners to OSS. If you are an experienced OSS developer, you can skip
+this section.</p>
+<ol>
+<li>First, fork this project to your own namespace using the fork button at the top right of the repository page.</li>
+<li>Clone the <strong>upstream</strong> repository to local:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pdm-project/pdm.git
+<span class="c1"># Or if you prefer SSH clone:</span>
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:pdm-project/pdm.git
+</code></pre></div></td></tr></table></div></li>
+<li>Add the fork as a new remote:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>fork<span class="w"> </span>https://github.com/yourname/pdm.git
+git<span class="w"> </span>fetch<span class="w"> </span>fork
+</code></pre></div></td></tr></table></div>
+   where <code>fork</code> is the remote name of the fork repository.</li>
+</ol>
+<p><strong>ProTips:</strong></p>
+<ol>
+<li>Don't modify code on the main branch, the main branch should always keep track of origin/main.</li>
+</ol>
+<p>To update main branch to date:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+<span class="c1"># In rare cases that your local main branch diverges from the remote main:</span>
+git<span class="w"> </span>fetch<span class="w"> </span>origin<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>main
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Create a new branch based on the up-to-date main branch for new patches.</li>
+<li>Create a Pull Request from that patch branch.</li>
+</ol>
+<h2 id="local-development">Local development<a class="headerlink" href="#local-development" title="Permanent link">#</a></h2>
+<p>We recommend working in a virtual environment.
+Feel free to create a virtual environment with either the <code>venv</code> module or the <code>virtualenv</code> tool.
+For example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+.<span class="w"> </span>.venv/bin/activate<span class="w">  </span><span class="c1"># linux</span>
+.venv/Scripts/activate<span class="w">  </span><span class="c1"># windows</span>
+</code></pre></div></td></tr></table></div>
+<p>Make sure your <code>pip</code> is newer than <code>21.3</code> to install PDM in develop/editable mode.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span><span class="s2">&quot;pip&gt;=21.3&quot;</span>
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</code></pre></div></td></tr></table></div>
+<p>Make sure PDM uses the virtual environment you just created:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>config<span class="w"> </span>-l<span class="w"> </span>python.use_venv<span class="w"> </span><span class="nb">true</span>
+pdm<span class="w"> </span>config<span class="w"> </span>-l<span class="w"> </span>venv.in_project<span class="w"> </span><span class="nb">true</span>
+</code></pre></div></td></tr></table></div>
+<p>Install PDM development dependencies:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>install
+</code></pre></div></td></tr></table></div>
+<p>Now, all dependencies are installed into the Python environment you chose, which will be used for development after this point.</p>
+<h3 id="run-tests">Run tests<a class="headerlink" href="#run-tests" title="Permanent link">#</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>run<span class="w"> </span><span class="nb">test</span>
+</code></pre></div></td></tr></table></div>
+<p>The test suite is still simple and needs expansion! Please help write more test cases.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also run your test suite against all supported Python version using <code>tox</code> with the <code>tox-pdm</code> plugin.
+You can either run it by yourself with:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tox
+</code></pre></div></td></tr></table></div>
+<p>or from <code>pdm</code> with:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>run<span class="w"> </span>tox
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="code-style">Code style<a class="headerlink" href="#code-style" title="Permanent link">#</a></h3>
+<p>PDM uses <code>pre-commit</code> for linting. Install <code>pre-commit</code> first, for example with pip or <a href="https://github.com/pypa/pipx">pipx</a>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pre-commit
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pipx<span class="w"> </span>install<span class="w"> </span>pre-commit
+</code></pre></div></td></tr></table></div>
+<p>Then initialize <code>pre-commit</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pre-commit<span class="w"> </span>install
+</code></pre></div></td></tr></table></div>
+<p>You can now lint the code with:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>run<span class="w"> </span>lint
+</code></pre></div></td></tr></table></div>
+<p>PDM uses <code>black</code> for code style and <code>isort</code> for sorting import statements. If you are not following them,
+the CI will fail and your Pull Request will not be merged.</p>
+<h3 id="news-fragments">News fragments<a class="headerlink" href="#news-fragments" title="Permanent link">#</a></h3>
+<p>When you make changes such as fixing a bug or adding a feature, you must add a news fragment describing
+your change. News fragments are placed in the <code>news/</code> directory, and should be named according to this pattern: <code>&lt;issue_num&gt;.&lt;issue_type&gt;.md</code> (e.g., <code>566.bugfix.md</code>).</p>
+<h4 id="issue-types">Issue Types<a class="headerlink" href="#issue-types" title="Permanent link">#</a></h4>
+<ul>
+<li><code>feature</code>: Features and improvements</li>
+<li><code>bugfix</code>: Bug fixes</li>
+<li><code>refactor</code>: Code restructures</li>
+<li><code>doc</code>: Added or improved documentation</li>
+<li><code>dep</code>: Changes to dependencies</li>
+<li><code>removal</code>: Removals or deprecations in the API</li>
+<li><code>misc</code>: Miscellaneous changes that don't fit any of the other categories</li>
+</ul>
+<p>The contents of the file should be a single sentence in the imperative
+mood that describes your changes. (e.g., <code>Deduplicate the plugins list.</code> ) See entries in the <a href="/CHANGELOG.md">Change Log</a> for more examples.</p>
+<h3 id="preview-the-documentation">Preview the documentation<a class="headerlink" href="#preview-the-documentation" title="Permanent link">#</a></h3>
+<p>If you make some changes to the <code>docs/</code> and you want to preview the build result, simply do:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>run<span class="w"> </span>doc
+</code></pre></div></td></tr></table></div>
+<h2 id="release">Release<a class="headerlink" href="#release" title="Permanent link">#</a></h2>
+<p>Once all changes are done and ready to release, you can preview the changelog contents by running:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>run<span class="w"> </span>release<span class="w"> </span>--dry-run
+</code></pre></div></td></tr></table></div>
+<p>Make sure the next version and the changelog are as expected in the output.</p>
+<p>Then cut a release on the <strong>main</strong> branch:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>run<span class="w"> </span>release
+</code></pre></div></td></tr></table></div>
+<p>GitHub action will create the release and upload the distributions to PyPI.</p>
+<p>Read more options about version bumping by <code>pdm run release --help</code>.</p>
 
 
   
@@ -860,9 +1158,11 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
       
-        <script src="../../assets/extra.js"></script>
+        
+          <script src="../../assets/extra.js"></script>
+        
       
     
   </body>
