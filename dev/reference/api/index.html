@@ -15,15 +15,15 @@
         <link rel="next" href="../../dev/write/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
-        <title>API Reference - PDM</title>
+        <title>API Reference# - PDM</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Reference
+              API Reference#
             
           </span>
         </div>
@@ -504,6 +504,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/template/" class="md-nav__link">
+        Create Project From a Template
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -613,12 +627,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          API Reference
+          API Reference#
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        API Reference
+        API Reference#
       </a>
       
         
@@ -728,13 +742,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pdm.project.core.Project.get_pyproject_dependencies" class="md-nav__link">
-    get_pyproject_dependencies()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#pdm.project.core.Project.get_reporter" class="md-nav__link">
     get_reporter()
   </a>
@@ -758,6 +765,13 @@
           <li class="md-nav__item">
   <a href="#pdm.project.core.Project.resolve_interpreter" class="md-nav__link">
     resolve_interpreter()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdm.project.core.Project.use_pyproject_dependencies" class="md-nav__link">
+    use_pyproject_dependencies()
   </a>
   
 </li>
@@ -964,7 +978,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/fixtures/" class="md-nav__link">
-        Pytest fixtures
+        Pytest fixtures#
       </a>
     </li>
   
@@ -978,7 +992,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/contributing/" class="md-nav__link">
-        Contributing
+        Contributing to PDM
       </a>
     </li>
   
@@ -1152,13 +1166,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pdm.project.core.Project.get_pyproject_dependencies" class="md-nav__link">
-    get_pyproject_dependencies()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#pdm.project.core.Project.get_reporter" class="md-nav__link">
     get_reporter()
   </a>
@@ -1182,6 +1189,13 @@
           <li class="md-nav__item">
   <a href="#pdm.project.core.Project.resolve_interpreter" class="md-nav__link">
     resolve_interpreter()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdm.project.core.Project.use_pyproject_dependencies" class="md-nav__link">
+    use_pyproject_dependencies()
   </a>
   
 </li>
@@ -1810,26 +1824,6 @@ is used</p></td>
 
 
 
-<h3 id="pdm.project.core.Project.get_pyproject_dependencies" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get_pyproject_dependencies</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="n">dev</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
-
-<a href="#pdm.project.core.Project.get_pyproject_dependencies" class="headerlink" title="Permanent link">#</a></h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Get the dependencies array in the pyproject.toml
-Return a tuple of two elements, the first is the dependencies array,
-and the second tells whether it is a dev-dependencies group.</p>
-
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-
 <h3 id="pdm.project.core.Project.get_reporter" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">get_reporter</span><span class="p">(</span><span class="n">requirements</span><span class="p">,</span> <span class="n">tracked_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">spinner</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
@@ -1906,8 +1900,28 @@ and the second tells whether it is a dev-dependencies group.</p>
 
 
 
+<h3 id="pdm.project.core.Project.use_pyproject_dependencies" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_pyproject_dependencies</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="n">dev</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#pdm.project.core.Project.use_pyproject_dependencies" class="headerlink" title="Permanent link">#</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the dependencies array and setter in the pyproject.toml
+Return a tuple of two elements, the first is the dependencies array,
+and the second value is a callable to set the dependencies array back.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
 <h3 id="pdm.project.core.Project.write_lockfile" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">write_lockfile</span><span class="p">(</span><span class="n">toml_data</span><span class="p">,</span> <span class="n">show_message</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cross_platform</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">write_lockfile</span><span class="p">(</span><span class="n">toml_data</span><span class="p">,</span> <span class="n">show_message</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">_kwds</span><span class="p">)</span></code>
 
 <a href="#pdm.project.core.Project.write_lockfile" class="headerlink" title="Permanent link">#</a></h3>
 
@@ -2965,10 +2979,10 @@ and the second tells whether it is a dev-dependencies group.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../../assets/extra.js"></script>

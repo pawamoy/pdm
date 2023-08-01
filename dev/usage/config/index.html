@@ -15,7 +15,7 @@
         <link rel="next" href="../scripts/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -469,6 +469,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configure-the-python-finder" class="md-nav__link">
+    Configure the Python finder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#allow-prereleases-in-resolution-result" class="md-nav__link">
     Allow prereleases in resolution result
   </a>
@@ -493,6 +500,13 @@
           <li class="md-nav__item">
   <a href="#store-credentials-with-the-index" class="md-nav__link">
     Store credentials with the index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-https-certificates" class="md-nav__link">
+    Configure HTTPS certificates
   </a>
   
 </li>
@@ -623,6 +637,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template/" class="md-nav__link">
+        Create Project From a Template
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -721,7 +749,7 @@
   
     <li class="md-nav__item">
       <a href="../../reference/api/" class="md-nav__link">
-        API Reference
+        API Reference#
       </a>
     </li>
   
@@ -784,7 +812,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/fixtures/" class="md-nav__link">
-        Pytest fixtures
+        Pytest fixtures#
       </a>
     </li>
   
@@ -798,7 +826,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/contributing/" class="md-nav__link">
-        Contributing
+        Contributing to PDM
       </a>
     </li>
   
@@ -888,6 +916,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configure-the-python-finder" class="md-nav__link">
+    Configure the Python finder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#allow-prereleases-in-resolution-result" class="md-nav__link">
     Allow prereleases in resolution result
   </a>
@@ -912,6 +947,13 @@
           <li class="md-nav__item">
   <a href="#store-credentials-with-the-index" class="md-nav__link">
     Store credentials with the index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-https-certificates" class="md-nav__link">
+    Configure HTTPS certificates
   </a>
   
 </li>
@@ -1018,6 +1060,21 @@ show configurations.</p>
 </ul>
 <p>If <code>-g/--global</code> option is used, the first item will be replaced by <code>&lt;CONFIG_ROOT&gt;/global-project/pdm.toml</code>.</p>
 <p>You can find all available configuration items in <a href="../../reference/configuration/">Configuration Page</a>.</p>
+<h2 id="configure-the-python-finder">Configure the Python finder<a class="headerlink" href="#configure-the-python-finder" title="Permanent link">#</a></h2>
+<p>By default, PDM will try to find Python interpreters in the following sources:</p>
+<ul>
+<li><code>venv</code>: The PDM virtualenv location</li>
+<li><code>path</code>: The <code>PATH</code> environment variable</li>
+<li><code>pyenv</code>: The <a href="https://github.com/pyenv/pyenv">pyenv</a> install root</li>
+<li><code>rye</code>: The <a href="https://rye-up.com/">rye</a> toolchain install root</li>
+<li><code>asdf</code>: The <a href="https://asdf-vm.com/">asdf</a> python install root</li>
+<li><code>winreg</code>: The Windows registry</li>
+</ul>
+<p>You can unselect some of them or change the order by setting <code>python.providers</code> config key:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>config<span class="w"> </span>python.providers<span class="w"> </span>rye<span class="w">   </span><span class="c1"># Rye source only</span>
+pdm<span class="w"> </span>config<span class="w"> </span>python.providers<span class="w"> </span>pyenv,asdf<span class="w">  </span><span class="c1"># pyenv and asdf</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="allow-prereleases-in-resolution-result">Allow prereleases in resolution result<a class="headerlink" href="#allow-prereleases-in-resolution-result" title="Permanent link">#</a></h2>
 <p>By default, <code>pdm</code>'s dependency resolver will ignore prereleases unless there are no stable versions for the given version range of a dependency. This behavior can be changed by setting <code>allow_prereleases</code> to <code>true</code> in <code>[tool.pdm]</code> table:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1091,6 +1148,16 @@ Otherwise, store them in the local config which won't be seen by others.</p>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[[tool.pdm.source]]</span>
 <span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;private&quot;</span>
 <span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://${PRIVATE_PYPI_USERNAME}:${PRIVATE_PYPI_PASSWORD}/private.pypi.org/simple&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="configure-https-certificates">Configure HTTPS certificates<a class="headerlink" href="#configure-https-certificates" title="Permanent link">#</a></h3>
+<p>You can use a custom CA bundle or client certificate for HTTPS requests. It can be configured for both indexes(for package download) and repositories(for upload):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>config<span class="w"> </span>pypi.ca_certs<span class="w"> </span>/path/to/ca_bundle.pem
+pdm<span class="w"> </span>config<span class="w"> </span>repository.pypi.ca_certs<span class="w"> </span>/path/to/ca_bundle.pem
+</code></pre></div></td></tr></table></div>
+<p>Besides, it is possible to use the system trust store, instead of the bundled certifi certificates for verifying HTTPS certificates. This approach will typically support corporate proxy certificates without additional configuration.</p>
+<p>To use <code>truststore</code>, you need Python 3.10 or newer and install <code>truststore</code> into the same environment as PDM:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>self<span class="w"> </span>add<span class="w"> </span>truststore
 </code></pre></div></td></tr></table></div>
 <h3 id="index-configuration-merging">Index configuration merging<a class="headerlink" href="#index-configuration-merging" title="Permanent link">#</a></h3>
 <p>Index configurations are merged with the <code>name</code> field of <code>[[tool.pdm.source]]</code> table or <code>pypi.&lt;name&gt;</code> key in the config file.
@@ -1292,10 +1359,10 @@ Most of the time, you can just add any transient constraints to the <code>depend
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../../assets/extra.js"></script>

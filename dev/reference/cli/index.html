@@ -15,7 +15,7 @@
         <link rel="next" href="../api/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -504,6 +504,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/template/" class="md-nav__link">
+        Create Project From a Template
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -962,7 +976,7 @@
   
     <li class="md-nav__item">
       <a href="../api/" class="md-nav__link">
-        API Reference
+        API Reference#
       </a>
     </li>
   
@@ -1025,7 +1039,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/fixtures/" class="md-nav__link">
-        Pytest fixtures
+        Pytest fixtures#
       </a>
     </li>
   
@@ -1039,7 +1053,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/contributing/" class="md-nav__link">
-        Contributing
+        Contributing to PDM
       </a>
     </li>
   
@@ -1466,7 +1480,7 @@
 <h1 id="cli-reference">CLI Reference<a class="headerlink" href="#cli-reference" title="Permanent link">#</a>
 </h1>
 <p><h2 id="pdm">pdm<a class="headerlink" href="#pdm" title="Permanent link">#</a></h2>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-V</code>, <code>--version</code>: Show the version and exit</li>
@@ -1485,12 +1499,12 @@
 <li><code>-e</code>, <code>--editable</code>: Specify editable packages</li>
 <li><code>packages</code>: Specify packages</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
 <li><code>--save-compatible</code>: Save compatible version specifiers</li>
 <li><code>--save-wildcard</code>: Save wildcard version specifiers</li>
@@ -1519,11 +1533,11 @@
 <blockquote>
 <p>Build artifacts for distribution</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--no-isolation</code>: Do not isolate the build in a clean environment</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>--no-sdist</code>: Don't build source tarballs (default: <code>True</code>)</li>
@@ -1536,7 +1550,7 @@
 <blockquote>
 <p>Control the caches of PDM</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1550,7 +1564,7 @@
 <ul>
 <li><code>type</code>: Clear the given type of caches</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1563,7 +1577,7 @@
 <ul>
 <li><code>pattern</code>: The pattern to remove</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1576,7 +1590,7 @@
 <ul>
 <li><code>pattern</code>: The pattern to list (default: <code>*</code>)</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1585,7 +1599,7 @@
 <blockquote>
 <p>Show the info and current size of caches</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1598,7 +1612,7 @@
 <ul>
 <li><code>shell</code>: The shell to generate the scripts for. If not given, PDM will properly guess from <code>SHELL</code> env var.</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 </ul>
@@ -1611,12 +1625,12 @@
 <li><code>key</code>: Config key</li>
 <li><code>value</code>: Config value</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-l</code>, <code>--local</code>: Set config in the project's local configuration file</li>
 <li><code>-d</code>, <code>--delete</code>: Unset a configuration key</li>
 <li><code>-e</code>, <code>--edit</code>: Edit the configuration file in the default editor(defined by EDITOR env var)</li>
@@ -1625,12 +1639,12 @@
 <blockquote>
 <p>Export the locked packages set to other formats</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
 <li><code>-f</code>, <code>--format</code>: Specify the export file format (default: <code>requirements</code>)</li>
 <li><code>--without-hashes</code>: Don't include artifact hashes (default: <code>True</code>)</li>
@@ -1653,12 +1667,12 @@
 <ul>
 <li><code>problem</code>: Fix the specific problem, or all if not given</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Only show the problems</li>
 </ul>
 <h3 id="import">import<a class="headerlink" href="#import" title="Permanent link">#</a></h3>
@@ -1669,12 +1683,12 @@
 <ul>
 <li><code>filename</code>: The file name</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-d</code>, <code>--dev</code>: import packages into dev dependencies</li>
 <li><code>-G</code>, <code>--group</code>: Specify the target dependency group to import into</li>
 <li><code>-f</code>, <code>--format</code>: Specify the file format explicitly</li>
@@ -1683,12 +1697,12 @@
 <blockquote>
 <p>Show the project information</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
 <li><code>--python</code>: Show the interpreter path</li>
 <li><code>--where</code>: Show the project root path</li>
@@ -1700,13 +1714,23 @@
 <blockquote>
 <p>Initialize a pyproject.toml for PDM</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Positional Arguments:</p>
+<ul>
+<li><code>template</code>: Specify the project template, which can be a local path or a Git URL</li>
+<li><code>generator_args</code>: Arguments passed to the generator</li>
+</ul>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
+<li><code>--copier</code>: Use Copier to generate project [not installed] (default: <code>builtin</code>)</li>
+<li><code>--cookiecutter</code>: Use Cookiecutter to generate project [not installed] (default: <code>builtin</code>)</li>
+</ul>
+<p>Builtin Generator Options:</p>
+<ul>
 <li><code>-n</code>, <code>--non-interactive</code>: Don't ask questions but use default values</li>
 <li><code>--python</code>: Specify the Python version/path to use</li>
 <li><code>--backend</code>: Specify the build backend</li>
@@ -1716,12 +1740,12 @@
 <blockquote>
 <p>Install dependencies from lock file</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Show the difference only and don't perform any action</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
@@ -1748,12 +1772,12 @@
 <blockquote>
 <p>List packages installed in the current working set</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
 <li><code>--freeze</code>: Show the installed dependencies in pip's requirements.txt format</li>
 <li><code>--graph</code>: Display a graph of dependencies</li>
@@ -1771,18 +1795,20 @@
 <blockquote>
 <p>Resolve and lock dependencies</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
 <li><code>--no-isolation</code>: Do not isolate the build in a clean environment</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>--refresh</code>: Don't update pinned versions, only refresh the lock file</li>
 <li><code>--check</code>: Check if the lock file is up to date and quit</li>
 <li><code>--no-cross-platform</code>: Only lock packages for the current platform (default: <code>True</code>)</li>
+<li><code>--static-urls</code>: Store static file URLs in the lockfile</li>
+<li><code>--no-static-urls</code>: Do not store static file URLs in the lockfile (default: <code>True</code>)</li>
 </ul>
 <p>Dependencies Selection:</p>
 <ul>
@@ -1795,11 +1821,11 @@
 <blockquote>
 <p>Build and publish the project to PyPI</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>-r</code>, <code>--repository</code>: The repository name or url to publish the package to [env var: <code>PDM_PUBLISH_REPO</code>]</li>
 <li><code>-u</code>, <code>--username</code>: The username to access the repository [env var: <code>PDM_PUBLISH_USERNAME</code>]</li>
@@ -1819,12 +1845,12 @@
 <ul>
 <li><code>packages</code>: Specify the packages to remove</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Show the difference only and don't perform any action</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
@@ -1844,12 +1870,12 @@
 <blockquote>
 <p>Run commands or scripts with local packages loaded</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
 <li><code>-l</code>, <code>--list</code>: Show all available scripts defined in<code>pyproject.toml</code></li>
@@ -1869,7 +1895,7 @@
 <ul>
 <li><code>query</code>: Query string to search</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1878,7 +1904,7 @@
 <blockquote>
 <p>Manage the PDM program itself (previously known as plugin)</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1888,7 +1914,7 @@
 <blockquote>
 <p>List all packages installed with PDM</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1902,7 +1928,7 @@
 <ul>
 <li><code>packages</code>: Specify one or many package names, each package can have a version specifier</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1916,7 +1942,7 @@
 <ul>
 <li><code>packages</code>: Specify one or many package names</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1927,7 +1953,7 @@
 <blockquote>
 <p>Update PDM itself</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1939,7 +1965,7 @@
 <blockquote>
 <p>Manage the PDM program itself (previously known as plugin)</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1949,7 +1975,7 @@
 <blockquote>
 <p>List all packages installed with PDM</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1963,7 +1989,7 @@
 <ul>
 <li><code>packages</code>: Specify one or many package names, each package can have a version specifier</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1977,7 +2003,7 @@
 <ul>
 <li><code>packages</code>: Specify one or many package names</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -1988,7 +2014,7 @@
 <blockquote>
 <p>Update PDM itself</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -2004,12 +2030,12 @@
 <ul>
 <li><code>package</code>: Specify the package name, or show this package if not given</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
 <li><code>--name</code>: Show name</li>
 <li><code>--version</code>: Show version</li>
@@ -2022,12 +2048,12 @@
 <blockquote>
 <p>Synchronize the current working set with lock file</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Show the difference only and don't perform any action</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
@@ -2058,12 +2084,12 @@
 <ul>
 <li><code>packages</code>: If packages are given, only update them</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
 <li><code>--save-compatible</code>: Save compatible version specifiers</li>
 <li><code>--save-wildcard</code>: Save wildcard version specifiers</li>
@@ -2102,12 +2128,12 @@
 <ul>
 <li><code>python</code>: Specify the Python version or path</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
-<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code></li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>-f</code>, <code>--first</code>: Select the first matched interpreter</li>
 <li><code>-i</code>, <code>--ignore-remembered</code>: Ignore the remembered selection</li>
@@ -2117,9 +2143,10 @@
 <blockquote>
 <p>Virtualenv management</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
+<li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--path</code>: Show the path to the given virtualenv</li>
 <li><code>--python</code>: Show the python interpreter path for the given virtualenv</li>
 </ul>
@@ -2133,7 +2160,7 @@
 <li><code>python</code>: Specify which python should be used to create the virtualenv</li>
 <li><code>venv_args</code>: Additional arguments that will be passed to the backend</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -2146,7 +2173,7 @@
 <blockquote>
 <p>List all virtualenvs associated with this project</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -2159,7 +2186,7 @@
 <ul>
 <li><code>env</code>: The key of the virtualenv</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -2173,7 +2200,7 @@
 <ul>
 <li><code>env</code>: The key of the virtualenv</li>
 </ul>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -2182,7 +2209,7 @@
 <blockquote>
 <p>Purge selected/all created Virtualenvs</p>
 </blockquote>
-<p>Optional Arguments:</p>
+<p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
@@ -2270,10 +2297,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../../assets/extra.js"></script>

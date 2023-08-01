@@ -15,7 +15,7 @@
         <link rel="next" href="../pep582/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -539,6 +539,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reuse-the-virtualenv-you-created-elsewhere" class="md-nav__link">
+    Reuse the virtualenv you created elsewhere
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#virtualenv-auto-detection" class="md-nav__link">
     Virtualenv auto-detection
   </a>
@@ -625,6 +632,20 @@
     <li class="md-nav__item">
       <a href="../pep582/" class="md-nav__link">
         Working with PEP 582
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template/" class="md-nav__link">
+        Create Project From a Template
       </a>
     </li>
   
@@ -729,7 +750,7 @@
   
     <li class="md-nav__item">
       <a href="../../reference/api/" class="md-nav__link">
-        API Reference
+        API Reference#
       </a>
     </li>
   
@@ -792,7 +813,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/fixtures/" class="md-nav__link">
-        Pytest fixtures
+        Pytest fixtures#
       </a>
     </li>
   
@@ -806,7 +827,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/contributing/" class="md-nav__link">
-        Contributing
+        Contributing to PDM
       </a>
     </li>
   
@@ -905,6 +926,13 @@
         <li class="md-nav__item">
   <a href="#the-location-of-virtualenvs" class="md-nav__link">
     The location of virtualenvs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reuse-the-virtualenv-you-created-elsewhere" class="md-nav__link">
+    Reuse the virtualenv you created elsewhere
   </a>
   
 </li>
@@ -1027,6 +1055,10 @@ $<span class="w"> </span>pdm<span class="w"> </span>venv<span class="w"> </span>
 <h2 id="the-location-of-virtualenvs">The location of virtualenvs<a class="headerlink" href="#the-location-of-virtualenvs" title="Permanent link">#</a></h2>
 <p>For the first time, PDM will try to create a virtualenv <strong>in project</strong>, unless <code>.venv</code> already exists.
 Other virtualenvs go to the location specified by the <code>venv.location</code> configuration. They are named as <code>&lt;project_name&gt;-&lt;path_hash&gt;-&lt;name_or_python_version&gt;</code> to avoid name collision. A virtualenv created with <code>--name</code> option will always go to this location. You can disable the in-project virtualenv creation by <code>pdm config venv.in_project false</code>.</p>
+<h2 id="reuse-the-virtualenv-you-created-elsewhere">Reuse the virtualenv you created elsewhere<a class="headerlink" href="#reuse-the-virtualenv-you-created-elsewhere" title="Permanent link">#</a></h2>
+<p>You can tell PDM to use a virtualenv you created in preceding steps, with <a href="../../reference/cli/#use"><code>pdm use</code></a>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>use<span class="w"> </span>-f<span class="w"> </span>/path/to/venv
+</code></pre></div></td></tr></table></div>
 <h2 id="virtualenv-auto-detection">Virtualenv auto-detection<a class="headerlink" href="#virtualenv-auto-detection" title="Permanent link">#</a></h2>
 <p>When no interpreter is stored in the project config or <code>PDM_IGNORE_SAVED_PYTHON</code> env var is set, PDM will try to detect possible virtualenvs to use:</p>
 <ul>
@@ -1241,10 +1273,10 @@ $<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>p
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../../assets/extra.js"></script>
