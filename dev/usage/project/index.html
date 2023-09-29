@@ -15,7 +15,7 @@
         <link rel="next" href="../dependency/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -54,7 +54,7 @@
   
 
 
-  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/umami.js"></script>
+  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/script.js"></script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -708,7 +708,7 @@
   
     <li class="md-nav__item">
       <a href="../../reference/api/" class="md-nav__link">
-        API Reference#
+        API Reference
       </a>
     </li>
   
@@ -771,7 +771,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/fixtures/" class="md-nav__link">
-        Pytest fixtures#
+        Pytest fixtures
       </a>
     </li>
   
@@ -1004,7 +1004,7 @@ To fix this, you need add a maximum version to <code>requires-python</code>, lik
 </tbody>
 </table>
 <h2 id="working-with-python-37">Working with Python &lt; 3.7<a class="headerlink" href="#working-with-python-37" title="Permanent link">#</a></h2>
-<p>Although PDM run on Python 3.7 and above, you can still have lower Python versions for your <strong>working project</strong>. But remember, if your project is a library, which needs to be built, published or installed, you make sure the PEP 517 build backend being used supports the lowest Python version you need. For instance, the default backend <code>pdm-pep517</code> only works on Python 3.7+, so if you run <a href="../../reference/cli/#build"><code>pdm build</code></a> on a project with Python 3.6, you will get an error. Most modern build backends have dropped the support for Python 3.6 and lower, so it is highly recommended to upgrade the Python version to 3.7+. Here are the supported Python range for some commonly used build backends, we only list those that support PEP 621 since otherwise PDM can't work with them.</p>
+<p>Although PDM run on Python 3.7 and above, you can still have lower Python versions for your <strong>working project</strong>. But remember, if your project is a library, which needs to be built, published or installed, you make sure the PEP 517 build backend being used supports the lowest Python version you need. For instance, the default backend <code>pdm-backend</code> only works on Python 3.7+, so if you run <a href="../../reference/cli/#build"><code>pdm build</code></a> on a project with Python 3.6, you will get an error. Most modern build backends have dropped the support for Python 3.6 and lower, so it is highly recommended to upgrade the Python version to 3.7+. Here are the supported Python range for some commonly used build backends, we only list those that support PEP 621 since otherwise PDM can't work with them.</p>
 <table>
 <thead>
 <tr>
@@ -1015,7 +1015,7 @@ To fix this, you need add a maximum version to <code>requires-python</code>, lik
 </thead>
 <tbody>
 <tr>
-<td><code>pdm-pep517</code></td>
+<td><code>pdm-backend</code></td>
 <td><code>&gt;=3.7</code></td>
 <td>Yes</td>
 </tr>
@@ -1041,7 +1041,8 @@ To fix this, you need add a maximum version to <code>requires-python</code>, lik
 </tr>
 </tbody>
 </table>
-<p>Note that if your project is an application(without <code>name</code> metadata), the above limitation of backends don't apply, since you don't need a build backend after all, and you can use a Python version up to <code>2.7</code>.</p>
+<p>Note that if your project is an application (i.e. without the <code>name</code> metadata),
+the above limitation of backends does not apply. Therefore, if you don't need a build backend you can use any Python version <code>&gt;=2.7</code>.</p>
 <h2 id="import-the-project-from-other-package-managers">Import the project from other package managers<a class="headerlink" href="#import-the-project-from-other-package-managers" title="Permanent link">#</a></h2>
 <p>If you are already using other package manager tools like Pipenv or Poetry, it is easy to migrate to PDM.
 PDM provides <code>import</code> command so that you don't have to initialize the project manually, it now supports:</p>
@@ -1112,7 +1113,7 @@ $<span class="w"> </span>pdm<span class="w"> </span>info<span class="w"> </span>
 <span class="w">  </span><span class="s2">&quot;platform_system&quot;</span>:<span class="w"> </span><span class="s2">&quot;Windows&quot;</span>,
 <span class="w">  </span><span class="s2">&quot;platform_version&quot;</span>:<span class="w"> </span><span class="s2">&quot;10.0.18362&quot;</span>,
 <span class="w">  </span><span class="s2">&quot;python_full_version&quot;</span>:<span class="w"> </span><span class="s2">&quot;3.8.0&quot;</span>,
-<span class="w">  </span><span class="s2">&quot;platform_python_implementaiton&quot;</span>:<span class="w"> </span><span class="s2">&quot;CPython&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;platform_python_implementation&quot;</span>:<span class="w"> </span><span class="s2">&quot;CPython&quot;</span>,
 <span class="w">  </span><span class="s2">&quot;python_version&quot;</span>:<span class="w"> </span><span class="s2">&quot;3.8&quot;</span>,
 <span class="w">  </span><span class="s2">&quot;sys_platform&quot;</span>:<span class="w"> </span><span class="s2">&quot;win32&quot;</span>
 <span class="o">}</span>

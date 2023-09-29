@@ -15,7 +15,7 @@
         <link rel="next" href="../pep582/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -54,7 +54,7 @@
   
 
 
-  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/umami.js"></script>
+  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/script.js"></script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -750,7 +750,7 @@
   
     <li class="md-nav__item">
       <a href="../../reference/api/" class="md-nav__link">
-        API Reference#
+        API Reference
       </a>
     </li>
   
@@ -813,7 +813,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/fixtures/" class="md-nav__link">
-        Pytest fixtures#
+        Pytest fixtures
       </a>
     </li>
   
@@ -1093,7 +1093,7 @@ Will<span class="w"> </span>remove:<span class="w"> </span>C:<span class="se">\U
 Removed<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\F</span>rost<span class="w"> </span>Ming<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\p</span>dm<span class="se">\p</span>dm<span class="se">\v</span>envs<span class="se">\t</span>est-project-8Sgn_62n-for-test
 </code></pre></div></td></tr></table></div>
 <h2 id="activate-a-virtualenv">Activate a virtualenv<a class="headerlink" href="#activate-a-virtualenv" title="Permanent link">#</a></h2>
-<p>Instead of spawning a subshell like what <code>pipenv</code> and <code>poetry</code> do, <code>pdm-venv</code> doesn't create the shell for you but print the activate command to the console. In this way you won't leave the current shell. You can then feed the output to <code>eval</code> to activate the virtualenv:</p>
+<p>Instead of spawning a subshell like what <code>pipenv</code> and <code>poetry</code> do, <code>pdm venv</code> doesn't create the shell for you but print the activate command to the console. In this way you won't leave the current shell. You can then feed the output to <code>eval</code> to activate the virtualenv:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">bash/csh/zsh</label><label for="__tabbed_1_2">Powershell</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1111,14 +1111,6 @@ $<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><sp
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">PS1</span><span class="p">&gt;</span> <span class="nb">Invoke-Expression</span> <span class="p">(</span><span class="n">pdm</span> <span class="n">venv</span> <span class="n">activate</span> <span class="k">for</span><span class="n">-test</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>You can make your own shell shortcut function to avoid the input of long command. Here is an example of Bash:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">pdm_venv_activate</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">eval</span> <span class="p">$(</span><span class="s1">&#39;pdm&#39;</span> <span class="s1">&#39;venv&#39;</span> <span class="s1">&#39;activate&#39;</span> <span class="s2">&quot;$1&quot;</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>Then you can activate it by <code>pdm_venv_activate $venv_name</code> and deactivate by deactivate directly.</p>
 <p>Additionally, if the project interpreter is a venv Python, you can omit the name argument following activate.</p>
 </div>
 </div>
@@ -1128,6 +1120,34 @@ $<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><sp
 <p><code>venv activate</code> <strong>does not</strong> switch the Python interpreter used by the project. It only changes the shell by injecting the virtualenv paths to environment variables. For the forementioned purpose, use the <code>pdm use</code> command.</p>
 </div>
 <p>For more CLI usage, see the <a href="../../reference/cli/#venv"><code>pdm venv</code></a> documentation.</p>
+<div class="admonition tip">
+<p class="admonition-title">Looking for <code>pdm shell</code>?</p>
+<p>PDM doesn't provide a <code>shell</code> command because many fancy shell functions may not work perfectly in a subshell, which brings a maintenance burden to support all the corner cases. However, you can still gain the ability via the following ways:</p>
+<ul>
+<li>Use <code>pdm run $SHELL</code>, this will spawn a subshell with the environment variables set properly. <strong>The subshell can be quit with <code>exit</code> or <code>Ctrl+D</code>.</strong></li>
+<li>Add a shell function to activate the virtualenv, here is an example of BASH function that also works on ZSH:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">command</span><span class="o">=</span><span class="nv">$1</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$command</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;shell&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>pdm<span class="w"> </span>venv<span class="w"> </span>activate<span class="k">)</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">      </span><span class="nb">command</span><span class="w"> </span>pdm<span class="w"> </span><span class="nv">$@</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Copy and paste this function to your <code>~/.bashrc</code> file and restart your shell. Now you can run <code>pdm shell</code> to activate the virtualenv.
+  <strong>The virtualenv can be deactivated with <code>deactivate</code> command as usual.</strong></p>
+</div>
 <h2 id="prompt-customization">Prompt customization<a class="headerlink" href="#prompt-customization" title="Permanent link">#</a></h2>
 <p>By default when you activate a virtualenv, the prompt will show: <code>{project_name}-{python_version}</code>.</p>
 <p>For example if your project is named <code>test-project</code>:</p>

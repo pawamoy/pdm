@@ -15,7 +15,7 @@
         <link rel="next" href="../cli/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -54,7 +54,7 @@
   
 
 
-  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/umami.js"></script>
+  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/script.js"></script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -628,7 +628,7 @@
   
     <li class="md-nav__item">
       <a href="../api/" class="md-nav__link">
-        API Reference#
+        API Reference
       </a>
     </li>
   
@@ -691,7 +691,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/fixtures/" class="md-nav__link">
-        Pytest fixtures#
+        Pytest fixtures
       </a>
     </li>
   
@@ -801,7 +801,7 @@
 <p><code>pdm</code> uses the <a href="https://www.python.org/dev/peps/pep-0517/">PEP 517</a> to build the package. It acts as a build frontend that calls the build backend to build the package.</p>
 <p>A build backend is what drives the build system to build source distributions and wheels from arbitrary source trees.</p>
 <p>If you run <a href="../cli/#init"><code>pdm init</code></a>, PDM will let you choose the build backend to use. Unlike other package managers, PDM does not force you to use a specific build backend. You can choose the one you like. Here is a list of build backends and corresponding configurations initially supported by PDM:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pdm-backend</label><label for="__tabbed_1_2">setuptools</label><label for="__tabbed_1_3">flit</label><label for="__tabbed_1_4">hatchling</label><label for="__tabbed_1_5">pdm-pep517(deprecated)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">pdm-backend</label><label for="__tabbed_1_2">setuptools</label><label for="__tabbed_1_3">flit</label><label for="__tabbed_1_4">hatchling</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><code>pyproject.toml</code> configuration:</p>
@@ -842,17 +842,6 @@
 <span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hatchling.build&quot;</span>
 </code></pre></div></td></tr></table></div>
 <p><a href="https://hatch.pypa.io/"><img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:" /> Read the docs</a></p>
-</div>
-<div class="tabbed-block">
-<p><em>This backend is deprecated, please migrate to <code>pdm-backend</code>.</em></p>
-<p><code>pyproject.toml</code> configuration:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[build-system]</span>
-<span class="n">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;pdm-pep517&quot;</span><span class="p">]</span>
-<span class="n">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pdm.pep517.api&quot;</span>
-</code></pre></div></td></tr></table></div>
-<p><a href="https://pypi.org/project/pdm-pep517/"><img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:" /> Read the docs</a></p>
 </div>
 </div>
 </div>

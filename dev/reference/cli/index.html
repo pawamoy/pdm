@@ -15,7 +15,7 @@
         <link rel="next" href="../api/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -54,7 +54,7 @@
   
 
 
-  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/umami.js"></script>
+  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/script.js"></script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -976,7 +976,7 @@
   
     <li class="md-nav__item">
       <a href="../api/" class="md-nav__link">
-        API Reference#
+        API Reference
       </a>
     </li>
   
@@ -1039,7 +1039,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/fixtures/" class="md-nav__link">
-        Pytest fixtures#
+        Pytest fixtures
       </a>
     </li>
   
@@ -1506,6 +1506,7 @@
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
+<li><code>--no-lock</code>: Don't try to create or update the lockfile. [env var: <code>PDM_NO_LOCK</code>]</li>
 <li><code>--save-compatible</code>: Save compatible version specifiers</li>
 <li><code>--save-wildcard</code>: Save wildcard version specifiers</li>
 <li><code>--save-exact</code>: Save exact version specifiers</li>
@@ -1527,7 +1528,7 @@
 <li><code>--no-editable</code>: Install non-editable versions for all packages</li>
 <li><code>--no-self</code>: Don't install the project itself. [env var: <code>PDM_NO_SELF</code>]</li>
 <li><code>--fail-fast</code>, <code>-x</code>: Abort on first installation error</li>
-<li><code>--no-isolation</code>: Do not isolate the build in a clean environment</li>
+<li><code>--no-isolation</code>: Disable isolation when building a source distribution that follows PEP 517, as in: build dependencies specified by PEP 518 must be already installed if this option is used.</li>
 </ul>
 <h3 id="build">build<a class="headerlink" href="#build" title="Permanent link">#</a></h3>
 <blockquote>
@@ -1538,7 +1539,7 @@
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
-<li><code>--no-isolation</code>: Do not isolate the build in a clean environment</li>
+<li><code>--no-isolation</code>: Disable isolation when building a source distribution that follows PEP 517, as in: build dependencies specified by PEP 518 must be already installed if this option is used.</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>--no-sdist</code>: Don't build source tarballs (default: <code>True</code>)</li>
 <li><code>--no-wheel</code>: Don't build wheels (default: <code>True</code>)</li>
@@ -1728,6 +1729,7 @@
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>--copier</code>: Use Copier to generate project [not installed] (default: <code>builtin</code>)</li>
 <li><code>--cookiecutter</code>: Use Cookiecutter to generate project [not installed] (default: <code>builtin</code>)</li>
+<li><code>-r</code>, <code>--overwrite</code>: Overwrite existing files</li>
 </ul>
 <p>Builtin Generator Options:</p>
 <ul>
@@ -1748,9 +1750,9 @@
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Show the difference only and don't perform any action</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
+<li><code>--no-lock</code>: Don't try to create or update the lockfile. [env var: <code>PDM_NO_LOCK</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
-<li><code>--no-lock</code>: Don't do lock if the lock file is not found or outdated (default: <code>True</code>)</li>
 <li><code>--check</code>: Check if the lock file is up to date and fail otherwise</li>
 <li><code>--plugins</code>: Install the plugins specified in<code>pyproject.toml</code></li>
 </ul>
@@ -1759,7 +1761,7 @@
 <li><code>--no-editable</code>: Install non-editable versions for all packages</li>
 <li><code>--no-self</code>: Don't install the project itself. [env var: <code>PDM_NO_SELF</code>]</li>
 <li><code>--fail-fast</code>, <code>-x</code>: Abort on first installation error</li>
-<li><code>--no-isolation</code>: Do not isolate the build in a clean environment</li>
+<li><code>--no-isolation</code>: Disable isolation when building a source distribution that follows PEP 517, as in: build dependencies specified by PEP 518 must be already installed if this option is used.</li>
 </ul>
 <p>Dependencies Selection:</p>
 <ul>
@@ -1772,6 +1774,10 @@
 <blockquote>
 <p>List packages installed in the current working set</p>
 </blockquote>
+<p>Positional Arguments:</p>
+<ul>
+<li><code>patterns</code>: Filter packages by patterns. e.g. pdm list requests-<em> flask-</em>. In --tree mode, only show the subtree of the matched packages.</li>
+</ul>
 <p>Options:</p>
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
@@ -1780,10 +1786,10 @@
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
 <li><code>--freeze</code>: Show the installed dependencies in pip's requirements.txt format</li>
-<li><code>--graph</code>: Display a graph of dependencies</li>
-<li><code>-r</code>, <code>--reverse</code>: Reverse the dependency graph</li>
+<li><code>--tree</code>, <code>--graph</code>: Display a tree of dependencies</li>
+<li><code>-r</code>, <code>--reverse</code>: Reverse the dependency tree</li>
 <li><code>--resolve</code>: Resolve all requirements to output licenses (instead of just showing those currently installed)</li>
-<li><code>--fields</code>: Select information to output as a comma separated string. For example: name,version,homepage,licenses,groups. (default: <code>name,version,location</code>)</li>
+<li><code>--fields</code>: Select information to output as a comma separated string. All fields: groups,homepage,licenses,location,name,version. (default: <code>name,version,location</code>)</li>
 <li><code>--sort</code>: Sort the output using a given field name. If nothing is set, no sort is applied. Multiple fields can be combined with ','.</li>
 <li><code>--csv</code>: Output dependencies in CSV document format</li>
 <li><code>--json</code>: Output dependencies in JSON document format</li>
@@ -1802,7 +1808,7 @@
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
-<li><code>--no-isolation</code>: Do not isolate the build in a clean environment</li>
+<li><code>--no-isolation</code>: Disable isolation when building a source distribution that follows PEP 517, as in: build dependencies specified by PEP 518 must be already installed if this option is used.</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>--refresh</code>: Don't update pinned versions, only refresh the lock file</li>
 <li><code>--check</code>: Check if the lock file is up to date and quit</li>
@@ -1853,6 +1859,7 @@
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Show the difference only and don't perform any action</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
+<li><code>--no-lock</code>: Don't try to create or update the lockfile. [env var: <code>PDM_NO_LOCK</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
 <li><code>-d</code>, <code>--dev</code>: Remove packages from dev dependencies</li>
@@ -1864,7 +1871,7 @@
 <li><code>--no-editable</code>: Install non-editable versions for all packages</li>
 <li><code>--no-self</code>: Don't install the project itself. [env var: <code>PDM_NO_SELF</code>]</li>
 <li><code>--fail-fast</code>, <code>-x</code>: Abort on first installation error</li>
-<li><code>--no-isolation</code>: Do not isolate the build in a clean environment</li>
+<li><code>--no-isolation</code>: Disable isolation when building a source distribution that follows PEP 517, as in: build dependencies specified by PEP 518 must be already installed if this option is used.</li>
 </ul>
 <h3 id="run">run<a class="headerlink" href="#run" title="Permanent link">#</a></h3>
 <blockquote>
@@ -2067,7 +2074,7 @@
 <li><code>--no-editable</code>: Install non-editable versions for all packages</li>
 <li><code>--no-self</code>: Don't install the project itself. [env var: <code>PDM_NO_SELF</code>]</li>
 <li><code>--fail-fast</code>, <code>-x</code>: Abort on first installation error</li>
-<li><code>--no-isolation</code>: Do not isolate the build in a clean environment</li>
+<li><code>--no-isolation</code>: Disable isolation when building a source distribution that follows PEP 517, as in: build dependencies specified by PEP 518 must be already installed if this option is used.</li>
 </ul>
 <p>Dependencies Selection:</p>
 <ul>
@@ -2091,6 +2098,7 @@
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
+<li><code>--no-lock</code>: Don't try to create or update the lockfile. [env var: <code>PDM_NO_LOCK</code>]</li>
 <li><code>--save-compatible</code>: Save compatible version specifiers</li>
 <li><code>--save-wildcard</code>: Save wildcard version specifiers</li>
 <li><code>--save-exact</code>: Save exact version specifiers</li>
@@ -2111,7 +2119,7 @@
 <li><code>--no-editable</code>: Install non-editable versions for all packages</li>
 <li><code>--no-self</code>: Don't install the project itself. [env var: <code>PDM_NO_SELF</code>]</li>
 <li><code>--fail-fast</code>, <code>-x</code>: Abort on first installation error</li>
-<li><code>--no-isolation</code>: Do not isolate the build in a clean environment</li>
+<li><code>--no-isolation</code>: Disable isolation when building a source distribution that follows PEP 517, as in: build dependencies specified by PEP 518 must be already installed if this option is used.</li>
 </ul>
 <p>Dependencies Selection:</p>
 <ul>

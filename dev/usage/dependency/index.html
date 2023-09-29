@@ -15,7 +15,7 @@
         <link rel="next" href="../publish/">
       
       <link rel="icon" href="../../assets/logo.svg">
-      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -54,7 +54,7 @@
   
 
 
-  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/umami.js"></script>
+  <script async defer data-website-id="d41bc972-79a4-4ce3-8c24-33026a8cdd9b" src="https://umami.fming.dev/script.js"></script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -576,6 +576,40 @@
     Show what packages are installed
   </a>
   
+    <nav class="md-nav" aria-label="Show what packages are installed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include-and-exclude-groups" class="md-nav__link">
+    Include and exclude groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-the-output-fields-and-format" class="md-nav__link">
+    Change the output fields and format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-the-dependency-tree" class="md-nav__link">
+    Show the dependency tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-packages-by-patterns" class="md-nav__link">
+    Filter packages by patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -832,7 +866,7 @@
   
     <li class="md-nav__item">
       <a href="../../reference/api/" class="md-nav__link">
-        API Reference#
+        API Reference
       </a>
     </li>
   
@@ -895,7 +929,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/fixtures/" class="md-nav__link">
-        Pytest fixtures#
+        Pytest fixtures
       </a>
     </li>
   
@@ -1133,6 +1167,40 @@
   <a href="#show-what-packages-are-installed" class="md-nav__link">
     Show what packages are installed
   </a>
+  
+    <nav class="md-nav" aria-label="Show what packages are installed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include-and-exclude-groups" class="md-nav__link">
+    Include and exclude groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-the-output-fields-and-format" class="md-nav__link">
+    Change the output fields and format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-the-dependency-tree" class="md-nav__link">
+    Show the dependency tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-packages-by-patterns" class="md-nav__link">
+    Filter packages by patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1552,7 +1620,23 @@ However, if you want to store the static URLs of the packages in the lockfile, y
 <p>Similar to <code>pip list</code>, you can list all packages installed in the packages directory:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>list
 </code></pre></div></td></tr></table></div>
-<p>Or show a dependency graph by:</p>
+<h3 id="include-and-exclude-groups">Include and exclude groups<a class="headerlink" href="#include-and-exclude-groups" title="Permanent link">#</a></h3>
+<p>By default, all packages installed in the working set will be listed. You can specify which groups to be listed
+by <code>--include/--exclude</code> options, and <code>include</code> has a higher priority than <code>exclude</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>list<span class="w"> </span>--include<span class="w"> </span>dev
+pdm<span class="w"> </span>list<span class="w"> </span>--exclude<span class="w"> </span><span class="nb">test</span>
+</code></pre></div></td></tr></table></div>
+<p>There is a special group <code>:sub</code>, when included, all transitive dependencies will also be shown. It is included by default.</p>
+<p>You can also pass <code>--resolve</code> to <code>pdm list</code>, which will show the packages resolved in <code>pdm.lock</code>, rather than installed in the working set.</p>
+<h3 id="change-the-output-fields-and-format">Change the output fields and format<a class="headerlink" href="#change-the-output-fields-and-format" title="Permanent link">#</a></h3>
+<p>By default, name, version and location will be shown in the list output, you can view more fields or specify the order of fields by <code>--fields</code> option:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>list<span class="w"> </span>--fields<span class="w"> </span>name,license,version
+</code></pre></div></td></tr></table></div>
+<p>For all supported fields, please refer to the <a href="../../reference/cli/#list_1">CLI reference</a>.</p>
+<p>Also, you can specify the output format other than the default table output. The supported formats and options are <code>--csv</code>, <code>--json</code>, <code>--markdown</code> and <code>--freeze</code>.</p>
+<h3 id="show-the-dependency-tree">Show the dependency tree<a class="headerlink" href="#show-the-dependency-tree" title="Permanent link">#</a></h3>
+<p>Or show a dependency tree by:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1564,7 +1648,7 @@ However, if you want to store the static URLs of the packages in the lockfile, y
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>$ pdm list --graph
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>$ pdm list --tree
 tempenv 0.0.0
 └── click 7.0 [ required: &lt;7.0.0,&gt;=6.7 ]
 black 19.10b0
@@ -1576,6 +1660,25 @@ black 19.10b0
 ├── toml 0.10.0 [ required: &gt;=0.9.4 ]
 └── typed-ast 1.4.1 [ required: &gt;=1.4.0 ]
 bump2version 1.0.0
+</code></pre></div></td></tr></table></div>
+<p>Note that <code>--fields</code> option doesn't work with <code>--tree</code>.</p>
+<h3 id="filter-packages-by-patterns">Filter packages by patterns<a class="headerlink" href="#filter-packages-by-patterns" title="Permanent link">#</a></h3>
+<p>You can also limit the packages to show by passing the patterns to <code>pdm list</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>list<span class="w"> </span>flask-*<span class="w"> </span>requests-*
+</code></pre></div></td></tr></table></div>
+<details class="warning">
+<summary>Be careful with the shell expansion</summary>
+<p>In most shells, the wildcard <code>*</code> will be expanded if there are matching files under the current directory.
+To avoid getting unexpected results, you can quote the patterns: <code>pdm list 'flask-*' 'requests-*'</code>.</p>
+</details>
+<p>In <code>--tree</code> mode, only the subtree of the matched packages will be displayed. This can be used to achieve the same purpose as <code>pnpm why</code>, which is to show why a specific package is required.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>pdm<span class="w"> </span>list<span class="w"> </span>--tree<span class="w"> </span>--reverse<span class="w"> </span>certifi
+certifi<span class="w"> </span><span class="m">2023</span>.7.22
+└──<span class="w"> </span>requests<span class="w"> </span><span class="m">2</span>.31.0<span class="w"> </span><span class="o">[</span><span class="w"> </span>requires:<span class="w"> </span>&gt;<span class="o">=</span><span class="m">2017</span>.4.17<span class="w"> </span><span class="o">]</span>
+<span class="w">    </span>└──<span class="w"> </span>cachecontrol<span class="o">[</span>filecache<span class="o">]</span><span class="w"> </span><span class="m">0</span>.13.1<span class="w"> </span><span class="o">[</span><span class="w"> </span>requires:<span class="w"> </span>&gt;<span class="o">=</span><span class="m">2</span>.16.0<span class="w"> </span><span class="o">]</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="allow-prerelease-versions-to-be-installed">Allow prerelease versions to be installed<a class="headerlink" href="#allow-prerelease-versions-to-be-installed" title="Permanent link">#</a></h2>
 <p>Include the following setting in <code>pyproject.toml</code> to enable:</p>
@@ -1630,7 +1733,8 @@ Users should pass <code>-g/--global</code> explicitly to activate it, since it i
 But PDM also leave the decision to users, just set the config <code>global_project.fallback</code> to <code>true</code>.</p>
 <p>By default, when <code>pdm</code> uses global project implicitly the following message is printed: <code>Project is not found, fallback to the global project</code>. To disable this message set the config <code>global_project.fallback_verbose</code> to <code>false</code>.</p>
 <p>If you want global project to track another project file other than <code>&lt;CONFIG_ROOT&gt;/global-project</code>, you can provide the
-project path via <code>-p/--project &lt;path&gt;</code> option.</p>
+project path via <code>-p/--project &lt;path&gt;</code> option. Especially if you pass <code>--global --project .</code>, PDM will install the dependencies
+of the current project into the global Python.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Be careful with <code>remove</code> and <code>sync --clean/--pure</code> commands when global project is used, because it may remove packages installed in your system Python.</p>
