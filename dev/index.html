@@ -94,7 +94,7 @@
             
             
 <span class="twemoji" style="vertical-align: middle;">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg> 
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg>
 </span>
 <a class="pdm-expansions" style="display: none;">Python Dependency Manager</a>
 
@@ -1009,23 +1009,23 @@ in a similar way to <code>npm</code> that doesn't need to create a virtualenv at
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux/Mac</label><label for="__tabbed_1_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span>-sSL<span class="w"> </span>https://pdm.fming.dev/install-pdm.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span>-sSL<span class="w"> </span>https://pdm-project.org/install-pdm.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="n">https</span><span class="p">://</span><span class="n">pdm</span><span class="p">.</span><span class="n">fming</span><span class="p">.</span><span class="n">dev</span><span class="p">/</span><span class="nb">install-pdm</span><span class="p">.</span><span class="n">py</span> <span class="n">-UseBasicParsing</span><span class="p">).</span><span class="n">Content</span> <span class="p">|</span> <span class="n">python</span> <span class="p">-</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="n">https</span><span class="p">://</span><span class="n">pdm-project</span><span class="p">.</span><span class="n">org</span><span class="p">/</span><span class="nb">install-pdm</span><span class="p">.</span><span class="n">py</span> <span class="n">-UseBasicParsing</span><span class="p">).</span><span class="n">Content</span> <span class="p">|</span> <span class="n">python</span> <span class="p">-</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <p>For security reasons, you should verify the checksum of <code>install-pdm.py</code>.
-It can be downloaded from <a href="https://pdm.fming.dev/install-pdm.py.sha256">install-pdm.py.sha256</a>.</p>
+It can be downloaded from <a href="https://pdm-project.org/install-pdm.py.sha256">install-pdm.py.sha256</a>.</p>
 <p>For example, on Linux/Mac:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span>-sSLO<span class="w"> </span>https://pdm.fming.dev/install-pdm.py
-curl<span class="w"> </span>-sSL<span class="w"> </span>https://pdm.fming.dev/install-pdm.py.sha256<span class="w"> </span><span class="p">|</span><span class="w"> </span>shasum<span class="w"> </span>-a<span class="w"> </span><span class="m">256</span><span class="w"> </span>-c<span class="w"> </span>-
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span>-sSLO<span class="w"> </span>https://pdm-project.org/install-pdm.py
+curl<span class="w"> </span>-sSL<span class="w"> </span>https://pdm-project.org/install-pdm.py.sha256<span class="w"> </span><span class="p">|</span><span class="w"> </span>shasum<span class="w"> </span>-a<span class="w"> </span><span class="m">256</span><span class="w"> </span>-c<span class="w"> </span>-
 <span class="c1"># Run the installer</span>
 python3<span class="w"> </span>install-pdm.py<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div></td></tr></table></div>
@@ -1207,6 +1207,7 @@ pdm<span class="w"> </span>completion<span class="w"> </span>zsh<span class="w">
         
       </main>
       
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -1266,6 +1267,36 @@ pdm<span class="w"> </span>completion<span class="w"> </span>zsh<span class="w">
   </div>
 </footer>
       
+  <div class="bot-container">
+    <a class="twemoji bot-button" href="javascript:void(0)" title="Ask bot about PDM">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32v64h120c39.8 0 72 32.2 72 72v272c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72h120V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zM264 256a40 40 0 1 0-80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224h16z"/></svg>
+    </a>
+    <iframe
+      src="https://2prxfnwkygf4vexczrbpcq.streamlit.app/?embed=true"
+    ></iframe>
+  </div>
+  <script>
+    const botButton = document.querySelector('.bot-button');
+    const iFrame = document.querySelector('.bot-container > iframe');
+    const hideBot = () => {
+      iFrame.style.height = null;
+      document.removeEventListener('click', hideBot);
+    }
+    botButton.addEventListener('click', (e) => {
+      const curHeight = window.getComputedStyle(iFrame).height;
+      if (curHeight === '0px') {
+        iFrame.style.height = '600px';
+        document.addEventListener('click', hideBot);
+      } else {
+        hideBot();
+      }
+      e.stopPropagation();
+    });
+    iFrame.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  </script>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

@@ -96,7 +96,7 @@
             
             
 <span class="twemoji" style="vertical-align: middle;">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg> 
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg>
 </span>
 <a class="pdm-expansions" style="display: none;">Python Dependency Manager</a>
 
@@ -1028,7 +1028,7 @@
 <h1 id="working-with-virtual-environments">Working with Virtual Environments<a class="headerlink" href="#working-with-virtual-environments" title="Permanent link">#</a></h1>
 <p>When you run <a href="../../reference/cli/#init"><code>pdm init</code></a> command, PDM will <a href="../project/#choose-a-python-interpreter">ask for the Python interpreter to use</a> in the project, which is the base interpreter to install dependencies and run tasks.</p>
 <p>Compared to <a href="https://www.python.org/dev/peps/pep-0582/">PEP 582</a>, virtual environments are considered more mature and have better support in the Python ecosystem as well as IDEs. Therefore, virtualenv is the default mode if not configured otherwise.</p>
-<p><strong>Virtual environments will be used if the project interpreter(the interpreter stored in <code>.pdm-python</code>, which can be checked by <code>pdm info</code>) is from a virtualenv.</strong></p>
+<p><strong>Virtual environments will be used if the project interpreter (the interpreter stored in <code>.pdm-python</code>, which can be checked by <code>pdm info</code>) is from a virtualenv.</strong></p>
 <h2 id="virtualenv-auto-creation">Virtualenv auto-creation<a class="headerlink" href="#virtualenv-auto-creation" title="Permanent link">#</a></h2>
 <p>By default, PDM prefers to use the virtualenv layout as other package managers do. When you run <code>pdm install</code> the first time on a new PDM-managed project, whose Python interpreter is not decided yet, PDM will create a virtualenv in <code>&lt;project_root&gt;/.venv</code>, and install dependencies into it. In the interactive session of <code>pdm init</code>, PDM will also ask to create a virtualenv for you.</p>
 <p>You can choose the backend used by PDM to create a virtualenv. Currently it supports three backends:</p>
@@ -1053,8 +1053,9 @@ $<span class="w"> </span>pdm<span class="w"> </span>venv<span class="w"> </span>
 $<span class="w"> </span>pdm<span class="w"> </span>venv<span class="w"> </span>create<span class="w"> </span>--with<span class="w"> </span>venv<span class="w"> </span><span class="m">3</span>.9
 </code></pre></div></td></tr></table></div>
 <h2 id="the-location-of-virtualenvs">The location of virtualenvs<a class="headerlink" href="#the-location-of-virtualenvs" title="Permanent link">#</a></h2>
-<p>For the first time, PDM will try to create a virtualenv <strong>in project</strong>, unless <code>.venv</code> already exists.
-Other virtualenvs go to the location specified by the <code>venv.location</code> configuration. They are named as <code>&lt;project_name&gt;-&lt;path_hash&gt;-&lt;name_or_python_version&gt;</code> to avoid name collision. A virtualenv created with <code>--name</code> option will always go to this location. You can disable the in-project virtualenv creation by <code>pdm config venv.in_project false</code>.</p>
+<p>If no <code>--name</code> is given, PDM will create the venv in <code>&lt;project_root&gt;/.venv</code>. Otherwise, virtualenvs go to the location specified by the <code>venv.location</code> configuration.
+They are named as <code>&lt;project_name&gt;-&lt;path_hash&gt;-&lt;name_or_python_version&gt;</code> to avoid name collision.
+You can disable the in-project virtualenv creation by <code>pdm config venv.in_project false</code>. And all virtualenvs will be created under <code>venv.location</code>.</p>
 <h2 id="reuse-the-virtualenv-you-created-elsewhere">Reuse the virtualenv you created elsewhere<a class="headerlink" href="#reuse-the-virtualenv-you-created-elsewhere" title="Permanent link">#</a></h2>
 <p>You can tell PDM to use a virtualenv you created in preceding steps, with <a href="../../reference/cli/#use"><code>pdm use</code></a>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdm<span class="w"> </span>use<span class="w"> </span>-f<span class="w"> </span>/path/to/venv
@@ -1094,18 +1095,16 @@ Removed<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">
 </code></pre></div></td></tr></table></div>
 <h2 id="activate-a-virtualenv">Activate a virtualenv<a class="headerlink" href="#activate-a-virtualenv" title="Permanent link">#</a></h2>
 <p>Instead of spawning a subshell like what <code>pipenv</code> and <code>poetry</code> do, <code>pdm venv</code> doesn't create the shell for you but print the activate command to the console. In this way you won't leave the current shell. You can then feed the output to <code>eval</code> to activate the virtualenv:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">bash/csh/zsh</label><label for="__tabbed_1_2">Powershell</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">bash/csh/zsh</label><label for="__tabbed_1_2">Fish</label><label for="__tabbed_1_3">Powershell</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>pdm<span class="w"> </span>venv<span class="w"> </span>activate<span class="w"> </span><span class="k">for</span>-test<span class="k">)</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>pdm<span class="w"> </span>venv<span class="w"> </span>activate<span class="w"> </span><span class="k">for</span>-test<span class="k">)</span>
 <span class="o">(</span>test-project-for-test<span class="o">)</span><span class="w"> </span>$<span class="w">  </span><span class="c1"># Virtualenv entered</span>
-Fish
-
-$<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="o">(</span>pdm<span class="w"> </span>venv<span class="w"> </span>activate<span class="w"> </span><span class="k">for</span>-test<span class="o">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="o">(</span>pdm<span class="w"> </span>venv<span class="w"> </span>activate<span class="w"> </span><span class="k">for</span>-test<span class="o">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1189,7 +1188,7 @@ $<span class="w"> </span>pdm<span class="w"> </span>list<span class="w"> </span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Switch to a virtualenv named test</span>
 $<span class="w"> </span>pdm<span class="w"> </span>use<span class="w"> </span>--venv<span class="w"> </span><span class="nb">test</span>
 <span class="c1"># Switch to the in-project venv located at $PROJECT_ROOT/.venv</span>
-$<span class="w"> </span>pdm<span class="w"> </span>use<span class="w"> </span>--venv
+$<span class="w"> </span>pdm<span class="w"> </span>use<span class="w"> </span>--venv<span class="w"> </span><span class="k">in</span>-project
 </code></pre></div></td></tr></table></div>
 <h2 id="disable-virtualenv-mode">Disable virtualenv mode<a class="headerlink" href="#disable-virtualenv-mode" title="Permanent link">#</a></h2>
 <p>You can disable the auto-creation and auto-detection for virtualenv by <code>pdm config python.use_venv false</code>.
@@ -1229,6 +1228,7 @@ $<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>p
         
       </main>
       
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -1288,6 +1288,36 @@ $<span class="w"> </span>pdm<span class="w"> </span>run<span class="w"> </span>p
   </div>
 </footer>
       
+  <div class="bot-container">
+    <a class="twemoji bot-button" href="javascript:void(0)" title="Ask bot about PDM">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32v64h120c39.8 0 72 32.2 72 72v272c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72h120V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zM264 256a40 40 0 1 0-80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224h16z"/></svg>
+    </a>
+    <iframe
+      src="https://2prxfnwkygf4vexczrbpcq.streamlit.app/?embed=true"
+    ></iframe>
+  </div>
+  <script>
+    const botButton = document.querySelector('.bot-button');
+    const iFrame = document.querySelector('.bot-container > iframe');
+    const hideBot = () => {
+      iFrame.style.height = null;
+      document.removeEventListener('click', hideBot);
+    }
+    botButton.addEventListener('click', (e) => {
+      const curHeight = window.getComputedStyle(iFrame).height;
+      if (curHeight === '0px') {
+        iFrame.style.height = '600px';
+        document.addEventListener('click', hideBot);
+      } else {
+        hideBot();
+      }
+      e.stopPropagation();
+    });
+    iFrame.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  </script>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

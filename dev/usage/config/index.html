@@ -96,7 +96,7 @@
             
             
 <span class="twemoji" style="vertical-align: middle;">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg> 
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg>
 </span>
 <a class="pdm-expansions" style="display: none;">Python Dependency Manager</a>
 
@@ -498,6 +498,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#specify-index-for-individual-packages" class="md-nav__link">
+    Specify index for individual packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#store-credentials-with-the-index" class="md-nav__link">
     Store credentials with the index
   </a>
@@ -554,6 +561,13 @@
         <li class="md-nav__item">
   <a href="#passing-constant-arguments-to-every-pdm-invocation" class="md-nav__link">
     Passing constant arguments to every pdm invocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ignore-package-warnings" class="md-nav__link">
+    Ignore package warnings
   </a>
   
 </li>
@@ -945,6 +959,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#specify-index-for-individual-packages" class="md-nav__link">
+    Specify index for individual packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#store-credentials-with-the-index" class="md-nav__link">
     Store credentials with the index
   </a>
@@ -1001,6 +1022,13 @@
         <li class="md-nav__item">
   <a href="#passing-constant-arguments-to-every-pdm-invocation" class="md-nav__link">
     Passing constant arguments to every pdm invocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ignore-package-warnings" class="md-nav__link">
+    Ignore package warnings
   </a>
   
 </li>
@@ -1141,13 +1169,27 @@ Otherwise, store them in the local config which won't be seen by others.</p>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm.resolution]</span>
 <span class="n">respect-source-order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 </code></pre></div></td></tr></table></div>
+<h3 id="specify-index-for-individual-packages">Specify index for individual packages<a class="headerlink" href="#specify-index-for-individual-packages" title="Permanent link">#</a></h3>
+<p>You can bind packages to specific sources with <code>include_packages</code> and <code>exclude_packages</code> config under <code>tool.pdm.source</code> table.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[[tool.pdm.source]]</span>
+<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;private&quot;</span>
+<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://private.pypi.org/simple&quot;</span>
+<span class="n">include_packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;foo-*&quot;</span><span class="p">]</span>
+<span class="n">exclude_packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;bar-*&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>With the above configuration, any package matching <code>foo</code> or <code>foo-*</code> will only be searched from the <code>private</code> index, and any package matching <code>bar-*</code> will be searched from all indexes except <code>private</code>.</p>
+<p>Both <code>include_packages</code> and <code>exclude_packages</code> are optional and accept a list of glob patterns, and <code>include_packages</code> takes effect exclusively when the pattern matches.</p>
 <h3 id="store-credentials-with-the-index">Store credentials with the index<a class="headerlink" href="#store-credentials-with-the-index" title="Permanent link">#</a></h3>
 <p>You can specify credentials in the URL with <code>${ENV_VAR}</code> variable expansion and these variables will be read from the environment variables:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[[tool.pdm.source]]</span>
 <span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;private&quot;</span>
-<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://${PRIVATE_PYPI_USERNAME}:${PRIVATE_PYPI_PASSWORD}/private.pypi.org/simple&quot;</span>
+<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://${PRIVATE_PYPI_USERNAME}:${PRIVATE_PYPI_PASSWORD}@private.pypi.org/simple&quot;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="configure-https-certificates">Configure HTTPS certificates<a class="headerlink" href="#configure-https-certificates" title="Permanent link">#</a></h3>
 <p>You can use a custom CA bundle or client certificate for HTTPS requests. It can be configured for both indexes(for package download) and repositories(for upload):</p>
@@ -1279,6 +1321,26 @@ Most of the time, you can just add any transient constraints to the <code>depend
 </code></pre></div></td></tr></table></div>
 <p>These options will be added right after the command name. For instance, based on the configuration above,
 <code>pdm add requests</code> is equivalent to <code>pdm add --no-isolation --no-self requests</code>.</p>
+<h2 id="ignore-package-warnings">Ignore package warnings<a class="headerlink" href="#ignore-package-warnings" title="Permanent link">#</a></h2>
+<p><em>New in version 2.10.0</em></p>
+<p>You may see some warnings when resolving dependencies like this:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>PackageWarning: Skipping scipy@1.10.0 because it requires Python
+&lt;3.12,&gt;=3.8 but the project claims to work with Python&gt;=3.9.
+Narrow down the `requires-python` range to include this version. For example, &quot;&gt;=3.9,&lt;3.12&quot; should work.
+  warnings.warn(record.message, PackageWarning, stacklevel=1)
+Use `-q/--quiet` to suppress these warnings, or ignore them per-package with `ignore_package_warnings` config in [tool.pdm] table.
+</code></pre></div></td></tr></table></div>
+<p>This is because the supported range of Python versions of the package doesn't cover the <code>requires-python</code> value specified in the <code>pyproject.toml</code>.
+You can ignore these warnings in a per-package basis by adding the following config:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[tool.pdm]</span>
+<span class="n">ignore_package_warnings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;scipy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;tensorflow-*&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>Where each item is a case-insensitive glob pattern to match the package name.</p>
 
 
   
@@ -1295,6 +1357,7 @@ Most of the time, you can just add any transient constraints to the <code>depend
         
       </main>
       
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -1354,6 +1417,36 @@ Most of the time, you can just add any transient constraints to the <code>depend
   </div>
 </footer>
       
+  <div class="bot-container">
+    <a class="twemoji bot-button" href="javascript:void(0)" title="Ask bot about PDM">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32v64h120c39.8 0 72 32.2 72 72v272c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72h120V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zM264 256a40 40 0 1 0-80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224h16z"/></svg>
+    </a>
+    <iframe
+      src="https://2prxfnwkygf4vexczrbpcq.streamlit.app/?embed=true"
+    ></iframe>
+  </div>
+  <script>
+    const botButton = document.querySelector('.bot-button');
+    const iFrame = document.querySelector('.bot-container > iframe');
+    const hideBot = () => {
+      iFrame.style.height = null;
+      document.removeEventListener('click', hideBot);
+    }
+    botButton.addEventListener('click', (e) => {
+      const curHeight = window.getComputedStyle(iFrame).height;
+      if (curHeight === '0px') {
+        iFrame.style.height = '600px';
+        document.addEventListener('click', hideBot);
+      } else {
+        hideBot();
+      }
+      e.stopPropagation();
+    });
+    iFrame.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  </script>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

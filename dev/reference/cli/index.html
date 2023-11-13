@@ -96,7 +96,7 @@
             
             
 <span class="twemoji" style="vertical-align: middle;">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg> 
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/></svg>
 </span>
 <a class="pdm-expansions" style="display: none;">Python Dependency Manager</a>
 
@@ -1486,6 +1486,7 @@
 <li><code>-V</code>, <code>--version</code>: Show the version and exit</li>
 <li><code>-c</code>, <code>--config</code>: Specify another config file path [env var: <code>PDM_CONFIG_FILE</code>] </li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-I</code>, <code>--ignore-python</code>: Ignore the Python path saved in<code>.pdm-python</code>. [env var: <code>PDM_IGNORE_SAVED_PYTHON</code>]</li>
 <li><code>--pep582</code> <code>SHELL</code>: Print the command line to be eval'd by the shell</li>
 </ul>
@@ -1503,6 +1504,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
@@ -1538,6 +1540,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--no-isolation</code>: Disable isolation when building a source distribution that follows PEP 517, as in: build dependencies specified by PEP 518 must be already installed if this option is used.</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
@@ -1555,6 +1558,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <p>Commands:</p>
 <h4 id="clear">clear<a class="headerlink" href="#clear" title="Permanent link">#</a></h4>
@@ -1569,6 +1573,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <h4 id="remove">remove<a class="headerlink" href="#remove" title="Permanent link">#</a></h4>
 <blockquote>
@@ -1582,6 +1587,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <h4 id="list">list<a class="headerlink" href="#list" title="Permanent link">#</a></h4>
 <blockquote>
@@ -1595,6 +1601,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <h4 id="info">info<a class="headerlink" href="#info" title="Permanent link">#</a></h4>
 <blockquote>
@@ -1604,6 +1611,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <h3 id="completion">completion<a class="headerlink" href="#completion" title="Permanent link">#</a></h3>
 <blockquote>
@@ -1630,6 +1638,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-l</code>, <code>--local</code>: Set config in the project's local configuration file</li>
@@ -1644,6 +1653,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
@@ -1672,6 +1682,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Only show the problems</li>
@@ -1688,6 +1699,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-d</code>, <code>--dev</code>: import packages into dev dependencies</li>
@@ -1702,6 +1714,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
@@ -1724,6 +1737,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
@@ -1746,6 +1760,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Show the difference only and don't perform any action</li>
@@ -1782,6 +1797,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
@@ -1805,6 +1821,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
@@ -1812,9 +1829,13 @@
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>--refresh</code>: Don't update pinned versions, only refresh the lock file</li>
 <li><code>--check</code>: Check if the lock file is up to date and quit</li>
-<li><code>--no-cross-platform</code>: Only lock packages for the current platform (default: <code>True</code>)</li>
-<li><code>--static-urls</code>: Store static file URLs in the lockfile</li>
-<li><code>--no-static-urls</code>: Do not store static file URLs in the lockfile (default: <code>True</code>)</li>
+</ul>
+<p>Lock Strategy:</p>
+<ul>
+<li><code>--strategy</code>, <code>-S</code> <code>STRATEGY</code>: Specify lock strategy (cross_platform, static_urls, direct_minimal_versions). Add 'no_' prefix to disable. Can be supplied multiple times or split by comma.</li>
+<li><code>--no-cross-platform</code>: [DEPRECATED] Only lock packages for the current platform</li>
+<li><code>--static-urls</code>: [DEPRECATED] Store static file URLs in the lockfile</li>
+<li><code>--no-static-urls</code>: [DEPRECATED] Do not store static file URLs in the lockfile</li>
 </ul>
 <p>Dependencies Selection:</p>
 <ul>
@@ -1831,6 +1852,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
 <li><code>-r</code>, <code>--repository</code>: The repository name or url to publish the package to [env var: <code>PDM_PUBLISH_REPO</code>]</li>
@@ -1855,6 +1877,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Show the difference only and don't perform any action</li>
@@ -1881,6 +1904,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
@@ -1906,6 +1930,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <h3 id="self">self<a class="headerlink" href="#self" title="Permanent link">#</a></h3>
 <blockquote>
@@ -1915,6 +1940,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <p>Commands:</p>
 <h4 id="list_2">list<a class="headerlink" href="#list_2" title="Permanent link">#</a></h4>
@@ -1925,6 +1951,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>--plugins</code>: List plugins only</li>
 </ul>
 <h4 id="add_1">add<a class="headerlink" href="#add_1" title="Permanent link">#</a></h4>
@@ -1939,6 +1966,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>--pip-args</code>: Arguments that will be passed to pip install</li>
 </ul>
 <h4 id="remove_2">remove<a class="headerlink" href="#remove_2" title="Permanent link">#</a></h4>
@@ -1953,6 +1981,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>--pip-args</code>: Arguments that will be passed to pip uninstall</li>
 <li><code>-y</code>, <code>--yes</code>: Answer yes on the question</li>
 </ul>
@@ -1964,6 +1993,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>--head</code>: Update to the latest commit on the main branch</li>
 <li><code>--pre</code>: Update to the latest prerelease version</li>
 <li><code>--pip-args</code>: Additional arguments that will be passed to pip install</li>
@@ -1976,6 +2006,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <p>Commands:</p>
 <h4 id="list_3">list<a class="headerlink" href="#list_3" title="Permanent link">#</a></h4>
@@ -1986,6 +2017,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>--plugins</code>: List plugins only</li>
 </ul>
 <h4 id="add_2">add<a class="headerlink" href="#add_2" title="Permanent link">#</a></h4>
@@ -2000,6 +2032,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>--pip-args</code>: Arguments that will be passed to pip install</li>
 </ul>
 <h4 id="remove_3">remove<a class="headerlink" href="#remove_3" title="Permanent link">#</a></h4>
@@ -2014,6 +2047,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>--pip-args</code>: Arguments that will be passed to pip uninstall</li>
 <li><code>-y</code>, <code>--yes</code>: Answer yes on the question</li>
 </ul>
@@ -2025,6 +2059,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>--head</code>: Update to the latest commit on the main branch</li>
 <li><code>--pre</code>: Update to the latest prerelease version</li>
 <li><code>--pip-args</code>: Additional arguments that will be passed to pip install</li>
@@ -2041,6 +2076,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--venv</code> <code>NAME</code>: Run the command in the virtual environment with the given key. [env var: <code>PDM_IN_VENV</code>]</li>
@@ -2059,6 +2095,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>--dry-run</code>: Show the difference only and don't perform any action</li>
@@ -2095,6 +2132,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-L</code>, <code>--lockfile</code>: Specify another lockfile path. Default:<code>pdm.lock</code>. [env var: <code>PDM_LOCKFILE</code>]</li>
@@ -2140,6 +2178,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-g</code>, <code>--global</code>: Use the global project, supply the project root with <code>-p</code> option</li>
 <li><code>-p</code>, <code>--project</code>: Specify another path as the project root, which changes the base of<code>pyproject.toml</code> and <code>__pypackages__</code> [env var: <code>PDM_PROJECT</code>]</li>
 <li><code>-k</code>, <code>--skip</code>: Skip some tasks and/or hooks by their comma-separated names. Can be supplied multiple times. Use<code>:all</code> to skip all hooks. Use<code>:pre</code> and<code>:post</code> to skip all pre or post hooks.</li>
@@ -2172,6 +2211,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-w</code>, <code>--with</code>: Specify the backend to create the virtualenv</li>
 <li><code>-f</code>, <code>--force</code>: Recreate if the virtualenv already exists</li>
 <li><code>-n</code>, <code>--name</code>: Specify the name of the virtualenv</li>
@@ -2185,6 +2225,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <h4 id="remove_4">remove<a class="headerlink" href="#remove_4" title="Permanent link">#</a></h4>
 <blockquote>
@@ -2198,11 +2239,12 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-y</code>, <code>--yes</code>: Answer yes on the following question</li>
 </ul>
 <h4 id="activate">activate<a class="headerlink" href="#activate" title="Permanent link">#</a></h4>
 <blockquote>
-<p>Activate the virtualenv with the given name</p>
+<p>Print the command to activate the virtualenv with the given name</p>
 </blockquote>
 <p>Positional Arguments:</p>
 <ul>
@@ -2212,6 +2254,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 </ul>
 <h4 id="purge">purge<a class="headerlink" href="#purge" title="Permanent link">#</a></h4>
 <blockquote>
@@ -2221,6 +2264,7 @@
 <ul>
 <li><code>-h</code>, <code>--help</code>: Show this help message and exit.</li>
 <li><code>-v</code>, <code>--verbose</code>: Use <code>-v</code> for detailed output and <code>-vv</code> for more detailed</li>
+<li><code>-q</code>, <code>--quiet</code>: Suppress output</li>
 <li><code>-f</code>, <code>--force</code>: Force purging without prompting for confirmation</li>
 <li><code>-i</code>, <code>--interactive</code>: Interactively purge selected Virtualenvs</li>
 </ul>
@@ -2241,6 +2285,7 @@
         
       </main>
       
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -2300,6 +2345,36 @@
   </div>
 </footer>
       
+  <div class="bot-container">
+    <a class="twemoji bot-button" href="javascript:void(0)" title="Ask bot about PDM">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32v64h120c39.8 0 72 32.2 72 72v272c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72h120V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zM264 256a40 40 0 1 0-80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224h16z"/></svg>
+    </a>
+    <iframe
+      src="https://2prxfnwkygf4vexczrbpcq.streamlit.app/?embed=true"
+    ></iframe>
+  </div>
+  <script>
+    const botButton = document.querySelector('.bot-button');
+    const iFrame = document.querySelector('.bot-container > iframe');
+    const hideBot = () => {
+      iFrame.style.height = null;
+      document.removeEventListener('click', hideBot);
+    }
+    botButton.addEventListener('click', (e) => {
+      const curHeight = window.getComputedStyle(iFrame).height;
+      if (curHeight === '0px') {
+        iFrame.style.height = '600px';
+        document.addEventListener('click', hideBot);
+      } else {
+        hideBot();
+      }
+      e.stopPropagation();
+    });
+    iFrame.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  </script>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
